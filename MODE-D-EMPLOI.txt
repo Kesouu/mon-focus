@@ -1,0 +1,90 @@
+MON FOCUS : installer l'appli sur ton iPhone (gratuit)
+=====================================================
+
+Ce dossier contient ton appli. Une fois mise en ligne et ajoutée à ton
+écran d'accueil, elle a sa propre icône koala, s'ouvre en plein écran,
+fonctionne sans connexion et ne dépend plus de Claude.
+
+Ce qu'il y a dans le dossier :
+  - index.html             l'appli
+  - manifest.webmanifest   son nom et son icône
+  - sw.js                  le fonctionnement hors connexion
+  - icons/                 les icônes koala
+  - MODE-D-EMPLOI.txt      ce fichier (inutile de le mettre en ligne)
+
+Aucun prénom ni aucune donnée personnelle n'est écrit dans ces fichiers.
+Tes données restent uniquement dans ton iPhone.
+
+
+ÉTAPE 1 : mettre l'appli en ligne (sur le PC, environ 10 minutes)
+---------------------------------------------------------------
+1. Dézippe le fichier reçu (clic droit > Extraire tout).
+2. Va sur https://github.com et crée un compte gratuit.
+3. En haut à droite, clique sur « + » puis « New repository ».
+   - Repository name : mon-focus
+   - Laisse « Public » coché (obligatoire pour la version gratuite ;
+     le code est visible, mais il ne contient rien de personnel).
+   - Clique sur « Create repository ».
+4. Clique sur le lien « uploading an existing file ».
+5. Ouvre le dossier dézippé, sélectionne TOUT ce qu'il contient
+   (index.html, manifest.webmanifest, sw.js et le dossier icons)
+   et glisse-le dans la page. Attention : glisse le contenu du dossier,
+   pas le dossier lui-même, pour que index.html soit à la racine.
+6. En bas, clique sur « Commit changes ».
+7. Va dans « Settings » (en haut), puis « Pages » (menu de gauche).
+   Sous « Branch », choisis « main », laisse « / (root) », clique « Save ».
+8. Patiente 1 à 2 minutes puis recharge la page : l'adresse de ton appli
+   s'affiche, du type :
+      https://TON-PSEUDO.github.io/mon-focus/
+   Envoie-toi ce lien (par mail ou message) pour l'ouvrir sur l'iPhone.
+
+
+ÉTAPE 2 : installer l'appli sur l'iPhone
+----------------------------------------
+1. Ouvre le lien dans SAFARI (pas Chrome).
+2. Touche le bouton Partager (carré avec une flèche vers le haut).
+3. Choisis « Sur l'écran d'accueil », puis « Ajouter ».
+4. L'icône koala « Mon Focus » apparaît : à partir de maintenant,
+   ouvre toujours l'appli depuis cette icône.
+
+
+ÉTAPE 3 : récupérer tes données actuelles
+-----------------------------------------
+Ton appli actuelle (dans Claude) et la nouvelle ne partagent pas leurs
+données. Il faut les transférer une seule fois :
+1. Dans l'ancienne appli (Claude) : Réglages > 📤 Exporter >
+   📋 Copier le code.
+2. Ouvre la nouvelle appli DEPUIS L'ICÔNE KOALA (important : l'icône
+   a sa propre mémoire, différente de Safari).
+3. Réglages > 📥 Importer > colle le code > « Remplacer mes données ».
+Marine, Maïka, tes post-its, tes points et ton koala reviennent.
+
+
+PROTÉGER TES DONNÉES
+--------------------
+- Tes données ne sont stockées que dans ton iPhone, jamais sur GitHub.
+- Garde un code de verrouillage sur ton iPhone : il chiffre ce qui
+  est stocké dessus.
+- Le vrai risque est de les perdre (suppression de l'icône, changement
+  de téléphone). Fais une sauvegarde chaque semaine :
+  Réglages > 📤 Exporter > « 📝 Envoyer vers Notes ».
+  L'appli te le rappelle si ta dernière sauvegarde date de plus de 7 jours.
+- Ne supprime pas l'icône sans avoir fait une sauvegarde juste avant.
+
+
+METTRE À JOUR L'APPLI PLUS TARD
+-------------------------------
+Si Claude te donne une nouvelle version : sur GitHub, ouvre ton dépôt
+mon-focus > « Add file » > « Upload files », glisse le nouveau
+index.html > « Commit changes ». Ton iPhone récupère la nouvelle version
+à la prochaine ouverture avec internet. Tes données ne bougent pas.
+
+
+À SAVOIR
+--------
+- Le « body doubling à deux » n'existe que dans la version Claude
+  (il passe par Claude) : il n'est pas dans la version installée.
+- Les rappels ne sonnent que lorsque l'appli est ouverte.
+- Alternative à GitHub : Netlify Drop (app.netlify.com/drop), en glissant
+  le dossier. Il faut alors créer un compte gratuit Netlify dans l'heure,
+  sinon le site est supprimé.
