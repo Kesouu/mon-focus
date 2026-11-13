@@ -55,7 +55,7 @@
   .view{display:none} .view.active{display:block; animation:fade .25s ease}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-  /* Priorités */
+  /* Tâches importantes */
   .prio{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;transition:background .2s}
   .prio.done{background:var(--ok-soft);border-color:transparent}
@@ -658,6 +658,15 @@
   .myday{padding:14px}
   .mdh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
   .mdh b{font-family:"Fredoka",sans-serif;font-size:20px}
+  .nowcard{border:2px solid var(--accent, #7BB36E);border-radius:18px;padding:12px;margin-bottom:10px;background:var(--card, #fff)}
+  .nowlbl{margin:0 0 6px}
+  .nowmain{display:flex;gap:10px;align-items:center;font-size:17px;line-height:1.3}
+  .nowe{font-size:30px;flex:none}
+  .nowbtns{display:flex;gap:6px;margin-top:10px}
+  .nowbtns .btn{flex:1 1 0;min-width:0;min-height:46px;margin:0;white-space:nowrap;padding:0 8px;font-size:15px;overflow:hidden;text-overflow:ellipsis}
+  .nowbtns #nowOk{flex:0 0 46px;padding:0}
+  .tidy{border:1px dashed var(--line);border-radius:14px;padding:10px 12px;margin-top:8px;font-size:14px}
+  .tidyb{display:flex;gap:8px;margin-top:8px}.tidyb .btn{flex:1;margin:0}
   .mdrow{width:100%;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:14px;padding:10px 12px;margin-bottom:8px;font:inherit;font-weight:700;font-size:15px;text-align:left;cursor:pointer}
   .mdrow > span:first-child{flex:1}
   .mdrow > span:last-child{margin-left:auto;color:var(--muted)}
@@ -769,11 +778,197 @@
   .petadd:active{transform:scale(.95)}
   .petminus{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:4px 0;font:inherit;font-weight:800;font-size:18px;cursor:pointer;line-height:1}
   .petminus:disabled{opacity:.3}
+
+
+  /* AuDHD */
+  .aulist{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+  .auitem{display:inline-flex;align-items:center;gap:4px;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:5px 6px 5px 12px;font-weight:700;font-size:14px}
+  .auitem button{border:none;background:transparent;color:var(--muted);font-size:13px;cursor:pointer;padding:2px 6px}
+  .sensrow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-weight:700}
+  .senslv{display:flex;gap:6px}.senslv button{font-size:24px;width:46px;height:46px;border-radius:14px;border:2px solid transparent;background:var(--bg);cursor:pointer}
+  .senslv button.on{border-color:var(--accent);background:var(--accent-soft)}
+  .sensres{margin-top:12px;padding:12px;border-radius:16px;background:var(--accent-soft)}.sensres b{font-size:18px}
+  .senstips{margin:6px 0 0;padding-left:20px;font-weight:600}
+  .cardpick{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+  .cardpick button{text-align:left;font:inherit;font-weight:700;font-size:16px;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+  #sos .cardpick button{background:rgba(255,255,255,.12);color:inherit;border-color:rgba(255,255,255,.25)}
+  .commcard{position:fixed;inset:0;z-index:200;background:#FFFDF6;color:#1E1B2E;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;text-align:center;cursor:pointer}
+  .commcard p{font-family:"Fredoka","Nunito",sans-serif;font-size:clamp(30px,9vw,54px);line-height:1.2;font-weight:600;margin:0 0 30px}
+  .commcard .small{color:#777}
+  #lowd{position:fixed;inset:0;z-index:150;background:linear-gradient(180deg,#E9E4F5,#F6F1EA);color:#3B3452;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px}
+  html.dark #lowd{background:linear-gradient(180deg,#1A1830,#2A2445);color:#EEE9FA}
+  html.lowd .toast, html.lowd nav{display:none!important}
+  .lowk{width:150px;height:138px}.lowk svg{width:100%;height:100%}
+  .lowbtn{width:min(320px,86vw);display:flex;align-items:center;gap:16px;font-size:44px;padding:16px 22px;border-radius:28px;border:none;background:rgba(255,255,255,.75);color:inherit;cursor:pointer;box-shadow:0 6px 18px -10px rgba(0,0,0,.3)}
+  html.dark .lowbtn{background:rgba(255,255,255,.08)}
+  .lowbtn span{font-family:"Fredoka","Nunito",sans-serif;font-size:28px;font-weight:600}
+  .lowout{margin-top:18px;border:none;background:transparent;color:inherit;opacity:.6;font:inherit;font-weight:700;text-decoration:underline;cursor:pointer}
+  .lowfood{display:flex;flex-direction:column;gap:10px;width:min(320px,86vw)}
+  .lowfood button{font:inherit;font-size:22px;font-weight:700;padding:14px;border-radius:22px;border:none;background:rgba(255,255,255,.75);color:inherit;cursor:pointer}
+  html.dark .lowfood button{background:rgba(255,255,255,.08)}
+  .lowfood button.on{background:#BDE8CF;color:#1E3A2B}
+  .lowtime{font-family:"Fredoka",sans-serif;font-size:64px;margin:0}.lowsoft{font-size:20px;margin:0;opacity:.75}
+  .wkday{padding:10px 0;border-bottom:1px solid var(--line)}
+  .wkun{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .wkun button,.wkun span{font:inherit;font-size:14px;font-weight:700;padding:6px 10px;border-radius:12px;border:none;background:#FFE3C9;color:#7A4A1E;cursor:pointer}
+  .wkun button.ready{background:#D8F0E1;color:#24563A}
+  .choice2{display:flex;align-items:stretch;gap:8px}
+  .choice2 button{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font:inherit;padding:14px 8px;border-radius:20px;border:none;background:var(--card);color:var(--ink);cursor:pointer;box-shadow:0 3px 0 var(--line)}
+  .choice2 button span{font-size:30px}.choice2 button b{font-size:15px;line-height:1.25}
+  .choice2 .ou{align-self:center;font-weight:800;color:var(--muted)}
+  .panote{display:flex;gap:6px;align-items:baseline;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .panote button{margin-left:auto;border:none;background:transparent;color:var(--muted);cursor:pointer}
+
+  /* Moi en groupes, code santé, libellés */
+  .moiseg{margin:4px 0 14px}
+  .moiseg button{font-size:14px}
+  #v-mood .mghide{display:none!important}
+  .pindots{display:flex;justify-content:center;gap:14px;margin:14px 0}
+  .pindots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--accent)}
+  .pindots i.on{background:var(--accent)}
+  .pindots.shake{animation:pinshake .4s}
+  @keyframes pinshake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+  .pinpad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:270px;margin:0 auto}
+  .pinpad button{height:60px;border-radius:20px;border:none;background:var(--bg);color:var(--ink);font:inherit;font-size:24px;font-weight:700;cursor:pointer;box-shadow:0 3px 0 var(--line)}
+  .pinpad button:active{transform:translateY(2px);box-shadow:none}
+  html.nostreak #streakPill, html.nostreak #stStreak{display:none}
+  .leafpill{display:none!important}
+  .prio .mini small{display:block;font-size:10px;line-height:1;font-weight:700;margin-top:1px}
+  #rechAsk{border:1px dashed var(--line);border-radius:16px;padding:10px 12px;margin:0 0 10px;font-size:14px;background:var(--card)}
+
+  /* 4 onglets, étoiles, capture, journée */
+  nav .navgone{display:none!important}
+  .toast{white-space:pre-line;width:max-content;max-width:min(88vw,420px);text-align:left}
+  #pTimer{display:none}
+  #v-plan:not(.ptoday) #todayTop{display:none}
+  #v-plan:not(.pdayv) #todayTools{display:none}
+  #todayTop{margin-bottom:6px}
+  #todayTools{margin-top:18px}
+  #rewardsIn{margin-top:22px}
+  .secttl{font-family:"Fredoka","Nunito",sans-serif;font-size:22px;margin:0 4px 10px}
+  .pstar{position:absolute;top:-8px;left:-6px;font-size:20px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+  .cpsmart{margin:8px 0 2px;padding:8px 12px;border-radius:14px;background:var(--accent-soft);font-size:14px;line-height:1.5}
+  .capdest .smartd{background:var(--accent);color:#fff;grid-column:1/-1}
+  .prepbar{display:flex;gap:6px;margin:-4px 0 10px}.prepbar i{flex:1;height:5px;border-radius:9px;background:var(--line)}.prepbar i.on{background:var(--accent)}
+  .tsm{font:inherit;font-size:14px;padding:2px 4px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+  .tidy.disc{border-color:var(--lav);background:var(--lav-soft, #EEEAFB)}
+
+  /* Body doubling à deux retiré (usage solo) */
+  .duo-card{display:none!important}
+  /* Écrans allégés */
+  .addprio{width:100%;border:2px dashed var(--line);background:transparent;color:var(--muted);font:inherit;font-weight:800;font-size:15px;padding:13px;border-radius:20px;cursor:pointer;margin:2px 0 10px}
+  .donegrp{grid-column:1/-1;margin-top:6px}
+  .donegrp>summary{list-style:none;cursor:pointer;font-weight:800;color:var(--muted);padding:8px 4px}
+  .donegrp>summary::-webkit-details-marker{display:none}
+  .donegrp .board{margin-top:6px}
+  .donegrp .postit{opacity:.75;transform:scale(.92)}
+  .pmorebtn{width:100%;margin-top:14px}
+  .pmore{margin-top:4px}
+  .gmini{display:flex;gap:10px;margin:-6px 0 12px;padding:10px 12px;border-radius:20px;background:var(--glass, var(--card));box-shadow:var(--shadow, none)}
+  .gmini .g{flex:1;display:flex;flex-direction:column;gap:4px;margin:0;font-size:12px}
+  .gmini .g > span:first-child{width:auto}
+  .gmini .track{height:8px}
+  #v-koala .scene{min-height:262px}
+  #v-koala .kbig{width:160px;height:200px}
+  .rseg{margin:0 0 12px}
+  #v-settings[data-rs=app] [data-rs]:not([data-rs~=app]),
+  #v-settings[data-rs=confort] [data-rs]:not([data-rs~=confort]),
+  #v-settings[data-rs=data] [data-rs]:not([data-rs~=data]){display:none!important}
+  /* ================= STYLE COSY LOFI (inspiré lofi, Focado, Finch) ================= */
+  html.cosy{
+    --bg:#F8F2EA; --card:#FFFCF7; --ink:#3B3452; --muted:#8B8399; --line:#EDE4E6;
+    --accent:#64A487; --accent-soft:#E1F1E7; --ok:#64A487; --ok-soft:#E4F3EA; --lav:#A897E8; --lav-soft:#EEEAFB; --peach:#F5B29A;
+    --glass:rgba(255,252,247,.78); --glass-b:rgba(255,255,255,.7); --shadow:0 10px 28px -16px rgba(70,50,110,.35), 0 2px 6px -3px rgba(70,50,110,.12);
+    --radius:26px;
+  }
+  html.cosy.dark{
+    --bg:#1D1A31; --card:#2B2747; --ink:#F3EFFC; --muted:#ADA5C8; --line:#3A355C;
+    --accent:#8DD3B1; --accent-soft:#2D4440; --ok:#8DD3B1; --ok-soft:#28403A; --lav:#B9AAF5; --lav-soft:#37315C; --peach:#F0A98F;
+    --glass:rgba(43,39,71,.74); --glass-b:rgba(255,255,255,.08); --shadow:0 12px 30px -14px rgba(0,0,0,.6);
+  }
+  html.cosy{background:var(--bg)}
+  html.cosy body{background:transparent;background-image:none}
+  html.cosy h1{font-size:34px;font-weight:600;letter-spacing:-.2px}
+  html.cosy h1, html.cosy h2, html.cosy .card h2, html.cosy summary{font-family:"Fredoka","Nunito",system-ui,sans-serif}
+  html.cosy .card h2{font-weight:600;font-size:18px}
+
+  /* Ciel vivant selon l'heure */
+  #sky{display:none}
+  html.cosy #sky{display:block;position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;transition:background 2s}
+  html.cosy[data-sky=aube] #sky{background:linear-gradient(180deg,#FAD1BF 0%,#F8E3D6 38%,#F6EEEA 70%,var(--bg) 100%)}
+  html.cosy[data-sky=jour] #sky{background:linear-gradient(180deg,#CFE3F1 0%,#E6EEF0 35%,#F5F0EA 70%,var(--bg) 100%)}
+  html.cosy[data-sky=doree] #sky{background:linear-gradient(180deg,#F7C3A5 0%,#F1C9CB 35%,#EBDDE9 70%,var(--bg) 100%)}
+  html.cosy[data-sky=soir] #sky{background:linear-gradient(180deg,#B9A6E2 0%,#E3AFC4 35%,#F2CDB9 70%,var(--bg) 100%)}
+  html.cosy[data-sky=nuit] #sky{background:linear-gradient(180deg,#D8D0F0 0%,#E9E2F2 45%,var(--bg) 100%)}
+  html.cosy.dark[data-sky] #sky{background:linear-gradient(180deg,#0F0F28 0%,#211D47 40%,#2E2656 70%,var(--bg) 100%)}
+  html.cosy.dark[data-sky=soir] #sky{background:linear-gradient(180deg,#2A2156 0%,#5B3F7A 38%,#8E5A7E 62%,var(--bg) 100%)}
+  html.cosy.dark[data-sky=aube] #sky{background:linear-gradient(180deg,#24224A 0%,#5A4A7A 40%,#B98A8E 66%,var(--bg) 100%)}
+  #sky .hills{position:absolute;left:0;right:0;bottom:0;width:100%;height:34vh;opacity:.55}
+  html.cosy.dark #sky .hills{opacity:.9}
+  #sky .h1{fill:color-mix(in srgb,var(--lav) 22%,var(--bg))} #sky .h2{fill:color-mix(in srgb,var(--accent) 16%,var(--bg))}
+  #sky .city{fill:color-mix(in srgb,var(--lav) 30%,var(--bg))}
+  html.cosy.dark #sky .h1{fill:#2A2550} html.cosy.dark #sky .h2{fill:#231F43} html.cosy.dark #sky .city{fill:#1B1838}
+  #sky .lit{fill:#FFD98E;opacity:0} html.cosy.dark #sky .lit{opacity:.85}
+  #sky .star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:0}
+  html.cosy.dark #sky .star{opacity:.8;animation:twinkle 3.5s ease-in-out infinite}
+  @keyframes twinkle{50%{opacity:.15;transform:scale(.6)}}
+  #sky .moon{position:absolute;top:9%;right:12%;width:44px;height:44px;border-radius:50%;background:#FFF3C9;box-shadow:0 0 40px 10px rgba(255,236,170,.35),inset -10px -4px 0 #F2DFA0;opacity:0;transition:opacity 2s}
+  html.cosy.dark #sky .moon{opacity:1}
+  #sky .sun{position:absolute;top:7%;right:14%;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle,#FFF4D8 0 45%,#FFD9A8 70%,transparent 72%);box-shadow:0 0 60px 20px rgba(255,214,160,.45);opacity:.9;transition:opacity 2s}
+  html.cosy.dark #sky .sun, html.cosy[data-sky=nuit] #sky .sun{opacity:0}
+  html.cosy[data-sky=soir]:not(.dark) #sky .sun, html.cosy[data-sky=doree] #sky .sun{top:16%;background:radial-gradient(circle,#FFE6C4 0 45%,#FFB98F 70%,transparent 72%)}
+  #sky .bokeh{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 70%);animation:floaty 18s ease-in-out infinite}
+  html.cosy.dark #sky .bokeh{background:radial-gradient(circle,rgba(255,210,150,.22),rgba(255,210,150,0) 70%)}
+  @keyframes floaty{50%{transform:translate(18px,-26px)}}
+  html.calm #sky *, html.deep #sky .bokeh{animation:none!important}
+  @media (prefers-reduced-motion: reduce){ #sky *{animation:none!important} }
+
+  /* Cartes douces, façon verre dépoli */
+  html.cosy .card, html.cosy .prio, html.cosy .mdrow, html.cosy details.card{background:var(--glass);border:1px solid var(--glass-b);box-shadow:var(--shadow);
+    -webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2)}
+  html.cosy .mdrow{box-shadow:none;background:color-mix(in srgb,var(--card) 70%,transparent)}
+  html.cosy .prio.done{background:color-mix(in srgb,var(--ok-soft) 85%,transparent)}
+  html.cosy .nowcard{background:linear-gradient(135deg,color-mix(in srgb,var(--accent-soft) 90%,transparent),color-mix(in srgb,var(--lav-soft) 90%,transparent));border:none;box-shadow:var(--shadow)}
+  html.cosy .bubble{border:none;box-shadow:var(--shadow)} html.cosy .bubble::before{border:none}
+  html.cosy .scene, html.cosy .desk-card{box-shadow:var(--shadow);border:none}
+  html.cosy.dark .desk-card{background:linear-gradient(180deg,#2B2652,#3A3060 70%,#4A3A62)}
+  html.cosy.dark .scene{background:linear-gradient(180deg,#2A2550 0%,#3A305E 60%,#4A3A5E 100%)}
+
+  /* Boutons dodus (façon Finch) */
+  html.cosy .btn{border-radius:20px;transition:transform .08s, box-shadow .08s}
+  html.cosy .btn.primary{background:var(--accent);box-shadow:0 4px 0 color-mix(in srgb,var(--accent) 70%,#1a2a22)}
+  html.cosy.dark .btn.primary{color:#13241C}
+  html.cosy .btn.primary:active{transform:translateY(3px);box-shadow:0 1px 0 color-mix(in srgb,var(--accent) 70%,#1a2a22)}
+  html.cosy .btn.ghost{background:var(--card);border:none;box-shadow:0 3px 0 var(--line), 0 0 0 1px var(--line) inset}
+  html.cosy .btn.ghost:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line), 0 0 0 1px var(--line) inset}
+  html.cosy .chip{border:none;box-shadow:0 2px 0 var(--line), 0 0 0 1px var(--line) inset;background:var(--card)}
+  html.cosy .chip.on{background:var(--accent-soft);color:color-mix(in srgb,var(--accent) 80%,var(--ink));box-shadow:0 0 0 2px var(--accent) inset}
+  html.cosy .pill{border:none;background:var(--glass);box-shadow:var(--shadow);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  html.cosy .pill.gold{background:#FFF1CF;color:#8A6400} html.cosy.dark .pill.gold{background:#4A3F24;color:#FFD98A}
+  html.cosy .pill.sos{background:#FBE1E0;color:#B23B32} html.cosy.dark .pill.sos{background:#55303A;color:#FFB7B0}
+  html.cosy .check{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+
+  /* Barre du bas flottante */
+  html.cosy nav{left:10px;right:10px;bottom:calc(env(safe-area-inset-bottom) + 8px);max-width:520px;margin:0 auto;border:1px solid var(--glass-b);border-radius:30px;
+    background:var(--glass);box-shadow:0 14px 34px -14px rgba(50,35,90,.45);padding:7px 8px;-webkit-backdrop-filter:blur(20px) saturate(1.3);backdrop-filter:blur(20px) saturate(1.3)}
+  html.cosy nav button{border-radius:22px}
+  html.cosy nav button.active{background:var(--lav-soft);color:color-mix(in srgb,var(--lav) 55%,var(--ink))}
+  html.cosy nav .navadd{background:linear-gradient(145deg,var(--accent),color-mix(in srgb,var(--accent) 70%,var(--lav)));box-shadow:0 10px 22px -8px color-mix(in srgb,var(--accent) 70%,#000)}
+  html.cosy .toast{bottom:calc(env(safe-area-inset-bottom) + 100px);border-radius:22px}
+  html.cosy .sheet{background:rgba(30,24,55,.42);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  html.cosy .sheet-card{border-radius:30px 30px 0 0}
+  html.cosy .view.active{animation:cosyIn .35s cubic-bezier(.2,.8,.3,1)}
+  @keyframes cosyIn{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
   .duo-card, #v-focus.session .duo-card{display:none!important}
 </style>
 <style id="featStyle"></style>
 </head>
 <body>
+<div id="sky" aria-hidden="true"><div class="sun"></div><div class="moon"></div><div id="skyDots"></div>
+<svg class="hills" viewBox="0 0 400 200" preserveAspectRatio="none"><path class="h1" d="M0 120 Q60 80 120 105 T240 95 T400 85 V200 H0Z"/>
+<g class="city"><rect x="250" y="70" width="18" height="60"/><rect x="270" y="52" width="14" height="78"/><rect x="286" y="78" width="20" height="52"/><rect x="308" y="60" width="12" height="70"/><rect x="322" y="84" width="22" height="46"/></g>
+<g class="lit"><rect x="254" y="78" width="3" height="4"/><rect x="261" y="92" width="3" height="4"/><rect x="274" y="60" width="3" height="4"/><rect x="278" y="74" width="3" height="4"/><rect x="291" y="86" width="3" height="4"/><rect x="299" y="96" width="3" height="4"/><rect x="312" y="70" width="3" height="4"/><rect x="327" y="92" width="3" height="4"/><rect x="335" y="100" width="3" height="4"/></g>
+<path class="h2" d="M0 150 Q80 115 170 140 T330 130 T400 128 V200 H0Z"/></svg></div>
 <div id="season" aria-hidden="true"></div>
 <div class="topbar">
   <button class="pill sos" id="sosPill" aria-label="SOS surcharge">🆘</button>
@@ -822,11 +1017,11 @@
       <div class="g"><span>💚 Bonheur</span><div class="track"><i id="gBonheur"></i></div></div>
     </div>
     <details class="card tool">
-      <summary>🍃 Comment gagner des feuilles</summary>
+      <summary>💚 Comment rendre ton koala heureux</summary>
       <ul class="rules">
-        <li>Priorité cochée : <b>+1</b> · les 3 : <b>+2 bonus</b></li>
-        <li>Séance de focus : <b>+1</b> (15 min ou plus : <b>+2</b>)</li>
-        <li>Humeur notée : <b>+1</b> par jour</li>
+        <li>Nourris-le quand il a faim : 🍃 c'est gratuit, à volonté</li>
+        <li>Chaque tâche cochée et chaque séance de focus le rendent plus heureux</li>
+        <li>Câlins et jeux font monter son bonheur</li>
       </ul>
       <p class="small" style="margin:10px 0 0">Ton koala ne tombe jamais malade et ne disparaît jamais. S'il a faim, il t'attend simplement 💚</p>
     </details>
@@ -838,7 +1033,7 @@
   <!-- RÉGLAGES -->
   <section id="v-settings" class="view">
     <div class="phead"><button class="parrow" id="setBack" aria-label="Retour">‹</button><div class="pdate"><h1>⚙️ Réglages</h1></div><span style="width:40px"></span></div>
-    <div class="card"><h2>👀 Lisibilité et confort d'usage</h2><div id="lookBox"></div></div>
+    <div class="card"><h2>👀 Affichage et confort</h2><div id="lookBox"></div></div>
     <div class="card">
       <h2>🎨 Saison & décor</h2>
       <div class="themechips" id="themeChips"></div>
@@ -918,16 +1113,19 @@
   <!-- PLANNING -->
   <section id="v-plan" class="view">
     <div class="phead"><button class="parrow" id="pPrev" aria-label="Jour précédent">‹</button><div class="pdate"><h1 id="pDate">Planning</h1><button class="chip" id="pToday" hidden>Aujourd'hui</button></div><button class="parrow" id="pNext" aria-label="Jour suivant">›</button></div>
-    <div class="pseg"><button id="pViewD" class="on">📄 Jour</button><button id="pViewW">🗓️ Semaine</button><button id="pViewQ">⚔️ Quêtes</button></div>
+    <div class="pseg"><button id="pViewD" class="on">📄 Jour</button><button id="pViewW">🗓️ Semaine</button><button id="pViewQ">⚔️ Mode jeu</button></div>
     <div class="pweek" id="pWeek"></div>
     <div class="koala-card"><div class="koala idle" id="k-plan"></div><div class="bubble" id="b-plan"></div></div>
     <div class="hint2" id="pLeft" hidden></div>
     <div class="hint2 over" id="pOver" hidden></div>
+    <div id="rechAsk" hidden></div>
     <div class="board" id="board"></div>
     <div class="weekboard" id="weekBoard" hidden></div>
     <div class="questboard" id="questBoard" hidden></div>
-    <div class="row2" style="margin-top:16px"><button class="btn ghost" id="pTpl">📋 Journées types</button><button class="btn ghost" id="pTimer">⏲️ Minuteurs</button><button class="btn ghost" id="pClear">🧹</button></div>
-    <label class="toggle sm" style="margin-top:12px"><input type="checkbox" id="pEst"> 🧮 Horaires estimés pour aujourd'hui (+10 min de marge entre les post-its)</label>
+    <div class="row2" style="margin-top:16px"><button class="btn ghost" id="pTpl">📋 Journées types</button><button class="btn ghost" id="pTimer">⏲️ Minuteurs</button><button class="btn ghost" id="pClear">🧹 Vider</button></div>
+    <div class="row2" style="margin-top:10px"><button class="btn ghost" id="pPlanB">⚡ Imprévu</button><button class="btn ghost" id="pPreview">🔭 Ma semaine</button></div>
+    <button class="btn ghost" id="pClose" hidden style="width:100%;margin-top:10px">🌙 Fermer ma journée</button>
+    <label class="toggle sm" style="margin-top:12px"><input type="checkbox" id="pEst"> 🧮 Afficher une heure estimée (~) sur les post-its sans heure</label>
     <p class="small center" style="margin-top:12px">✋ Garde le doigt appuyé sur un post-it pour le déplacer.<br>Dépose-le sur un autre jour pour le reporter.</p>
   </section>
 
@@ -979,6 +1177,9 @@
     <div class="card"><h2>Humeur</h2><div class="moods" id="moods"></div></div>
     <div class="card"><h2>Énergie</h2><div class="energy" id="energy"></div></div>
     <div class="card"><h2>Ces 7 derniers jours</h2><div class="week" id="week"></div></div>
+    <div class="card"><h2>🧩 Sensoriel et valeurs sûres</h2><div id="sensBox"></div></div>
+    <div class="card"><h2>🪧 Cartes à montrer</h2><div id="cardsBox"></div></div>
+    <div class="card"><h2>🌟 Ma passion</h2><div id="passionBox"></div></div>
     <div class="card">
       <h2>💛 Boîte à fiertés</h2>
       <div id="prides"></div>
@@ -1060,13 +1261,13 @@
     <div class="card">
       <h2>Comment gagner des points</h2>
       <ul class="rules">
-        <li>✅ Priorité terminée : <b>+10</b></li>
-        <li>🌟 Les 3 priorités faites : <b>+20 bonus</b></li>
+        <li>✅ Tâche importante terminée : <b>+10</b></li>
+        <li>🌟 Les 3 tâches importantes faites : <b>+20 bonus</b></li>
         <li>⏳ Séance de focus : <b>+1 par minute</b> (25 min = +25)</li>
         <li>🙂 Humeur notée : <b>+5</b> (une fois par jour)</li>
         <li>🔥 Chaque jour d'affilée : <b>+5</b> par jour de série</li>
         <li>🛡️ 2 jokers par semaine : si tu rates un jour, ta série continue</li>
-        <li>🐾 Étape d'une priorité : <b>+2</b> · Routine terminée : <b>+15</b></li>
+        <li>🐾 Étape d'une tâche importante : <b>+2</b> · Routine terminée : <b>+15</b></li>
       </ul>
     </div>
     <div class="card" id="logCard"><h2>Derniers cadeaux pris</h2><div id="log" class="small"></div></div>
@@ -1097,7 +1298,7 @@
   <div class="kidbody" id="btBody"></div>
 </div>
 <div class="sos-overlay" id="sos" hidden>
-  <div class="sostabs"><button class="stab on" data-t="breath">🌬️ Respirer</button><button class="stab" data-t="ground">🖐️ Ancrage</button><button class="stab" data-t="strat">🧸 Ce qui m'aide</button><button class="stab" data-t="msg">💬 Message</button></div>
+  <div class="sostabs"><button class="stab on" data-t="breath">🌬️ Respirer</button><button class="stab" data-t="ground">🖐️ Ancrage</button><button class="stab" data-t="strat">🧸 Ce qui m'aide</button><button class="stab" data-t="msg">💬 Message</button><button class="stab" data-t="cards">🪧 Cartes</button><button class="stab" data-t="low">🫧 Basse demande</button></div>
   <div class="soskoala" id="sosKoalaWrap"><div id="sosKoala"></div></div>
   <div class="sosbody" id="sosBody"></div>
   <button class="sosclose" id="sosClose">Ça va un peu mieux 💚</button>
@@ -1118,8 +1319,8 @@
     {id:"r5",e:"🛍️",n:"Un petit achat plaisir",c:300}
   ];
   const BADGES = [
-    {id:"first",e:"👣",n:"Premier pas",t:"1re priorité faite"},
-    {id:"trio",e:"🌟",n:"Trio parfait",t:"3 priorités en 1 jour"},
+    {id:"first",e:"👣",n:"Premier pas",t:"1re tâche importante faite"},
+    {id:"trio",e:"🌟",n:"Trio parfait",t:"3 tâches importantes en 1 jour"},
     {id:"focus1",e:"⏳",n:"Concentré·e",t:"1re séance de focus"},
     {id:"focus10",e:"🧠",n:"Cerveau d'acier",t:"10 séances de focus"},
     {id:"streak3",e:"🔥",n:"En feu",t:"3 jours d'affilée"},
@@ -1137,18 +1338,18 @@
 
   /* ---------- Thèmes de saison ---------- */
   const THEMES = {
-    automne:   {e:"🍂", n:"Automne",   amb:"🍂 Vent & feuilles", parts:["🍂","🍁"], sky:"#F3D9B5",
-                msg:["J'adore les feuilles qui craquent 🍂","Un thé chaud et une tâche à la fois ?","L'automne, c'est la saison des plaids 🧣"]},
+    automne:   {e:"🍂", n:"Automne",   amb:"🎐 Carillon doux", parts:["🍂","🍁"], sky:"#F3D9B5",
+                msg:["J'adore les couleurs de l'automne 🍂","Un thé chaud et une tâche à la fois ?","L'automne, c'est la saison des plaids 🧣"]},
     hiver:     {e:"❄️", n:"Hiver",     amb:"🔥 Coin du feu",     parts:["❄️"], sky:"#DCE6F0",
                 msg:["Il fait froid… un chocolat chaud ? ☕","Bien au chaud, on avance doucement ❄️","Même en hiver, tu brilles ✨"]},
     noel:      {e:"🎄", n:"Noël",      amb:"🔔 Grelots & feu",   parts:["❄️","✨"], sky:"#DCE6F0",
-                msg:["Bientôt Noël ! 🎄","Ho ho ho ! On coche une priorité ?","Tu es mon plus beau cadeau 🎁"]},
+                msg:["Bientôt Noël ! 🎄","Ho ho ho ! On coche une tâche importante ?","Tu es mon plus beau cadeau 🎁"]},
     halloween: {e:"🎃", n:"Halloween", amb:"🦉 Nuit d'Halloween", parts:["🦇","🍂"], sky:"#3E3157",
                 msg:["Bouh ! 🎃 … Je rigole, je suis un gentil koala.","Même les fantômes font des pauses 👻","Une tâche, et hop, une friandise ! 🍬"]},
     printemps: {e:"🌸", n:"Printemps", amb:"🐦 Oiseaux",          parts:["🌸"], sky:"#CFE6F2",
                 msg:["Ça sent les fleurs 🌸","Tout repousse, toi aussi tu avances 🌱","Tu entends les oiseaux ? 🐦"]},
     paques:    {e:"🐣", n:"Pâques",    amb:"🐦 Oiseaux",          parts:["🌸","🌼"], sky:"#CFE6F2",
-                msg:["Tu as trouvé des œufs en chocolat ? 🐣","Joyeuses Pâques ! 🥚","Une priorité = un œuf en chocolat ? 🍫"]},
+                msg:["Tu as trouvé des œufs en chocolat ? 🐣","Joyeuses Pâques ! 🥚","Une tâche importante = un œuf en chocolat ? 🍫"]},
     ete:       {e:"☀️", n:"Été",       amb:"🌊 Vagues",           parts:["🦋"], sky:"#BFE3F5",
                 msg:["Pense à boire, il fait chaud ☀️","Un peu d'ombre et on s'y met 🌴","Profite du soleil après ta séance 😎"]}
   };
@@ -1295,7 +1496,18 @@
       '<g transform="translate(20 0)"><g class="k-head">'+head+'</g></g>'+
     '</svg>';
   }
+  // Ton du koala : « doux » (enthousiaste) ou « sobre » (neutre, sans points d'exclamation ni émojis en trop)
+  function sober(msg){
+    if (msg == null || !state.settings || state.settings.tone !== "sobre") return msg;
+    const m = String(msg).match(/^([\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]\uFE0F?\s*)/u), lead = m ? m[1] : "";
+    let t = String(msg).slice(lead.length)
+      .replace(/\s*Je suis (trop |tellement )?fier de toi[^.!?]*[.!]?/gi, "").replace(/Tu gères/gi, "Ça avance").replace(/\b(Bravo|Youpi|Super|Génial|Waouh|Hihi)\b\s*[!,.]?\s*/g, "")
+      .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F000}-\u{1F2FF}]\uFE0F?/gu, "").replace(/\s*!+/g, ".").replace(/\s+([.,])/g, "$1").replace(/\.{2,}/g, ".").replace(/\s{2,}/g, " ").trim();
+    if (t) t = t.charAt(0).toUpperCase() + t.slice(1);
+    return (lead + t).trim();
+  }
   function koala(id, mood, msg, bounce){
+    msg = sober(msg);
     if (id === "focus"){ deskMood = mood; renderDesk(bounce); if (msg != null) document.getElementById("b-focus").textContent = msg; return; }
     const k = document.getElementById("k-"+id), b = document.getElementById("b-"+id);
     if (!k) return;
@@ -1337,7 +1549,8 @@
   }
   rollDay();
 
-  function save(){ try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch(e){} }
+  let syncHook = null;
+  function save(){ if (syncHook) try { syncHook(); } catch(e){ console.error(e); } try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch(e){} }
 
   /* ---------- Effets visuels ---------- */
   function floatText(txt){
@@ -1345,17 +1558,19 @@
     document.body.appendChild(el); setTimeout(() => el.remove(), 1200);
   }
   let toastQ = [], toastOn = false;
-  function toast(txt){ toastQ.push(txt); if (!toastOn) nextToast(); }
+  function toast(txt){ txt = sober(txt); toastQ.push(txt); if (!toastOn) nextToast(); }
   function nextToast(){
-    const txt = toastQ.shift(); if (!txt){ toastOn=false; return; }
+    // Plusieurs messages en attente : regroupés en un seul (3 max)
+    const grp = toastQ.splice(0, 3).filter((x,i,a) => a.indexOf(x) === i), txt = grp.join("\n"); if (!txt){ toastOn=false; return; }
     toastOn = true;
     const el = document.createElement("div"); el.className = "toast"; el.innerHTML = '<span class="koala">'+koalaSVG("happy")+'</span>'; el.appendChild(document.createTextNode(txt));
-    document.body.appendChild(el); setTimeout(() => { el.remove(); nextToast(); }, 3000);
+    document.body.appendChild(el); setTimeout(() => { el.remove(); nextToast(); }, 3000 + 1200*(grp.length-1));
   }
   function confetti(){
     if (state.settings && state.settings.calm) return;
-    const set = ["🌿","⭐","🍃","✨","💚"];
-    for (let i=0;i<22;i++){
+    const quiet = state.settings && state.settings.noSurprise;
+    const set = quiet ? ["🌿","💚"] : ["🌿","⭐","🍃","✨","💚"];
+    for (let i=0;i<(quiet ? 6 : 22);i++){
       const c = document.createElement("div"); c.className = "confetti";
       c.textContent = set[i%set.length];
       c.style.left = Math.random()*100+"vw";
@@ -1369,6 +1584,12 @@
   /* ---------- Points, niveaux, série, badges ---------- */
   const levelOf = xp => Math.floor(xp/100)+1;
   function award(n, label){
+    // Pas de points retirés : si on décoche, on ne perd rien, et recocher ne rapporte pas une 2e fois
+    if (!state.settings.penalty){
+      if (state.creditDay !== todayKey()){ state.credit = 0; state.creditDay = todayKey(); }
+      if (n < 0){ state.credit = (state.credit||0) - n; save(); return; }
+      if (n > 0 && state.credit){ const u = Math.min(n, state.credit); state.credit -= u; n -= u; if (n <= 0){ save(); return; } }
+    }
     const before = levelOf(state.xp);
     state.pts = Math.max(0, state.pts + n);
     state.xp = Math.max(0, state.xp + n);
@@ -1381,11 +1602,17 @@
   function markActive(){
     const t = todayKey();
     if (state.streak.last === t) return;
-    state.streak.n = (state.streak.last === yesterdayKey()) ? state.streak.n+1 : 1;
+    refillJokers();
+    const miss = missedDays();
+    if (state.streak.last && miss === 0) state.streak.n++;
+    else if (state.streak.last && miss <= state.streak.jokers){
+      state.streak.jokers -= miss; state.streak.n++;
+      if (!state.settings.hideStreak) setTimeout(() => toast("🛡️ "+miss+" joker"+(miss>1?"s":"")+" utilisé"+(miss>1?"s":"")+" : ta série continue !"), 900);
+    } else state.streak.n = 1;
     state.streak.last = t;
     if (state.streak.n > 1){
       const bonus = Math.min(5*state.streak.n, 30);
-      setTimeout(() => { toast("🔥 "+state.streak.n+" jours d'affilée ! +"+bonus+" points"); award(bonus); }, 1300);
+      setTimeout(() => { if (!state.settings.hideStreak) toast("🔥 "+state.streak.n+" jours d'affilée ! +"+bonus+" points"); award(bonus); }, 1300);
     }
   }
   function unlock(id){
@@ -1440,7 +1667,7 @@
     if (kTemp && Date.now() < kTemp.until && kTemp.msg) return kTemp.msg;
     if (k.sleeping) return k.energie >= 99 ? n+" est en pleine forme. Tu peux le réveiller ☀️" : "Chut… "+n+" fait dodo 💤";
     if (isNight()) return "Il se fait tard… On va dormir tous les deux ? 🌙";
-    if (k.faim < 30) return k.leaves > 0 ? "J'ai un petit creux… Une feuille d'eucalyptus ? 🍃" : "J'ai faim… Coche une priorité pour gagner une feuille 🍃";
+    if (k.faim < 30) return "J'ai un petit creux… Une feuille d'eucalyptus ? 🍃";
     if (k.energie < 25) return "Je suis fatigué… Une petite sieste ? 💤";
     if (k.bonheur < 30) return "Tu me fais un câlin ? 🤗";
     if (!kIdleMsg || Date.now() - kIdleAt > 45000){
@@ -1451,7 +1678,7 @@
         "On fait une séance de focus ensemble ?",
         "Une petite chose à la fois, d'accord ?",
         "Tu as bu de l'eau aujourd'hui ? 💧",
-        done < 3 ? "Encore "+(3-done)+" priorité"+(3-done>1?"s":"")+" aujourd'hui. Je crois en toi !" : "Toutes tes priorités sont faites, bravo ! 🌟",
+        done < 3 ? "Encore "+(3-done)+" tâche importante"+(3-done>1?"s":"")+" aujourd'hui. Je crois en toi !" : "Toutes tes tâches importantes sont faites, bravo ! 🌟",
         "Pense à respirer un grand coup 🌿"
       ].concat(THEMES[THEME].msg, THEMES[THEME].msg));
     }
@@ -1464,9 +1691,9 @@
     e.style.left = (x==null ? 40+Math.random()*20 : x)+"%"; e.style.top = (y==null ? 50 : y)+"%";
     box.appendChild(e); setTimeout(() => e.remove(), 2200);
   }
+  // Une seule monnaie (⭐) : plus de feuilles à compter. Bien travailler rend juste le koala plus heureux.
   function giveLeaves(n){
-    const k = K(); k.leaves = Math.max(0, (k.leaves||0) + n);
-    if (n > 0){ k.bonheur = clamp(k.bonheur + 4*n); setTimeout(() => floatText("+"+n+" 🍃"), 450); }
+    const k = K(); if (n > 0) k.bonheur = clamp(k.bonheur + 4*n);
     save(); renderKoala();
   }
   function bar(id, v){
@@ -1489,10 +1716,10 @@
     document.getElementById("kStage").textContent = st.n+" · niveau "+levelOf(state.xp);
     document.getElementById("kBubble").textContent = kMessage();
     bar("gFaim", k.faim); bar("gEnergie", k.energie); bar("gBonheur", k.bonheur);
-    document.getElementById("leafCount").textContent = k.leaves||0;
+
     document.getElementById("aSleep").innerHTML = k.sleeping ? "<span>☀️</span>Réveiller" : "<span>💤</span>Dodo";
     document.getElementById("aSleep").classList.toggle("glow", !k.sleeping && (isNight() || k.energie < 25));
-    document.getElementById("aFeed").classList.toggle("glow", !k.sleeping && k.faim < 30 && k.leaves > 0);
+    document.getElementById("aFeed").classList.toggle("glow", !k.sleeping && k.faim < 30);
     document.getElementById("nameBox").style.display = k.name ? "none" : "";
     if (k.sleeping && !zzzTimer) zzzTimer = setInterval(() => fx(pick(["z","Z","z"]), "zzz", 60+Math.random()*8, 44), 1100);
     if (!k.sleeping && zzzTimer){ clearInterval(zzzTimer); zzzTimer = null; }
@@ -1510,8 +1737,7 @@
     const k = K();
     if (k.sleeping) return kReact("sleep", "Chut… il mangera à son réveil.", 1500);
     if (k.faim >= 95) return kReact("happy", "Je n'ai plus faim, merci ! 😊", 1600);
-    if (!k.leaves) return kReact("soft", "Plus de feuilles ! Coche une priorité ou fais un focus pour en gagner 🍃", 3000);
-    k.leaves--; k.faim = clamp(k.faim + 25); k.bonheur = clamp(k.bonheur + 5);
+    k.faim = clamp(k.faim + 25); k.bonheur = clamp(k.bonheur + 5);
     fx("🍃", "feed", 50, 85);
     setTimeout(() => kReact("eat", "Miam miam ! 🍃", 1600), 500);
   }
@@ -1534,64 +1760,75 @@
 
   function renderTop(){
     document.getElementById("ptsPill").textContent = "⭐ "+state.pts;
-    const live = state.streak.last === todayKey() || state.streak.last === yesterdayKey();
-    document.getElementById("streakPill").textContent = "🔥 "+(live ? state.streak.n : 0);
+    document.getElementById("streakPill").textContent = "🔥 "+(streakAlive() ? state.streak.n : 0);
   }
 
   /* ---------- Navigation ---------- */
   const navBtns = document.querySelectorAll("nav button[data-v]");
   function show(v){
+    let goRewards = false;
+    if (v === "today"){ v = "plan"; try { planDay = todayKey(); state.settings.planView = "day"; tabDirty.add("plan"); } catch(e){} }
+    if (v === "rewards"){ v = "koala"; goRewards = true; }
+    if (goRewards) setTimeout(() => { const r = document.getElementById("rewardsIn"); if (r) r.scrollIntoView({behavior:"smooth"}); }, 60);
+    try { renderTab(v); } catch(e){}
     document.querySelectorAll(".view").forEach(s => s.classList.toggle("active", s.id==="v-"+v));
     navBtns.forEach(b => b.classList.toggle("active", b.dataset.v===v));
-    window.scrollTo(0,0);
+    if (!goRewards) window.scrollTo(0,0);
   }
   navBtns.forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
   document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => show(b.dataset.go)));
 
   /* ---------- Aujourd'hui ---------- */
   const prios = document.getElementById("prios"), cheer = document.getElementById("cheer");
+  let addSlotOpen = false;
   function renderToday(msg, bounce){
     document.getElementById("dateLabel").textContent =
       new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"}).replace(/^./,c=>c.toUpperCase());
+    renderEnergy(); renderSocialHint(); renderPaperHint(); renderBdayHint(); renderWishHint();
+    const low = lowDay() && state.showAllDate !== todayKey();
     prios.innerHTML = "";
+    const firstEmpty = state.items.findIndex(x => !x.t || !x.t.trim());
     state.items.forEach((it,i) => {
+      if (low && i > 0) return;
+      if ((!it.t || !it.t.trim()) && !(i === firstEmpty && (addSlotOpen || !state.items.some(x => x.t && x.t.trim())))) return;
+      it.s = it.s || [];
+      const wrap = document.createElement("div"); wrap.className = "pwrap"+(pickedIdx===i?" picked":"");
       const row = document.createElement("div");
       row.className = "prio"+(it.d?" done":"");
+      const sd = it.s.filter(x => x.d).length;
       row.innerHTML = '<span class="num">'+(i+1)+'</span>'+
-        '<input maxlength="80" placeholder="Priorité '+(i+1)+'…" enterkeyhint="done">'+
+        '<input maxlength="80" placeholder="Tâche importante '+(i+1)+'…" enterkeyhint="done">'+
         (it.old && !it.d ? '<span class="tag">d\'hier</span>' : '')+
+        (it.dread && !it.d ? '<span class="tag dread">😬×2</span>' : '')+
+        '<button class="mini" data-a="steps" aria-label="Étapes">'+(it.s.length ? sd+"/"+it.s.length : "🪜<small>Étapes</small>")+'</button>'+
+        (it.d ? "" : '<button class="mini play" data-a="go" aria-label="Lancer">▶</button>')+
         '<button class="check" aria-label="Fait"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>';
       const inp = row.querySelector("input");
       inp.value = it.t;
       inp.addEventListener("input", () => { it.t = inp.value; save(); });
       inp.addEventListener("keydown", e => { if (e.key==="Enter") inp.blur(); });
-      row.querySelector(".check").addEventListener("click", () => {
+      row.querySelector('[data-a="steps"]').addEventListener("click", () => {
         if (!it.t.trim()){ inp.focus(); return; }
-        it.d = !it.d;
-        const filled = state.items.filter(x => x.t.trim());
-        const all = filled.length === 3 && filled.every(x => x.d);
-        if (it.d){
-          markActive(); award(10); giveLeaves(1);
-          buzz(30);
-          if (all && state.bonusDate !== todayKey()){
-            state.bonusDate = todayKey(); unlock("trio"); giveLeaves(2);
-            setTimeout(() => { award(20); confetti(); }, 700);
-            save(); renderToday("Les 3 ! Tu es incroyable. Prends une vraie pause 🌟", true); return;
-          }
-          save(); renderToday(pick(CHEERS), true); return;
-        } else {
-          award(-10); giveLeaves(-1);
-          if (state.bonusDate === todayKey()){ state.bonusDate = null; award(-20); }
-        }
-        save(); renderToday();
+        it.open = !it.open; save(); renderToday();
       });
-      prios.appendChild(row);
+      const go = row.querySelector('[data-a="go"]');
+      if (go) go.addEventListener("click", () => { if (!it.t.trim()){ inp.focus(); return; } askEstimate(i); });
+      row.querySelector(".check").addEventListener("click", () => toggleItem(i));
+      wrap.appendChild(row);
+      if (it.open) wrap.appendChild(stepsPanel(it, i));
+      prios.appendChild(wrap);
     });
-    const filled = state.items.filter(x => x.t.trim()), done = filled.filter(x => x.d).length;
+    if (low && state.items.length > 1){
+      const n = state.items.slice(1).filter(x => x.t.trim() && !x.d).length;
+      if (n){ const p = document.createElement("p"); p.className = "small center"; p.textContent = n+" autre"+(n>1?"s":"")+" tâche importante"+(n>1?"s":"")+" en pause pour aujourd'hui 🌙"; prios.appendChild(p); }
+    }
+    renderIdeas(); renderWait();
+    const vis = low ? state.items.slice(0,1) : state.items;
+    const filled = vis.filter(x => x.t.trim()), done = filled.filter(x => x.d).length;
     let mood = "normal", m;
-    if (!filled.length) m = "Coucou ! Quelles sont tes 3 choses pour aujourd'hui ? Petites, c'est très bien 🌿";
-    else if (done === 0) m = "Laquelle on fait en premier ? Commence par la plus facile.";
-    else if (filled.length === 3 && done === 3){ mood = "happy"; m = "Tout est fait ! Va te reposer, tu l'as bien mérité 💚"; }
+    if (!filled.length) m = low ? "Journée douce : une seule petite chose, ça suffit 🌙" : "Coucou ! Quelles sont tes 3 choses pour aujourd'hui ? Petites, c'est très bien 🌿";
+    else if (done === 0) m = low ? "Une seule chose aujourd'hui. Tu veux la découper en petites étapes ? Touche 🪜 Étapes." : "Laquelle on fait en premier ? Commence par la plus facile.";
+    else if (done === filled.length && filled.length === vis.length){ mood = "happy"; m = low ? "Journée douce réussie ! Repose-toi 💚" : "Tout est fait ! Va te reposer, tu l'as bien mérité 💚"; }
     else { mood = "happy"; m = "Déjà "+done+" de faite"+(done>1?"s":"")+" ! Je suis fier de toi."; }
     koala("today", mood, msg || m, bounce);
   }
@@ -1621,6 +1858,7 @@
   state.focusPrefs = state.focusPrefs || {act:"ordi", min:15, lofi:true, cafe:false, pluie:false, vol:0.6};
   const fp = state.focusPrefs;
   if (fp.saison === undefined) fp.saison = true;
+  delete fp.cafe; delete fp.pluie; delete fp.brun; fp.lofiStyle = fp.lofiStyle || "doux";
   if (!ACTS.find(a => a.id === fp.act)) fp.act = ({ordi:"admin",ecriture:"admin",menage:"salon",creatif:"autre"})[fp.act] || "autre";
   var deskMood = "normal", deskKey = "";
   let total = fp.min*60, remaining = total, endAt = null, startAt = null, elapsedBase = 0, tick = null, running = false, halfDone = false, lastCheck = 0;
@@ -1632,17 +1870,22 @@
 
   /* --- Moteur audio lo-fi (tout est synthétisé, rien n'est téléchargé) --- */
   const Sound = (() => {
-    let ctx = null, master = null, music = null, delay = null, white = null, brown = null, crackleBuf = null, fireBuf = null;
-    let sched = null, nextTime = 0, step = 0, crackle = null, playing = false;
+    let ctx = null, master = null, music = null, delay = null, white = null, brown = null, fireBuf = null;
+    let sched = null, nextTime = 0, step = 0, playing = false;
     const amb = {};
-    const BPM = 72, EIGHTH = 60/BPM/2;
+    // 3 styles de lo-fi, tous sans grésillement ni souffle
+    const STYLES = {doux:{bpm:72, drums:1, mel:.2}, reveur:{bpm:60, drums:0, mel:.28}, jazzy:{bpm:80, drums:1, mel:.3}};
+    const sty = () => STYLES[fp.lofiStyle] || STYLES.doux;
+    let EIGHTH = 60/72/2;
     const PROGS = {
       base: {C:[[53,57,60,64,67],[52,55,59,62,66],[50,53,57,60,64],[48,52,55,59,62]], B:[41,40,38,36], P:[72,74,76,79,81,84]},
       halloween: {C:[[57,60,64,67,71],[53,57,60,64,67],[50,53,57,60,64],[52,56,59,62,65]], B:[45,41,38,40], P:[69,72,74,76,79,81]},
       noel: {C:[[48,52,55,59,62],[57,60,64,67,71],[53,57,60,64,69],[55,59,62,65,69]], B:[36,45,41,43], P:[72,74,76,79,81,84]},
-      ete: {C:[[50,54,57,61,64],[55,59,62,66,69],[52,55,59,62,66],[57,61,64,67,71]], B:[38,43,40,45], P:[74,76,78,81,83,86]}
+      ete: {C:[[50,54,57,61,64],[55,59,62,66,69],[52,55,59,62,66],[57,61,64,67,71]], B:[38,43,40,45], P:[74,76,78,81,83,86]},
+      jazzy: {C:[[50,53,57,60,64],[55,59,62,65,69],[48,52,55,59,62],[57,61,64,67,70]], B:[38,43,36,45], P:[72,74,75,77,79,82]},
+      reveur: {C:[[53,57,60,64,69],[48,52,55,59,64],[50,53,57,60,65],[46,50,53,57,62]], B:[41,36,38,34], P:[72,74,77,79,81,84]}
     };
-    const prog = () => PROGS[THEME] || PROGS.base;
+    const prog = () => fp.lofiStyle === "jazzy" ? PROGS.jazzy : fp.lofiStyle === "reveur" ? PROGS.reveur : (PROGS[THEME] || PROGS.base);
     function bell(m, t, vel){
       [1, 2.76, 5.4].forEach((k,i) => {
         const o = ctx.createOscillator(), g = ctx.createGain(); o.frequency.value = hz(m)*k;
@@ -1685,7 +1928,6 @@
       white = buf(2, d => { for (let i=0;i<d.length;i++) d[i] = Math.random()*2-1; });
       brown = buf(4, d => { let l = 0; for (let i=0;i<d.length;i++){ l = (l + .02*(Math.random()*2-1))/1.02; d[i] = l*3.5; } });
       fireBuf = buf(4, d => { for (let i=0;i<d.length;i++){ d[i] = (Math.random()*2-1)*.02; } for (let i=0;i<d.length;){ i += Math.floor(ctx.sampleRate*(.02+Math.random()*.25)); const amp = .2+Math.random()*.8, len = 80+Math.random()*500; for (let j=0;j<len && i+j<d.length;j++) d[i+j] += (Math.random()*2-1)*amp*Math.exp(-j/(len/4)); } });
-      crackleBuf = buf(3, d => { for (let i=0;i<d.length;i++) d[i] = (Math.random() < .0007 ? (Math.random()*2-1)*.7 : 0) + (Math.random()*2-1)*.012; });
       unlockIOS();
       return true;
     }
@@ -1698,11 +1940,14 @@
       env(g, t, vel, dur, .015); o.start(t); o2.start(t); o.stop(t+dur+.05); o2.stop(t+dur+.05);
       return g;
     }
-    function noise(t, type, f, peak, dur){
-      const s = ctx.createBufferSource(); s.buffer = white;
-      const fl = ctx.createBiquadFilter(); fl.type = type; fl.frequency.value = f; fl.Q.value = .8;
-      const g = ctx.createGain(); s.connect(fl); fl.connect(g); g.connect(music);
-      env(g, t, peak, dur, .003); s.start(t, Math.random()); s.stop(t+dur+.05);
+    function rim(t, peak){
+      const o = ctx.createOscillator(), g = ctx.createGain(); o.type = "triangle";
+      o.frequency.setValueAtTime(330, t); o.frequency.exponentialRampToValueAtTime(190, t+.06);
+      o.connect(g); g.connect(music); env(g, t, peak, .12, .002); o.start(t); o.stop(t+.15);
+    }
+    function tick(t, peak){
+      const o = ctx.createOscillator(), g = ctx.createGain(); o.frequency.value = 3200;
+      o.connect(g); g.connect(music); env(g, t, peak, .03, .001); o.start(t); o.stop(t+.05);
     }
     function kick(t){
       const o = ctx.createOscillator(), g = ctx.createGain();
@@ -1719,10 +1964,12 @@
       }
       if (s === 5 && Math.random() < .6) CHORDS[bar].slice(1,4).forEach((m,i) => ep(m+12, t+i*.02, .022, 1.4));
       if (s === 6){ const b = ctx.createOscillator(), bg = ctx.createGain(); b.frequency.value = hz(BASS[bar]+7); b.connect(bg); bg.connect(music); env(bg, t, .16, .7, .02); b.start(t); b.stop(t+.8); }
-      if (s === 0 || s === 5 || (s === 3 && Math.random() < .3)) kick(t);
-      if (s === 2 || s === 6) noise(t, "bandpass", 1700, .13, .22);
-      if (Math.random() > .12) noise(t, "highpass", 7500, s % 2 ? .025 : .045, .05);
-      if (s % 2 === 0 && Math.random() < .2){
+      if (sty().drums){
+        if (s === 0 || s === 5 || (s === 3 && Math.random() < .3)) kick(t);
+        if (s === 2 || s === 6) rim(t, .07);
+        if (s % 2 === 0) tick(t, .012);
+      }
+      if (s % 2 === 0 && Math.random() < sty().mel){
         const note = PENTA[Math.floor(Math.random()*PENTA.length)];
         if (THEME === "noel") bell(note+12, t, .035);
         else { const g = ep(note, t, .05, 1.8); g.connect(delay); }
@@ -1730,6 +1977,7 @@
     }
     function startLofi(){
       if (sched) return;
+      EIGHTH = 60/sty().bpm/2; delay.delayTime.setValueAtTime(EIGHTH*3, ctx.currentTime);
       nextTime = ctx.currentTime + .15; step = 0;
       sched = setInterval(() => {
         while (nextTime < ctx.currentTime + .3){
@@ -1737,8 +1985,6 @@
           nextTime += EIGHTH; step++;
         }
       }, 60);
-      crackle = ctx.createBufferSource(); crackle.buffer = crackleBuf; crackle.loop = true;
-      const cg = ctx.createGain(); cg.gain.value = .5; crackle.connect(cg); cg.connect(music); crackle.start();
       music.gain.cancelScheduledValues(ctx.currentTime);
       music.gain.setTargetAtTime(1, ctx.currentTime, .6);
     }
@@ -1746,8 +1992,8 @@
       if (!sched) return;
       music.gain.cancelScheduledValues(ctx.currentTime);
       music.gain.setTargetAtTime(0, ctx.currentTime, .4);
-      const s = sched, c = crackle; sched = null; crackle = null;
-      setTimeout(() => { clearInterval(s); try{ c.stop(); }catch(e){} }, 1800);
+      const s = sched; sched = null;
+      setTimeout(() => clearInterval(s), 1800);
     }
     function startSeason(){
       if (amb.saison) return;
@@ -1761,60 +2007,24 @@
       const fire = () => { loop(brown, [filter("lowpass", 300)]).connect(g); const c = loop(fireBuf, [filter("highpass", 900)]); const cg = ctx.createGain(); cg.gain.value = .55; c.connect(cg); cg.connect(g); };
       const wind = (lvl) => { const bp = filter("bandpass", 520, 1.3); const out = loop(white, [bp]); const wg = ctx.createGain(); wg.gain.value = .2*lvl; out.connect(wg); wg.connect(g); lfo(.06, 260, bp.frequency); lfo(.09, .09*lvl, wg.gain); };
       switch (THEME){
-        case "hiver": fire(); wind(.6); break;
+        case "hiver": fire(); break;
         case "noel": fire();
           every(9000, 16000, t => { for (let k=0;k<8;k++) for (let j=0;j<3;j++){ const o = ctx.createOscillator(), og = ctx.createGain(); o.frequency.value = 4800+Math.random()*3500; o.connect(og); og.connect(g); env(og, t+k*.05, .012, .22, .002); o.start(t+k*.05); o.stop(t+k*.05+.3); } });
           break;
-        case "halloween": wind(1);
+        case "halloween":
           every(9000, 17000, t => { tone(430, 370, t, .5, .07); tone(400, 340, t+.65, .6, .06); });
           break;
         case "printemps": case "paques":
           every(1500, 5000, t => { const base = 2600 + Math.random()*1400, n = 2 + Math.floor(Math.random()*3); for (let k=0;k<n;k++){ const tt = t + k*.13; const o = ctx.createOscillator(), og = ctx.createGain(); o.frequency.setValueAtTime(base, tt); o.frequency.linearRampToValueAtTime(base*1.45, tt+.05); o.frequency.linearRampToValueAtTime(base*1.1, tt+.1); o.connect(og); og.connect(g); env(og, tt, .035, .12, .005); o.start(tt); o.stop(tt+.15); } });
           break;
         case "ete": { const out = loop(brown, [filter("lowpass", 850)]); const wg = ctx.createGain(); wg.gain.value = .32; out.connect(wg); wg.connect(g); lfo(.085, .26, wg.gain); } break;
-        default: wind(.55);
-          every(500, 2200, t => { const s = ctx.createBufferSource(); s.buffer = white; const f = filter("highpass", 2800); const og = ctx.createGain(); s.connect(f); f.connect(og); og.connect(g); env(og, t, .025, .18, .01); s.start(t, Math.random()); s.stop(t+.2); });
+        default:
+          every(2500, 6500, t => { const N = [76,79,81,84,86,88], n = 1 + Math.floor(Math.random()*3); for (let k=0;k<n;k++){ const m = N[Math.floor(Math.random()*N.length)], tt = t + k*(.18+Math.random()*.25); [1, 2.76].forEach((r,i) => { const o = ctx.createOscillator(), og = ctx.createGain(); o.frequency.value = hz(m)*r; o.connect(og); og.connect(g); env(og, tt, i ? .006 : .03, i ? .8 : 2.4, .004); o.start(tt); o.stop(tt+2.5); }); } });
       }
       g.gain.setTargetAtTime(.9, ctx.currentTime, .8);
       amb.saison = {g, src:{stop(){ nodes.forEach(n => { try{ n.stop(); }catch(e){} }); }}, stopExtra(){ alive = false; }};
     }
-    function startAmb(name){
-      if (name === "saison") return startSeason();
-      if (amb[name]) return;
-      const src = ctx.createBufferSource(); src.loop = true;
-      const g = ctx.createGain(); g.gain.value = 0; let stopExtra = () => {};
-      if (name === "cafe"){
-        src.buffer = brown;
-        const bp = ctx.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 650; bp.Q.value = .6;
-        const mod = ctx.createGain(); mod.gain.value = .5;
-        const lfo = ctx.createOscillator(); lfo.frequency.value = .23; const lg = ctx.createGain(); lg.gain.value = .25;
-        lfo.connect(lg); lg.connect(mod.gain); lfo.start();
-        src.connect(bp); bp.connect(mod); mod.connect(g);
-        let alive = true;
-        const clink = () => {
-          if (!alive) return;
-          const t = ctx.currentTime, f = 2400 + Math.random()*1800;
-          [1, 2.7].forEach(k => { const o = ctx.createOscillator(), og = ctx.createGain(); o.frequency.value = f*k; o.connect(og); og.connect(g); env(og, t, k===1?.05:.015, .5, .002); o.start(t); o.stop(t+.6); });
-          setTimeout(clink, 3500 + Math.random()*7000);
-        };
-        setTimeout(clink, 2500);
-        stopExtra = () => { alive = false; try{ lfo.stop(); }catch(e){} };
-        g.gain.setTargetAtTime(.55, ctx.currentTime, .8);
-      } else if (name === "brun"){
-        src.buffer = brown;
-        const lp = ctx.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 420;
-        src.connect(lp); lp.connect(g);
-        g.gain.setTargetAtTime(.7, ctx.currentTime, .8);
-      } else {
-        src.buffer = white;
-        const hp = ctx.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 900;
-        const lp = ctx.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 5500;
-        src.connect(hp); hp.connect(lp); lp.connect(g);
-        g.gain.setTargetAtTime(.16, ctx.currentTime, .8);
-      }
-      g.connect(master); src.start();
-      amb[name] = {src, g, stopExtra};
-    }
+    function startAmb(name){ if (name === "saison") startSeason(); }
     function stopAmb(name){
       const a = amb[name]; if (!a) return; delete amb[name];
       a.g.gain.setTargetAtTime(0, ctx.currentTime, .4);
@@ -1823,14 +2033,12 @@
     function apply(){
       if (!ctx || !playing) return;
       fp.lofi ? startLofi() : stopLofi();
-      fp.cafe ? startAmb("cafe") : stopAmb("cafe");
-      fp.pluie ? startAmb("pluie") : stopAmb("pluie");
       fp.saison ? startAmb("saison") : stopAmb("saison");
-      fp.brun ? startAmb("brun") : stopAmb("brun");
     }
     return {
       play(){ if (!init()) return false; playing = true; apply(); return true; },
-      stop(){ if (!ctx) return; playing = false; stopLofi(); stopAmb("cafe"); stopAmb("pluie"); stopAmb("saison"); stopAmb("brun"); setTimeout(() => { if (!playing && silentEl) try{ silentEl.pause(); }catch(e){} }, 2000); },
+      stop(){ if (!ctx) return; playing = false; stopLofi(); stopAmb("saison"); setTimeout(() => { if (!playing && silentEl) try{ silentEl.pause(); }catch(e){} }, 2000); },
+      restyle(){ if (!ctx || !playing || !fp.lofi) return; stopLofi(); setTimeout(() => { if (playing && fp.lofi) startLofi(); }, 1900); },
       reseason(){ if (!ctx) return; stopAmb("saison"); if (playing && fp.saison) startSeason(); },
       apply,
       get playing(){ return playing; },
@@ -2002,7 +2210,20 @@
     if (!sc.noWin){
       let drops = "";
       if (rain) for (let i=0;i<10;i++) drops += '<path class="drop" d="M'+(24+i*7)+' 6l-3 9" style="animation-delay:'+(i*.137).toFixed(2)+'s"/>';
-      win = '<rect x="20" y="16" width="72" height="62" rx="6" fill="'+(rain ? "#B7CCDA" : THEMES[THEME].sky)+'"/>'+
+      const cosy = document.documentElement.classList.contains("cosy"), ph = skyPhase();
+      const SKY = {aube:["#F6B9A6","#FBE3D3"], jour:["#A9D3EE","#E3F1F6"], doree:["#F4A97F","#F7D3B8"], soir:["#7E68B8","#E79FB2"], nuit:["#15133A","#3A2F6B"]};
+      let wsky = "";
+      if (cosy){
+        const c = SKY[ph];
+        wsky = '<linearGradient id="wsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient>';
+      }
+      const skyDeco = !cosy ? "" : (ph === "nuit"
+        ? '<circle cx="78" cy="30" r="6" fill="#FFF3C9"/><circle cx="75" cy="28" r="5" fill="#15133A" opacity=".9"/>'+[[30,26],[44,22],[38,38],[62,24],[28,44],[52,34]].map(([x,y]) => '<circle class="wstar" cx="'+x+'" cy="'+y+'" r=".9" fill="#fff"/>').join("")
+        : ph === "soir" || ph === "doree" ? '<circle cx="74" cy="58" r="9" fill="#FFD9A8" opacity=".9"/>' : '<circle cx="76" cy="30" r="7" fill="#FFF6D8" opacity=".9"/>')+
+        '<path d="M20 78v-14h8v-8h7v12h6v-16h8v18h7v-10h9v10h6v-6h7v14z" fill="'+(ph === "nuit" ? "#0E0C26" : ph === "soir" ? "#5A4A86" : "#B8C3D6")+'" opacity="'+(ph === "nuit" ? 1 : .55)+'"/>'+
+        (ph === "nuit" ? '<g fill="#FFD98E"><rect x="23" y="68" width="2" height="2"/><rect x="38" y="64" width="2" height="2"/><rect x="51" y="62" width="2" height="2"/><rect x="66" y="70" width="2" height="2"/><rect x="80" y="72" width="2" height="2"/></g>' : "");
+      win = (wsky ? '<defs>'+wsky+'</defs>' : "")+'<rect x="20" y="16" width="72" height="62" rx="6" fill="'+(rain ? "#B7CCDA" : cosy ? "url(#wsky)" : THEMES[THEME].sky)+'"/>'+
+        (skyDeco ? '<g clip-path="url(#win)">'+skyDeco+'</g>' : "")+
         '<g clip-path="url(#win)">'+ds.win+'</g><g clip-path="url(#win)" stroke="#7FA6BE" stroke-width="2" stroke-linecap="round">'+drops+'</g>'+
         '<rect x="20" y="16" width="72" height="62" rx="6" fill="none" stroke="#fff" stroke-width="4"/><path d="M56 16v62M20 47h72" stroke="#fff" stroke-width="3"/>';
       if (THEME === "noel"){
@@ -2012,16 +2233,18 @@
       }
     }
     const shelf = sc.noShelf ? "" : '<path d="M226 30h50M232 30v-8M270 30v-8" stroke="#C9A27E" stroke-width="3" stroke-linecap="round"/>'+ds.shelf;
+    const night = document.documentElement.classList.contains("cosy") && (skyPhase() === "nuit" || skyPhase() === "soir");
+    const glow = night ? '<defs><radialGradient id="lglow"><stop offset="0" stop-color="#FFD58A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD58A" stop-opacity="0"/></radialGradient></defs><circle cx="250" cy="70" r="90" fill="url(#lglow)"/>' : "";
     return '<svg viewBox="0 0 300 194" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+
       '<defs><clipPath id="win"><rect x="20" y="16" width="72" height="62" rx="6"/></clipPath>'+(sc.defs||"")+'</defs>'+
-      (sc.bg||"") + win + shelf + garland + (sc.back||"") +
+      (sc.bg||"") + (night ? '<rect width="300" height="194" fill="#1B1740" opacity=".5"/>' : "") + glow + win + shelf + garland + (sc.back||"") +
       '<g class="k-body"><ellipse cx="150" cy="150" rx="52" ry="42" fill="#B0B9C3"/><ellipse cx="150" cy="160" rx="32" ry="28" fill="#DCE1E6"/></g>'+
       head + (sc.front||"") + (sc.paws||"") + (sc.over||"") +
       '</svg>';
   }
   function renderDesk(bounce){
     const d = document.getElementById("desk"); if (!d) return;
-    const rain = fp.pluie && Sound.playing;
+    const rain = false;
     const key = fp.act+"|"+deskMood+"|"+rain+"|"+THEME;
     if (key !== deskKey){ d.innerHTML = deskSVG(fp.act, deskMood, rain); deskKey = key; }
     d.classList.toggle("running", running);
@@ -2053,11 +2276,20 @@
   document.getElementById("actGrid").hidden = true;
   function renderAmb(){
     const el = document.getElementById("ambChips"); el.innerHTML = "";
-    [["lofi","🎵 Lo-fi"],["saison",THEMES[THEME].amb],["cafe","☕ Café"],["pluie","🌧️ Pluie"],["brun","🟤 Bruit brun"]].forEach(([k,l]) => {
+    [["lofi","🎵 Lo-fi"],["saison",THEMES[THEME].amb]].forEach(([k,l]) => {
       const b = document.createElement("button"); b.className = "chip"+(fp[k]?" on":""); b.textContent = l;
       b.addEventListener("click", () => { fp[k] = !fp[k]; save(); renderAmb(); Sound.apply(); renderDesk(); });
       el.appendChild(b);
     });
+    if (fp.lofi){
+      const row = document.createElement("div"); row.className = "lofiStyles"; row.style.cssText = "display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;width:100%";
+      [["doux","☕ Doux"],["reveur","🌙 Rêveur (sans batterie)"],["jazzy","🎷 Jazzy"]].forEach(([k,l]) => {
+        const b = document.createElement("button"); b.className = "chip"+((fp.lofiStyle||"doux")===k?" on":""); b.textContent = l;
+        b.addEventListener("click", () => { fp.lofiStyle = k; save(); renderAmb(); Sound.restyle(); });
+        row.appendChild(b);
+      });
+      el.appendChild(row);
+    }
     document.getElementById("ambBtn").textContent = Sound.playing ? "⏸ Couper l'ambiance" : "▶ Écouter l'ambiance";
   }
   document.getElementById("testBtn").addEventListener("click", () => {
@@ -2169,7 +2401,7 @@
     if (isFree()) startAt = Date.now();
     else { if (remaining <= 0) remaining = total; endAt = Date.now() + remaining*1000; }
     running = true; lastCheck = Date.now(); setSession(true);
-    if (!Sound.playing && (fp.lofi || fp.cafe || fp.pluie || fp.saison || fp.brun)) Sound.play();
+    if (!Sound.playing && (fp.lofi || fp.saison)) Sound.play();
     Sound.duck(false); renderAmb();
     startBtn.textContent = "Pause";
     koala("focus","focus", pick(act().m), true);
@@ -2348,26 +2580,6 @@
   }
   function missedDays(){ const l = state.streak.last; if (!l) return Infinity; return Math.max(0, daysBetween(l, todayKey()) - 1); }
   function streakAlive(){ refillJokers(); const l = state.streak.last; if (!l) return false; return l === todayKey() || missedDays() <= (state.streak.jokers||0); }
-  markActive = function(){
-    const t = todayKey();
-    if (state.streak.last === t) return;
-    refillJokers();
-    const miss = missedDays();
-    if (state.streak.last && miss === 0) state.streak.n++;
-    else if (state.streak.last && miss <= state.streak.jokers){
-      state.streak.jokers -= miss; state.streak.n++;
-      setTimeout(() => toast("🛡️ "+miss+" joker"+(miss>1?"s":"")+" utilisé"+(miss>1?"s":"")+" : ta série continue !"), 900);
-    } else state.streak.n = 1;
-    state.streak.last = t;
-    if (state.streak.n > 1){
-      const bonus = Math.min(5*state.streak.n, 30);
-      setTimeout(() => { toast("🔥 "+state.streak.n+" jours d'affilée ! +"+bonus+" points"); award(bonus); }, 1300);
-    }
-  };
-  renderTop = function(){
-    document.getElementById("ptsPill").textContent = "⭐ "+state.pts;
-    document.getElementById("streakPill").textContent = "🔥 "+(streakAlive() ? state.streak.n : 0);
-  };
 
   /* ---------- Micro-étapes ---------- */
   const STEP_IDEAS = [
@@ -2401,7 +2613,7 @@
     }
     const lbl = ["","🪫 basse","🔋 moyenne","⚡ haute"][m.e];
     box.innerHTML = lowDay()
-      ? '<div class="ebox low"><b>🌙 Journée douce</b><p>Énergie '+lbl+' : on vise <b>une seule priorité</b>. Si tu la fais, c\'est une journée réussie 💚</p><button class="linkbtn" id="showAll">'+(state.showAllDate===todayKey()?"Masquer les 2 autres":"Afficher quand même les 3")+'</button> · <button class="linkbtn" id="chgE">changer</button></div>'
+      ? '<div class="ebox low"><b>🌙 Journée douce</b><p>Énergie '+lbl+' : on vise <b>une seule tâche importante</b>. Si tu la fais, c\'est une journée réussie 💚</p><button class="linkbtn" id="showAll">'+(state.showAllDate===todayKey()?"Masquer les 2 autres":"Afficher quand même les 3")+'</button> · <button class="linkbtn" id="chgE">changer</button></div>'
       : '<div class="eline">Énergie '+lbl+' · <button class="linkbtn" id="chgE">changer</button></div>';
     const sa = document.getElementById("showAll");
     if (sa) sa.addEventListener("click", () => { state.showAllDate = state.showAllDate === todayKey() ? null : todayKey(); save(); renderToday(); });
@@ -2410,55 +2622,6 @@
 
   /* ---------- Aujourd'hui (réécrit) ---------- */
   let pickedIdx = null;
-  renderToday = function(msg, bounce){
-    document.getElementById("dateLabel").textContent =
-      new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"}).replace(/^./,c=>c.toUpperCase());
-    renderEnergy(); renderSocialHint(); renderPaperHint(); renderBdayHint(); renderWishHint();
-    const low = lowDay() && state.showAllDate !== todayKey();
-    prios.innerHTML = "";
-    state.items.forEach((it,i) => {
-      if (low && i > 0) return;
-      it.s = it.s || [];
-      const wrap = document.createElement("div"); wrap.className = "pwrap"+(pickedIdx===i?" picked":"");
-      const row = document.createElement("div");
-      row.className = "prio"+(it.d?" done":"");
-      const sd = it.s.filter(x => x.d).length;
-      row.innerHTML = '<span class="num">'+(i+1)+'</span>'+
-        '<input maxlength="80" placeholder="Priorité '+(i+1)+'…" enterkeyhint="done">'+
-        (it.old && !it.d ? '<span class="tag">d\'hier</span>' : '')+
-        (it.dread && !it.d ? '<span class="tag dread">😬×2</span>' : '')+
-        '<button class="mini" data-a="steps" aria-label="Étapes">'+(it.s.length ? sd+"/"+it.s.length : "☰")+'</button>'+
-        (it.d ? "" : '<button class="mini play" data-a="go" aria-label="Lancer">▶</button>')+
-        '<button class="check" aria-label="Fait"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>';
-      const inp = row.querySelector("input");
-      inp.value = it.t;
-      inp.addEventListener("input", () => { it.t = inp.value; save(); });
-      inp.addEventListener("keydown", e => { if (e.key==="Enter") inp.blur(); });
-      row.querySelector('[data-a="steps"]').addEventListener("click", () => {
-        if (!it.t.trim()){ inp.focus(); return; }
-        it.open = !it.open; save(); renderToday();
-      });
-      const go = row.querySelector('[data-a="go"]');
-      if (go) go.addEventListener("click", () => { if (!it.t.trim()){ inp.focus(); return; } askEstimate(i); });
-      row.querySelector(".check").addEventListener("click", () => toggleItem(i));
-      wrap.appendChild(row);
-      if (it.open) wrap.appendChild(stepsPanel(it, i));
-      prios.appendChild(wrap);
-    });
-    if (low && state.items.length > 1){
-      const n = state.items.slice(1).filter(x => x.t.trim() && !x.d).length;
-      if (n){ const p = document.createElement("p"); p.className = "small center"; p.textContent = n+" autre"+(n>1?"s":"")+" priorité"+(n>1?"s":"")+" en pause pour aujourd'hui 🌙"; prios.appendChild(p); }
-    }
-    renderIdeas(); renderWait();
-    const vis = low ? state.items.slice(0,1) : state.items;
-    const filled = vis.filter(x => x.t.trim()), done = filled.filter(x => x.d).length;
-    let mood = "normal", m;
-    if (!filled.length) m = low ? "Journée douce : une seule petite chose, ça suffit 🌙" : "Coucou ! Quelles sont tes 3 choses pour aujourd'hui ? Petites, c'est très bien 🌿";
-    else if (done === 0) m = low ? "Une seule chose aujourd'hui. Tu veux la découper en petites étapes ? ☰" : "Laquelle on fait en premier ? Commence par la plus facile.";
-    else if (done === filled.length && filled.length === vis.length){ mood = "happy"; m = low ? "Journée douce réussie ! Repose-toi 💚" : "Tout est fait ! Va te reposer, tu l'as bien mérité 💚"; }
-    else { mood = "happy"; m = "Déjà "+done+" de faite"+(done>1?"s":"")+" ! Je suis fier de toi."; }
-    koala("today", mood, msg || m, bounce);
-  };
   function toggleItem(i, silent){
     const it = state.items[i];
     if (!it.t.trim()) return;
@@ -2511,7 +2674,7 @@
   document.getElementById("diceBtn").addEventListener("click", () => {
     const low = lowDay() && state.showAllDate !== todayKey();
     const c = state.items.map((x,i) => ({x,i})).filter(o => o.x.t.trim() && !o.x.d && (!low || o.i === 0));
-    if (!c.length){ koala("today","normal","Ajoute d'abord une priorité, et je choisirai pour toi 🎲", true); return; }
+    if (!c.length){ koala("today","normal","Ajoute d'abord une tâche importante, et je choisirai pour toi 🎲", true); return; }
     const o = pick(c); pickedIdx = o.i;
     const st = (o.x.s||[]).find(s => !s.d);
     renderToday("🎲 On commence par : « "+(st ? st.t : o.x.t)+" ». Juste 2 minutes ?", true);
@@ -2526,12 +2689,12 @@
     box.innerHTML = state.ideas.length ? "" : '<p class="small">Rien pour l\'instant. Pendant une séance, touche 💭 pour noter une pensée sans perdre le fil.</p>';
     state.ideas.forEach((idea, j) => {
       const r = document.createElement("div"); r.className = "idea";
-      r.innerHTML = '<span>'+esc(idea.t)+'</span><button class="mini" data-a="s" aria-label="Vers les courses">🛒</button><button class="mini" data-a="p">→ Priorité</button><button class="del" aria-label="Supprimer">✕</button>';
+      r.innerHTML = '<span>'+esc(idea.t)+'</span><button class="mini" data-a="s" aria-label="Vers les courses">🛒</button><button class="mini" data-a="p">→ Tâche importante</button><button class="del" aria-label="Supprimer">✕</button>';
       r.querySelector('[data-a="s"]').addEventListener("click", () => { addShop(idea.t); state.ideas.splice(j,1); save(); renderIdeas(); renderShop(); toast("🛒 Ajouté aux courses"); });
       r.querySelector('[data-a="p"]').addEventListener("click", () => {
         const slot = state.items.findIndex(x => !x.t.trim());
-        if (slot < 0){ toast("Tes 3 priorités sont pleines : garde l'idée pour demain 🌙"); return; }
-        state.items[slot] = {t:idea.t, d:false, s:[]}; state.ideas.splice(j,1); save(); renderToday("Idée transformée en priorité ✨", true);
+        if (slot < 0){ toast("Tes 3 tâches importantes sont pleines : garde l'idée pour demain 🌙"); return; }
+        state.items[slot] = {t:idea.t, d:false, s:[]}; state.ideas.splice(j,1); save(); renderToday("Idée transformée en tâche importante ✨", true);
       });
       r.querySelector(".del").addEventListener("click", () => { snap("🗑️ Idée supprimée"); state.ideas.splice(j,1); save(); renderIdeas(); });
       box.appendChild(r);
@@ -2541,7 +2704,7 @@
     e.preventDefault(); const i = document.getElementById("ideaIn"); const v = i.value.trim(); if (!v) return; i.value = ""; addIdea(v);
   });
   function ideaSheet(){
-    openSheet('<h2>💭 Parking à idées</h2><p class="small">Note-la vite, elle t\'attendra dans l\'onglet Tâches. Puis on reprend.</p><textarea id="qIdea" rows="3" maxlength="120" placeholder="Ex. : appeler maman, acheter du lait…"></textarea><button class="btn primary" id="qSave" style="width:100%">Garder pour plus tard</button>', card => {
+    openSheet('<h2>💭 Parking à idées</h2><p class="small">Note-la vite, elle t\'attendra dans le Parking à idées (Planning). Puis on reprend.</p><textarea id="qIdea" rows="3" maxlength="120" placeholder="Ex. : appeler maman, acheter du lait…"></textarea><button class="btn primary" id="qSave" style="width:100%">Garder pour plus tard</button>', card => {
       const ta = card.querySelector("#qIdea"); ta.focus();
       card.querySelector("#qSave").addEventListener("click", () => { const v = ta.value.trim(); if (v){ addIdea(v); toast("💭 Idée gardée au chaud"); } closeSheet(); });
     });
@@ -2797,7 +2960,11 @@
   function timeHooks(){
     if (!running) return;
     // Alerte douce avant la fin
-    if (!isFree() && !warned){
+    if (!isFree() && state.settings.trans !== false){
+      const T = [[600,"Encore 10 minutes. Tu peux commencer à ralentir 🌿"],[300,"Encore 5 minutes. Prépare-toi doucement à finir 🌿"],[60,"Encore 1 minute. On termine la phrase en cours ⏳"]];
+      if (warned === true || warned === false) warned = {};
+      T.forEach(([t,msg]) => { if (total > t + 60 && remaining <= t && !warned[t]){ warned[t] = 1; Object.keys(warned).forEach(k => { if (Number(k) > t) warned[k] = 1; }); Sound.softBell(); koala("focus","focus",msg); } });
+    } else if (!isFree() && !warned){
       if (total >= 600 && remaining <= 300){ warned = true; Sound.softBell(); koala("focus","focus","Encore 5 minutes. Prépare-toi doucement à finir 🌿"); }
       else if (total >= 180 && total < 600 && remaining <= 60){ warned = true; Sound.softBell(); koala("focus","focus","Encore 1 minute ⏳"); }
     }
@@ -2953,8 +3120,8 @@
     const undone = state.items.filter(x => x.t.trim() && !x.d).map(x => x.t);
     openSheet('<h2>🌙 Bilan du soir</h2><p class="small">Une minute, pas plus. Tu peux laisser des cases vides.</p>'+
       '<label class="fl2">💛 Une chose dont je suis fier·e aujourd\'hui<input id="bP" maxlength="100" placeholder="Même tout petit !"></label>'+
-      '<p class="fl2" style="margin-bottom:4px">📝 Mes 3 priorités pour '+(target === todayKey() ? "aujourd'hui" : "demain")+'</p>'+
-      [0,1,2].map(i => '<input class="bT" maxlength="80" placeholder="Priorité '+(i+1)+'" value="'+esc(pre[i]||"")+'">').join("")+
+      '<p class="fl2" style="margin-bottom:4px">📝 Mes 3 tâches importantes pour '+(target === todayKey() ? "aujourd'hui" : "demain")+'</p>'+
+      [0,1,2].map(i => '<input class="bT" maxlength="80" placeholder="Tâche importante '+(i+1)+'" value="'+esc(pre[i]||"")+'">').join("")+
       (undone.length ? '<p class="small">Pas fini aujourd\'hui : '+undone.map(esc).join(", ")+'. Ce qui ne tient pas dans les 3 ira au parking à idées.</p>' : "")+
       '<button class="btn primary" id="bOk" style="width:100%;margin-top:10px">Bonne nuit 🌙</button>', card => {
       card.querySelector("#bOk").onclick = () => {
@@ -3252,6 +3419,7 @@
     const board = document.getElementById("board"); if (!board) return;
     applyRecur(planDay); for (let i=0;i<8;i++){ const d = new Date(); d.setDate(d.getDate()+i); applyRecur(dayKey(d)); }
     save(); renderOverload();
+    if (!state.estOffV1){ state.settings.planEst = false; state.estOffV1 = true; save(); }
     document.getElementById("pEst").checked = !!state.settings.planEst;
     // En-tête
     document.getElementById("pDate").textContent = fmtDay(planDay, true);
@@ -3284,10 +3452,18 @@
     const l = dayList(planDay), nx = nextPostit(), est = estTimes();
     board.className = "board pzone"; board.dataset.day = planDay;
     board.innerHTML = "";
-    l.forEach(p => board.appendChild(postitEl(p, p === nx, est[p.id])));
+    l.filter(p => !p.done).forEach(p => board.appendChild(postitEl(p, p === nx, est[p.id])));
     const add = document.createElement("button"); add.className = "postit add"; add.innerHTML = '<span>＋</span>Nouveau post-it';
     add.onclick = () => editPostit(null);
     board.appendChild(add);
+    const dn = l.filter(p => p.done);
+    if (dn.length){
+      const g = document.createElement("details"); g.className = "donegrp"; g.open = !!state.showDone;
+      g.innerHTML = '<summary>✓ '+dn.length+' fait'+(dn.length>1?"s":"")+' <span class="small">· touche pour '+(g.open ? "replier" : "voir")+'</span></summary>';
+      const gb = document.createElement("div"); gb.className = "board"; dn.forEach(p => gb.appendChild(postitEl(p, false, null))); g.appendChild(gb);
+      g.addEventListener("toggle", () => { state.showDone = g.open; save(); g.querySelector("summary .small").textContent = "· touche pour "+(g.open ? "replier" : "voir"); });
+      board.appendChild(g);
+    }
     renderWeekView(mon); renderQuests();
     // Koala
     const done = l.filter(x => x.done).length;
@@ -3333,7 +3509,7 @@
     const tl = hmLabel(p);
     el.innerHTML = (isNext ? '<span class="pnext">👉 Maintenant</span>' : "")+
       (p.time ? '<span class="ptime">'+tl+'</span>' : est != null ? '<span class="ptime est">~'+Math.floor(est/60)%24+'h'+pad(est%60)+(p.dur ? " · "+fmtMin(p.dur) : "")+'</span>' : (tl ? '<span class="ptime">'+tl+'</span>' : ""))+
-      (p.rid ? '<span class="prec">🔁</span>' : "")+
+      (p.rid ? '<span class="prec">🔁</span>' : "")+(p.star ? '<span class="pstar" title="Tâche importante">⭐</span>' : "")+
       '<div class="ptext">'+p.t.split("\n").map(esc).join("<br>")+'</div>'+
       '<button class="pcheck" aria-label="Fait">'+(p.done?"✓":"")+'</button>';
     el.querySelector(".pcheck").addEventListener("click", e => { e.stopPropagation(); togglePostit(p); });
@@ -3438,6 +3614,7 @@
       '<textarea id="peT" rows="3" maxlength="140" placeholder="Ex. : Douche\n– moi\n– les enfants">'+esc(cur.t)+'</textarea>'+
       '<div class="pcols">'+Object.entries(PCOL).map(([k,v]) => '<button class="pcol'+(k===c?" on":"")+'" data-c="'+k+'" style="background:'+v+'" aria-label="'+k+'"></button>').join("")+'</div>'+
       '<label class="fl">⏰ Heure (optionnel) <span><input type="time" id="peH" value="'+(cur.time||"")+'"> <button class="linkbtn" id="peHx">✕</button></span></label>'+
+      (isSomeday(planDay) ? "" : '<button class="chip'+(cur.star ? " on" : "")+'" id="peS" style="margin-top:10px">⭐ Tâche importante du jour</button>')+
       '<p class="small" style="margin:10px 0 6px">⏱️ Durée</p><div class="estchips" id="peD">'+durs.map(m => '<button class="chip'+(m===dur?" on":"")+'" data-m="'+m+'">'+(m ? fmtMin(m) : "—")+'</button>').join("")+'</div>'+
       (isSomeday(planDay) ? "" : '<label class="fl" style="margin-top:12px">🔁 Répéter <select id="peR" class="sel" style="flex:none;width:60%">'+RULES.map(r => '<option value="'+r[0]+'">'+(r[0]==="dow" ? "Chaque "+dateOf(planDay).toLocaleDateString("fr-FR",{weekday:"long"}) : r[1])+'</option>').join("")+'</select></label>')+
       (!isNew && cur.time ? '<button class="btn ghost" id="peBack" style="width:100%;margin-top:10px">⏪ Préparer le départ (étapes avant '+hmLabel(cur)+')</button>' : "")+
@@ -3459,11 +3636,17 @@
       card.querySelectorAll(".pcol").forEach(b => b.onclick = () => { c = b.dataset.c; card.querySelectorAll(".pcol").forEach(x => x.classList.toggle("on", x === b)); });
       card.querySelectorAll("#peD [data-m]").forEach(b => b.onclick = () => { dur = Number(b.dataset.m); card.querySelectorAll("#peD [data-m]").forEach(x => x.classList.toggle("on", x === b)); });
       card.querySelector("#peHx").onclick = () => { card.querySelector("#peH").value = ""; };
-      const collect = () => { const t = ta.value.trim(); if (!t) return null; const o = {t, c, dur:dur||undefined, time:card.querySelector("#peH").value || undefined}; return o; };
+      let star = !!cur.star; const sb = card.querySelector("#peS");
+      if (sb) sb.onclick = () => {
+        const n = dayList(planDay).filter(x => x.star && x !== p).length;
+        if (!star && n >= 3){ toast("⭐ 3 tâches importantes maximum. Retire une étoile d'abord."); return; }
+        star = !star; sb.classList.toggle("on", star);
+      };
+      const collect = () => { const t = ta.value.trim(); if (!t) return null; const o = {t, c, dur:dur||undefined, time:card.querySelector("#peH").value || undefined, star:star||undefined}; return o; };
       card.querySelector("#peOk").onclick = () => {
         const o = collect(); if (!o){ ta.focus(); return; }
         let pp = p;
-        if (isNew){ pp = P(o.t, o); dayList(planDay).push(pp); } else Object.assign(p, o, {dur:o.dur, time:o.time});
+        if (isNew){ pp = P(o.t, o); dayList(planDay).push(pp); } else Object.assign(p, o, {dur:o.dur, time:o.time, star:o.star});
         applyRule(pp, o);
         save(); closeSheet(); renderPlan();
       };
@@ -3475,7 +3658,7 @@
         if (a === "up" && i > 0){ l.splice(i,1); l.splice(i-1,0,p); }
         if (a === "down" && i < l.length-1){ l.splice(i,1); l.splice(i+1,0,p); }
         if (a === "dup"){ l.splice(i+1, 0, P(p.t, {c:p.c, time:p.time, dur:p.dur})); }
-        if (a === "del"){ snap("🗑️ Post-it supprimé"); skipRecur(p, planDay); l.splice(i,1); save(); closeSheet(); renderPlan(); toast("🗑️ Post-it décollé"); return; }
+        if (a === "del"){ snap("🗑️ Post-it supprimé"); if (p.rech){ const par = l.find(x => x.id === p.rech); if (par) par.noRecharge = true; } else l.forEach(x => { if (x.rech === p.id) x.rech = "x"; }); skipRecur(p, planDay); l.splice(i,1); save(); closeSheet(); renderPlan(); toast("🗑️ Post-it décollé"); return; }
         if (a === "moveTo"){ save(); reportSheet(p); return; }
         save(); renderPlan();
       });
@@ -3647,15 +3830,29 @@
     "💼 Bureau":["Papiers","Surface du bureau","Tiroirs","Câbles","Poubelle"],
     "🧸 Chambre enfant":["Jouets par terre","Lit","Vêtements","Bureau","Étagères"]
   };
-  function shrinkPhoto(file, cb){
-    const r = new FileReader();
-    r.onload = () => { const img = new Image(); img.onload = () => {
-      const s = Math.min(1, 520/Math.max(img.width, img.height)), c = document.createElement("canvas");
-      c.width = Math.round(img.width*s); c.height = Math.round(img.height*s); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
-      cb(c.toDataURL("image/jpeg", .6));
-    }; img.src = r.result; };
-    r.readAsDataURL(file);
+  // Photos très allégées : 360 px max, JPEG compressé (≈ 15 Ko au lieu de plusieurs Mo)
+  const PH_MAX = 360, PH_Q = .5;
+  function shrinkSrc(src, cb){
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, PH_MAX/Math.max(img.width, img.height)), c = document.createElement("canvas");
+      c.width = Math.round(img.width*k); c.height = Math.round(img.height*k); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      cb(c.toDataURL("image/jpeg", PH_Q));
+    };
+    img.onerror = () => cb(null);
+    img.src = src;
   }
+  function shrinkPhoto(file, cb){ const r = new FileReader(); r.onload = () => shrinkSrc(r.result, url => url && cb(url)); r.readAsDataURL(file); }
+  // Allège les photos déjà enregistrées, et ne garde les photos que du dernier chantier terminé
+  (function slimPhotos(){
+    const list = state.chantiers || []; let changed = false;
+    const ended = list.filter(c => c.end), keep = ended[ended.length-1];
+    ended.forEach(c => { if (c !== keep && (c.before || c.after)){ delete c.before; delete c.after; changed = true; } });
+    list.forEach(c => ["before","after"].forEach(k => {
+      if (c[k] && c[k].length > 30000) shrinkSrc(c[k], url => { if (url && url.length < c[k].length){ c[k] = url; save(); } });
+    }));
+    if (changed) save();
+  })();
   function renderChantier(){
     const box = document.getElementById("chantier"); if (!box) return;
     const ch = state.chantiers.find(c => !c.end);
@@ -3678,7 +3875,7 @@
     box.querySelectorAll("[data-go]").forEach(b => b.onclick = () => startFocus({minutes:10, act:guessAct(ch.room) || "salon"}));
     document.getElementById("chZ").onsubmit = e => { e.preventDefault(); const v = e.target.querySelector("input").value.trim(); if (v){ ch.zones.push({n:v, d:false}); save(); renderChantier(); } };
     box.querySelectorAll("[data-ph]").forEach(inp => inp.onchange = () => { const f = inp.files[0]; if (!f) return; shrinkPhoto(f, url => { ch[inp.dataset.ph] = url; save(); renderChantier(); }); });
-    document.getElementById("chEnd").onclick = () => { ch.end = todayKey(); award(30); giveLeaves(3); confetti(); logEvent("extra", "🏁 Chantier "+ch.room); state.chantiers = state.chantiers.filter(c => !c.end || c === ch).slice(-3); save(); renderChantier(); toast("🏁 Chantier terminé ! +30 ⭐ Regarde le avant/après !"); };
+    document.getElementById("chEnd").onclick = () => { ch.end = todayKey(); award(30); giveLeaves(3); confetti(); logEvent("extra", "🏁 Chantier "+ch.room); state.chantiers.forEach(c => { if (c.end && c !== ch){ delete c.before; delete c.after; } }); state.chantiers = state.chantiers.filter(c => !c.end || c === ch).slice(-3); save(); renderChantier(); toast("🏁 Chantier terminé ! +30 ⭐ Regarde le avant/après !"); };
     document.getElementById("chDel").onclick = () => { state.chantiers = state.chantiers.filter(c => c !== ch); save(); renderChantier(); };
   }
   function newChantier(){
@@ -4091,7 +4288,7 @@
   OUTFITS.arc = {slot:"head", e:"🌈", n:"Arc-en-ciel", rare:true, svg:'<path d="M26 34a34 26 0 0 1 68 0" stroke="#E25D5D" stroke-width="5" fill="none"/><path d="M32 34a28 20 0 0 1 56 0" stroke="#F2C94C" stroke-width="5" fill="none"/><path d="M38 34a22 14 0 0 1 44 0" stroke="#5FAE86" stroke-width="5" fill="none"/><path d="M44 34a16 9 0 0 1 32 0" stroke="#6C8FB8" stroke-width="5" fill="none"/>'};
   function maybeChest(){
     const c = state.chestDay && state.chestDay.d === todayKey() ? state.chestDay : (state.chestDay = {d:todayKey(), n:0});
-    if (c.n >= 3 || Math.random() > .15) return;
+    if (state.settings.noSurprise || c.n >= 3 || Math.random() > .15) return;
     c.n++; save();
     setTimeout(() => openSheet('<div class="chest"><div class="chestbox" id="chB">🎁</div><h2 style="text-align:center">Un coffre surprise !</h2><p class="small center">Ton koala l\'a trouvé pendant que tu travaillais.</p><button class="btn primary" id="chO" style="width:100%">Ouvrir</button></div>', card => {
       card.querySelector("#chO").onclick = () => {
@@ -4101,7 +4298,7 @@
           let txt;
           if (r < .05 && rare.length){ const k = pick(rare); W.owned.push(k); W[OUTFITS[k].slot] = k; txt = OUTFITS[k].e+" Tenue rare : "+OUTFITS[k].n+" ! Ton koala la porte déjà."; refreshKoalas(); }
           else if (r < .55){ const n = 10 + Math.floor(Math.random()*31); award(n); txt = "⭐ +"+n+" points !"; }
-          else if (r < .85){ const n = 2 + Math.floor(Math.random()*3); giveLeaves(n); txt = "🍃 +"+n+" feuilles pour ton koala !"; }
+          else if (r < .85){ award(20); txt = "⭐ +20 points !"; }
           else { award(15); txt = "💌 "+pick(["Tu es plus capable que tu ne le crois.","Ton cerveau n'est pas cassé, il est différent.","Chaque petit pas compte, vraiment.","Je suis fier de toi, tous les jours."])+" (+15 ⭐)"; }
           bx.textContent = "✨"; bx.classList.remove("shake");
           card.querySelector("h2").textContent = txt; card.querySelector("p").textContent = "";
@@ -4183,10 +4380,10 @@
     ["Tâches", [["energy","⚡ Énergie du jour","#energyBox"],["dice","🎲 Je bloque","#diceBtn,#diceGo"],["dump","🧠 Vider ma tête","#dumpBtn"],["wait","⏳ Rendez-vous","#waitBtn"],["halt","🍔 Check-in HALT","#haltBtn"],["timers","⏲️ Minuteurs","#timerBtn,#pTimer"],["bilan","🌙 Bilan du soir","#bilanBtn"],["review","🔄 Revue de la semaine","#reviewBtn"],
       ["ideas","💭 Parking à idées",".card:has(#ideasList),#ideaBtn"],["done","🎉 J'ai fait",".card:has(#doneList)"],["habits","🔗 Quand… alors…","details:has(#habits)"],["where","🔑 Où j'ai mis…","details:has(#whereList)"],
       ["shop","🛒 Courses","details:has(#shopList)"],["papers","🧾 Échéances","details:has(#papers),#paperHint"],["chantier","🧺 Gros chantier","details:has(#chantier)"],["scripts","📞 Scripts","details:has(#scripts)"]]],
-    ["Planning", [["pest","🧮 Horaires estimés","label:has(#pEst)"],["ptpl","📋 Journées types","#pTpl"],["quest","⚔️ Vue quêtes","#pViewQ"]]],
+    ["Planning", [["pest","🧮 Heures estimées (~)","label:has(#pEst)"],["ptpl","📋 Journées types","#pTpl"],["quest","⚔️ Vue quêtes","#pViewQ"],["planb","⚡ Imprévu","#pPlanB"],["preview","🔭 Aperçu de la semaine","#pPreview"]]],
     ["Focus", [["twomin","🐾 Juste 2 minutes","#twoMin"],["move","🏃 Pauses mouvement","#moveBtn"],["deep","🔕 Focus profond","#deepBtn"],["bigt","⏳ Grand minuteur","#bigTimerBtn"],["routines","🔁 Routines",".routines-card"],["amb","🎧 Ambiance sonore",".card.amb"],["estbox","🎯 Mes estimations","#estWrap"]]],
     ["Moi", [["prides","💛 Fiertés",".card:has(#prides)"],["social","🔋 Batterie sociale",".card:has(#socBat),#socialHint"],["trends","📊 Tendances",".card:has(#trends)"],["kid","🧒 Mode enfant",".card:has(#kid)"],
-      ["bdays","🎂 Anniversaires",".card:has(#bdays),#bdayHint"],["wish","🛍️ Envies 48 h",".card:has(#wish),#wishHint"],["meds","💊 Traitement","details:has(#meds)"],["sleep","😴 Sommeil",".card:has(#sleepBox)"],["notes","📋 Carnet médecin","details:has(#notesList)"],["cycle","🌸 Cycle","details:has(#cycle)"]]],
+      ["bdays","🎂 Anniversaires",".card:has(#bdays),#bdayHint"],["wish","🛍️ Envies 48 h",".card:has(#wish),#wishHint"],["meds","💊 Traitement","details:has(#meds)"],["sleep","😴 Sommeil",".card:has(#sleepBox)"],["notes","📋 Carnet médecin","details:has(#notesList)"],["cycle","🌸 Cycle","details:has(#cycle)"],["auprof","🧩 Sensoriel et valeurs sûres",".card:has(#sensBox)"],["aucards","🪧 Cartes à montrer",".card:has(#cardsBox)"],["passion","🌟 Ma passion",".card:has(#passionBox)"]]],
     ["Cadeaux et koala", [["boss","🐉 Boss de la semaine",".card:has(#boss)"],["chal","🎯 Défis",".card:has(#chal)"],["wardrobe","🐨 Garde-robe",".card:has(#wardrobe)"],["dopa","🍽️ Menu dopamine",".card:has(#dopa)"],["badges","🏆 Badges",".card:has(#badges)"],["pet","🐕 Mon animal","#pet"]]]
   ];
   const ALLF = FEATS.flatMap(g => g[1]);
@@ -4195,6 +4392,7 @@
     equilibre: ["chantier","scripts","habits","where","social","trends","wish","meds","cycle","kid","bdays","chal","estbox","wardrobe","papers"],
     tout: []
   };
+  function applyPreset(p){ state.hidden = {}; PRESETS_F[p].forEach(id => state.hidden[id] = true); save(); applyFeats(); }
   function applyFeats(){
     let css = "";
     ALLF.forEach(([id,,sel]) => { if (state.hidden[id]) css += sel+"{display:none!important}\n"; });
@@ -4207,16 +4405,56 @@
     const draw = card => {
       card.innerHTML = '<button class="sheet-x" aria-label="Fermer">✕</button><h2>🎛️ Mon app à la carte</h2><p class="small">Garde seulement ce qui t\'aide. Tu peux tout réactiver quand tu veux.</p>'+
         '<div class="row3"><button data-p="essentiel">🌱 Essentiel</button><button data-p="equilibre">⚖️ Équilibré</button><button data-p="tout">🌳 Tout</button></div>'+
+        '<label class="toggle sm" style="margin-top:10px"><input type="checkbox" id="fDisc"'+(state.discover && state.discover.on ? " checked" : "")+'> 🌱 Découverte progressive : partir de l\'essentiel, puis un nouvel outil proposé chaque semaine</label>'+
         FEATS.map(([g, items]) => '<p class="fgroup">'+g+'</p>'+items.map(([id,l]) => '<label class="toggle sm fitem"><input type="checkbox" data-f="'+id+'"'+(state.hidden[id] ? "" : " checked")+'> '+l+'</label>').join("")).join("")+
         '<button class="btn primary" id="fOk" style="width:100%;margin-top:14px">C\'est bon</button>';
       card.querySelector(".sheet-x").onclick = closeSheet;
       card.querySelector("#fOk").onclick = closeSheet;
+      card.querySelector("#fDisc").onchange = e => {
+        state.discover = state.discover || {};
+        state.discover.on = e.target.checked; state.discover.offer = null;
+        if (e.target.checked){ applyPreset("essentiel"); state.discover.last = Date.now(); toast("🌱 On repart de l'essentiel. Un nouvel outil te sera proposé chaque semaine."); draw(card); }
+        save();
+      };
       card.querySelectorAll("[data-f]").forEach(i => i.onchange = () => { if (i.checked) delete state.hidden[i.dataset.f]; else state.hidden[i.dataset.f] = true; save(); applyFeats(); });
       card.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { state.hidden = {}; PRESETS_F[b.dataset.p].forEach(id => state.hidden[id] = true); save(); applyFeats(); draw(card); toast(b.textContent+" : c'est appliqué"); });
     };
     openSheet("", draw);
   }
   document.getElementById("featBtn").addEventListener("click", featSheet);
+
+  /* ---------- L'app s'allège selon ton usage réel ---------- */
+  state.use = state.use || {}; state.useAsk = state.useAsk || {};
+  if (!state.useSince) state.useSince = Date.now();
+  const NO_TIDY = ["sos","gear","myday","pest","out","eat","energy","trends","estbox","badges","done"]; // essentiels ou à simple lecture
+  const TIDY_DAYS = 21;
+  function markUse(e){
+    const t = e.target; if (!t || !t.closest) return;
+    ALLF.forEach(([id,,sel]) => { try { if (t.closest(sel)) state.use[id] = Date.now(); } catch(err){} });
+    const nb = t.closest("nav [data-v]"); if (nb) state.use["tab-"+nb.dataset.v] = Date.now();
+  }
+  document.addEventListener("click", markUse, true);
+  document.addEventListener("toggle", markUse, true);
+  function tidyCandidate(){
+    const now = Date.now(), lim = TIDY_DAYS*864e5;
+    if (now - state.useSince < lim || state.tidyDay === todayKey()) return null;
+    return ALLF.find(([id]) => !id.startsWith("tab-") && !NO_TIDY.includes(id) && !state.hidden[id] &&
+      now - (state.use[id] || state.useSince) >= lim && (!state.useAsk[id] || now - state.useAsk[id] > 90*864e5));
+  }
+  function tidyHtml(){
+    const c = tidyCandidate(); if (!c) return "";
+    const d = Math.floor((Date.now() - (state.use[c[0]] || state.useSince))/864e5), w = Math.max(3, Math.round(d/7));
+    return '<div class="tidy" data-tid="'+c[0]+'"><span>🧹 Tu n\'as pas utilisé <b>'+esc(c[1])+'</b> depuis '+w+' semaines. Je le masque pour alléger l\'app ?</span><div class="tidyb"><button class="btn primary" data-ty="hide">Masquer</button><button class="btn ghost" data-ty="keep">Garder</button></div></div>';
+  }
+  function tidyBind(box){
+    const el = box.querySelector(".tidy"); if (!el) return;
+    const id = el.dataset.tid;
+    el.querySelectorAll("[data-ty]").forEach(b => b.onclick = () => {
+      state.useAsk[id] = Date.now(); state.tidyDay = todayKey();
+      if (b.dataset.ty === "hide"){ snap("🧹 Masqué · à réactiver dans ⚙️", true); state.hidden[id] = true; applyFeats(); }
+      save(); renderMyDay();
+    });
+  }
 
   /* ---------- Pause mouvement ---------- */
   const MOVES = [["🙆","Bras au ciel","Étire-toi le plus haut possible","stretch"],["🔄","Épaules","Roule les épaules vers l'arrière, lentement","sway"],["🙂","Cou","Tourne doucement la tête à droite, puis à gauche","sway"],
@@ -4266,12 +4504,12 @@
   function sortDump(items){
     let i = 0; const res = {};
     const tk = (() => { const d = new Date(); d.setDate(d.getDate()+1); return dayKey(d); })();
-    const ACT = [["today","📝 Post-it aujourd'hui"],["tomorrow","🗓️ Post-it demain"],["someday","📥 Un jour"],["prio","✅ Priorité du jour"],["shop","🛒 Courses"],["idea","💭 Idée"],["drop","🍃 Je lâche"]];
+    const ACT = [["today","📝 Post-it aujourd'hui"],["tomorrow","🗓️ Post-it demain"],["someday","📥 Un jour"],["prio","✅ Tâche importante du jour"],["shop","🛒 Courses"],["idea","💭 Idée"],["drop","🍃 Je lâche"]];
     const draw = card => {
       if (i >= items.length){
         const n = k => res[k] || 0;
         card.innerHTML = '<button class="sheet-x" aria-label="Fermer">✕</button><div class="chest"><div class="chestbox">🍃</div><h2 style="text-align:center">Ta tête est plus légère !</h2></div>'+
-          '<p class="center">'+[["today","📝 aujourd'hui"],["tomorrow","🗓️ demain"],["someday","📥 un jour"],["prio","✅ priorités"],["shop","🛒 courses"],["idea","💭 idées"],["drop","🍃 lâché"]].filter(([k]) => n(k)).map(([k,l]) => "<b>"+n(k)+"</b> "+l).join(" · ")+'</p>'+
+          '<p class="center">'+[["today","📝 aujourd'hui"],["tomorrow","🗓️ demain"],["someday","📥 un jour"],["prio","✅ tâches importantes"],["shop","🛒 courses"],["idea","💭 idées"],["drop","🍃 lâché"]].filter(([k]) => n(k)).map(([k,l]) => "<b>"+n(k)+"</b> "+l).join(" · ")+'</p>'+
           '<button class="btn primary" id="dmOk" style="width:100%;margin-top:12px">Merci 💚</button>';
         if (state.dumpDate !== todayKey()){ state.dumpDate = todayKey(); award(10); }
         save(); renderPlan(); renderToday(); renderShop(); renderIdeas();
@@ -4326,7 +4564,7 @@
         if (state.checkinDate !== todayKey()){ state.checkinDate = todayKey(); award(5); }
         const ks = Object.keys(state.sleep).sort(); while (ks.length > 90) delete state.sleep[ks.shift()];
         save(); closeSheet(); renderAll();
-        koala("today", en === 1 ? "soft" : "happy", en === 1 ? "Journée douce aujourd'hui. Juste « "+(imp||"une petite chose")+" », et c'est gagné 🌙" : "Bonne journée ! On commence par « "+(imp||"ta priorité")+" » ☀️", true);
+        koala("today", en === 1 ? "soft" : "happy", en === 1 ? "Journée douce aujourd'hui. Juste « "+(imp||"une petite chose")+" », et c'est gagné 🌙" : "Bonne journée ! On commence par « "+(imp||"ta tâche importante")+" » ☀️", true);
       };
     });
   }
@@ -4447,9 +4685,9 @@
     const k = isSomeday(planDay) ? todayKey() : planDay, l = dayList(k);
     const main = k === todayKey() ? state.items.map((x,i) => [x,i]).filter(([x]) => x.t.trim()) : [];
     const xp = main.filter(([x]) => x.d).length*10 + l.filter(p => p.done).length*5, max = main.length*10 + l.length*5;
-    qb.innerHTML = '<div class="qhead">📜 Journal de quêtes · '+fmtDay(k)+'<div class="hpbar xp"><i style="width:'+(max ? xp/max*100 : 0)+'%"></i></div><span class="small">'+xp+' / '+max+' XP</span></div>'+
-      (main.length ? '<p class="qcat">⭐ Quêtes principales</p>'+main.map(([x,i]) => '<div class="quest'+(x.d?" done":"")+'"><button class="qbox" data-m="'+i+'">'+(x.d?"✓":"")+'</button><span>'+esc(x.t)+'</span><b>+10 XP</b></div>').join("") : "")+
-      '<p class="qcat">❕ Quêtes secondaires</p>'+(l.length ? l.map(p => '<div class="quest'+(p.done?" done":"")+'"><button class="qbox" data-p="'+p.id+'">'+(p.done?"✓":"")+'</button><span>'+esc(p.t.split("\n")[0])+(p.time ? ' <span class="small">· '+hmLabel(p)+'</span>' : "")+'</span><b>+5 XP</b></div>').join("") : '<p class="small">Aucune quête secondaire. Ajoute des post-its !</p>')+
+    qb.innerHTML = '<p class="small" style="margin:0 0 8px">🎮 Ta journée en version jeu : tes tâches importantes et tes post-its deviennent des quêtes. Ce sont les mêmes, cocher ici = cocher là-bas.</p><div class="qhead">📜 Ma journée en mode jeu · '+fmtDay(k)+'<div class="hpbar xp"><i style="width:'+(max ? xp/max*100 : 0)+'%"></i></div><span class="small">'+xp+' / '+max+' ⭐</span></div>'+
+      (main.length ? '<p class="qcat">⭐ ⭐ Tâches importantes</p>'+main.map(([x,i]) => '<div class="quest'+(x.d?" done":"")+'"><button class="qbox" data-m="'+i+'">'+(x.d?"✓":"")+'</button><span>'+esc(x.t)+'</span><b>+10 ⭐</b></div>').join("") : "")+
+      '<p class="qcat">❕ 📝 Autres tâches</p>'+(l.length ? l.map(p => '<div class="quest'+(p.done?" done":"")+'"><button class="qbox" data-p="'+p.id+'">'+(p.done?"✓":"")+'</button><span>'+esc(p.t.split("\n")[0])+(p.time ? ' <span class="small">· '+hmLabel(p)+'</span>' : "")+'</span><b>+5 ⭐</b></div>').join("") : '<p class="small">Aucune autre tâche. Ajoute des post-its !</p>')+
       (state.boss && !state.boss.defeated ? '<p class="qcat">🐉 Raid de la semaine</p><div class="quest"><span>'+state.boss.e+' '+esc(state.boss.n)+'</span><b>'+state.boss.steps.filter(s => !s.d).length*20+' PV</b></div>' : "");
     qb.querySelectorAll("[data-m]").forEach(b => b.onclick = () => { toggleItem(Number(b.dataset.m)); renderPlan(); });
     qb.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { const p = findPostit(b.dataset.p)[1]; if (p) togglePostit(p); });
@@ -4464,7 +4702,7 @@
     const av = f => { const v = moods.map(f).filter(Boolean); return v.length ? (v.reduce((a,b)=>a+b,0)/v.length).toFixed(1).replace(".",",") : "—"; };
     const nw = (() => { const d = dateOf(w); d.setDate(d.getDate()+7); return d; })();
     openSheet('<h2>🔄 Revue de la semaine</h2>'+
-      '<div class="revstats"><div><b>'+c("plan")+'</b><span>post-its</span></div><div><b>'+c("prio")+'</b><span>priorités</span></div><div><b>'+fmtMin(fmin)+'</b><span>de focus</span></div><div><b>'+av(m => m.m)+'</b><span>humeur /5</span></div></div>'+
+      '<div class="revstats"><div><b>'+c("plan")+'</b><span>post-its</span></div><div><b>'+c("prio")+'</b><span>tâches importantes</span></div><div><b>'+fmtMin(fmin)+'</b><span>de focus</span></div><div><b>'+av(m => m.m)+'</b><span>humeur /5</span></div></div>'+
       '<label class="fl2">💚 Ce qui a bien marché cette semaine<input id="rvG" maxlength="100" placeholder="Même un petit truc"></label>'+
       '<label class="fl2">🧱 Ce qui a coincé<input id="rvB" maxlength="100" placeholder="Sans te juger"></label>'+
       '<label class="fl2">🌱 Une seule chose à essayer la semaine prochaine<input id="rvN" maxlength="100" placeholder="Ex. : préparer mes affaires la veille"></label>'+
@@ -4543,6 +4781,39 @@
     ["pointerup","pointerleave","pointercancel"].forEach(e => ex.addEventListener(e, stop)); })();
 
   /* ---------- Ma journée ---------- */
+  /* ---------- Le koala choisit LA prochaine action ---------- */
+  let nowIdx = 0;
+  function nextActions(){
+    const L = [], h = new Date().getHours(), now = nowHM(), mood = state.moods[todayKey()] || {}, low = lowDay();
+    const tl = dayList(todayKey());
+    // 1. Coucher
+    if (state.settings.bedOn && state.settings.bed){ const b = hmToMin(state.settings.bed); if (now >= b - 45 && now < b + 120) L.push({e:"🌙", t:"Préparer le coucher", sub:"On pose les écrans, on ralentit doucement", go_l:"Lecture", go:() => startFocus({minutes:10, act:"lecture"})}); }
+    // 2. Post-it à l'heure (en cours ou dans les 20 min)
+    const timed = tl.find(p => !p.done && p.time && hmToMin(p.time) - 20 <= now && now < hmToMin(p.time) + (p.dur || 30));
+    if (timed) L.push({kind:"postit", e:"📌", t:timed.t.split("\n")[0], sub:"Prévu à "+timed.time+(timed.prep ? (timed.prep.dep ? " · départ "+timed.prep.dep : "")+(timed.prep.emp ? " · 🎒 "+timed.prep.emp : "") : ""), go:() => startFocus({minutes:timed.dur||15, act:guessAct(timed.t), postit:{id:timed.id}}), ok:() => togglePostit(timed)});
+    // 3. Repas oublié
+    if (state.eat && state.eat.on){ const e = state.eat.log[todayKey()] || {}; (state.eat.times || []).forEach((tm,i) => { const m = hmToMin(tm); if (!e[i] && now >= m && now < m + 120) L.push({e:"🍽️", t:"Manger : "+EATN[i].split(" ")[1], sub:"Ton cerveau a besoin de carburant", go_l:"Manger", go:() => startFocus({minutes:20, act:"manger"}), ok:() => { state.eat.log[todayKey()] = Object.assign({}, e, {[i]:true}); save(); }}); }); }
+    // 4. Énergie pas encore notée
+    if (!mood.e && state.checkinDate !== todayKey() && h < 14) L.push({e:"🌅", t:"Préparer ma journée", sub:"60 secondes : énergie, 3 tâches importantes, rendez-vous", go_l:"60 s", go:dayPrep});
+    // 5. Tâches importantes (si énergie basse : la plus petite étape, 5 minutes)
+    const pr = state.items.map((x,i) => ({x,i})).filter(o => o.x.t.trim() && !o.x.d);
+    (low ? pr.slice(0,1) : pr).forEach(o => {
+      const st = (o.x.s || []).find(z => !z.d);
+      if (low) L.push({e:"🪫", t:st ? st.t : o.x.t, sub:"Énergie basse : juste 5 minutes, c'est déjà gagné", go_l:"5 minutes", go:() => startFocus({minutes:5, act:guessAct(o.x.t), taskIdx:o.i}), ok:() => toggleItem(o.i)});
+      else L.push({e:"✅", t:o.x.t, sub:st ? "Première étape : "+st.t : "Ta tâche importante du jour", go:() => startFocus({minutes:o.x.est || 15, act:guessAct(o.x.t), taskIdx:o.i, est:o.x.est}), ok:() => toggleItem(o.i)});
+    });
+    // 6. Prochain post-it de la journée
+    const nxp = tl.find(p => !p.done && !p.star && p !== timed && (!p.time || hmToMin(p.time) <= now + 60));
+    if (nxp && !low) L.push({kind:"postit", e:"📝", t:nxp.t.split("\n")[0], sub:"Prochain post-it de ta journée", go:() => startFocus({minutes:nxp.dur||15, act:guessAct(nxp.t), postit:{id:nxp.id}}), ok:() => togglePostit(nxp)});
+    // 7. Temps passion en récompense
+    if (state.au && state.au.passion && state.au.passion.name && !pr.length && h >= 12) L.push({e:"🌟", t:"Temps passion : "+state.au.passion.name, sub:"Tes tâches importantes sont faites. Recharge-toi avec ce que tu aimes", go_l:"30 min", go:() => startFocus({minutes:30, act:"autre"})});
+    // 8. Petits gestes qui font du bien
+    if (h >= 19 && state.closedDay !== todayKey() && tl.some(p => !p.done && !p.rech)) L.push({e:"🌙", t:"Fermer ma journée", sub:"Ce qui reste part à demain, en un geste", go_l:"Fermer", go:closeDay});
+    if (h >= 19) L.push({e:"📝", t:"Bilan du soir", sub:"2 minutes pour noter ce qui s'est bien passé", go_l:"Bilan", go:bilanSheet});
+    L.push({e:"🏃", t:"Pause mouvement", sub:"2 minutes pour relancer la machine", go_l:"Bouger", go:moveBreak});
+    L.push({e:"🧠", t:"Vider ma tête", sub:"Tout noter pour libérer de la place", go_l:"Vider", go:dumpSheet});
+    return L;
+  }
   function renderMyDay(){
     const box = document.getElementById("myday"); if (!box) return;
     const h = new Date().getHours();
@@ -4552,19 +4823,27 @@
     const eat = state.eat.on ? (state.eat.log[todayKey()] || {}) : null;
     const B = state.boss && !state.boss.defeated ? state.boss : null;
     let html = '<div class="mdh"><b>'+hello+' 👋</b><span class="small">'+new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})+'</span></div>';
-    if (state.checkinDate !== todayKey() && h < 14) html += '<button class="mdrow cta" id="mdCi">🌅 Check-in du matin <span>30 s ›</span></button>';
     if (new Date().getDay() === 0 && state.reviewWeek !== weekKey()) html += '<button class="mdrow cta" id="mdRv">🔄 C\'est dimanche : revue de la semaine <span>›</span></button>';
-    html += nx ? '<div class="mdrow"><span>👉 <b>'+esc(nx.t.split("\n")[0])+'</b>'+(nx.time ? ' <span class="small">'+hmLabel(nx)+'</span>' : "")+'</span><button class="mini play" id="mdGo">▶</button><button class="mini" id="mdOk">✓</button></div>'
-      : '<button class="mdrow" id="mdPl">🗓️ '+(tl.length ? "Tous les post-its sont faits 🌟" : "Aucun post-it aujourd'hui")+' <span>›</span></button>';
-    html += '<button class="mdrow" id="mdTd">✅ Priorités <b>'+prd+'/'+pr.length+'</b>'+(pr.find(x => !x.d) ? ' · <span class="small">'+esc(pr.find(x => !x.d).t)+'</span>' : "")+' <span>›</span></button>';
+    const na = nextActions(), cur = na[nowIdx % na.length], alt = na[(nowIdx+1) % na.length];
+    if (new Date().getDay() === 0 && state.previewWeek !== weekKey()) html += '<button class="mdrow cta" id="mdPv">🔭 Aperçu de ta semaine à venir <span>›</span></button>';
+    if (state.settings.choice && na.length > 1) html += '<div class="nowcard"><p class="small nowlbl">🐨 Tu préfères…</p><div class="choice2"><button id="chA"><span>'+cur.e+'</span><b>'+esc(cur.t)+'</b></button><span class="ou">ou</span><button id="chB"><span>'+alt.e+'</span><b>'+esc(alt.t)+'</b></button></div>'+(na.length > 2 ? '<button class="linkbtn" id="nowNx2">🔀 D\'autres choix</button>' : "")+'</div>';
+    else html += '<div class="nowcard"><p class="small nowlbl">🐨 Je te propose maintenant :</p><div class="nowmain"><span class="nowe">'+cur.e+'</span><span><b>'+esc(cur.t)+'</b>'+(cur.sub ? '<br><span class="small">'+esc(cur.sub)+'</span>' : "")+'</span></div>'+
+      '<div class="nowbtns"><button class="btn primary" id="nowGo">▶ '+(cur.go_l || "C'est parti")+'</button>'+(cur.ok ? '<button class="btn ghost" id="nowOk" aria-label="Déjà fait">✓</button>' : "")+(na.length > 1 ? '<button class="btn ghost" id="nowNx" aria-label="Autre chose">🔀 Autre</button>' : "")+'</div></div>';
+    const tdone = tl.filter(p => p.done).length;
+    html += '<button class="mdrow" id="mdPl">🗓️ Planning <b>'+tdone+'/'+tl.length+'</b>'+(nx && cur.kind !== "postit" ? ' · <span class="small">'+esc(nx.t.split("\n")[0])+'</span>' : "")+' <span>›</span></button>';
+    html += '<button class="mdrow" id="mdTd">✅ Tâches importantes <b>'+prd+'/'+pr.length+'</b>'+(pr.find(x => !x.d) ? ' · <span class="small">'+esc(pr.find(x => !x.d).t)+'</span>' : "")+' <span>›</span></button>';
     if (B) html += '<button class="mdrow" id="mdBs">'+B.e+' '+esc(B.n)+' <div class="hpbar mini"><i style="width:'+(B.steps.filter(s => !s.d).length/B.steps.length*100)+'%"></i></div></button>';
     if (eat) html += '<div class="mdrow"><span>🍽️ Repas : '+EATN.map((n,i) => (eat[i] ? "✓ " : "· ")+n.split(" ")[1]).join(" · ")+'</span></div>';
-    html += '<div class="row3"><button id="md2">🐾 2 min</button><button id="mdDump">🧠 Vider</button><button id="mdMove">🏃 Bouger</button></div>';
-    box.innerHTML = html;
+
+    html += discoverHtml() || tidyHtml();
+    box.innerHTML = html; tidyBind(box); discoverBind(box);
     const on = (id, f) => { const e = document.getElementById(id); if (e) e.onclick = f; };
     on("mdCi", checkinSheet); on("mdRv", reviewSheet);
-    on("mdGo", () => startFocus({minutes:nx.dur||0, act:guessAct(nx.t), postit:{id:nx.id}}));
-    on("mdOk", () => { togglePostit(nx); renderMyDay(); });
+    on("nowGo", () => cur.go());
+    on("nowOk", () => { cur.ok(); nowIdx = 0; renderMyDay(); });
+    on("nowNx", () => { nowIdx++; renderMyDay(); });
+    on("chA", () => cur.go()); on("chB", () => alt.go()); on("nowNx2", () => { nowIdx += 2; renderMyDay(); });
+    on("mdPv", weekPreview);
     on("mdPl", () => { planDay = todayKey(); show("plan"); renderPlan(); });
     on("mdTd", () => show("today")); on("mdBs", () => { show("rewards"); setTimeout(() => document.getElementById("boss").scrollIntoView({block:"center"}), 50); });
     on("md2", () => startFocus({minutes:2})); on("mdDump", dumpSheet); on("mdMove", moveBreak);
@@ -4575,15 +4854,22 @@
   document.getElementById("setBack").addEventListener("click", () => show("koala"));
   function captureSheet(){
     openSheet('<h2>➕ Capture rapide</h2><textarea id="cpT" rows="3" maxlength="400" placeholder="Une tâche, une idée, un truc à acheter…\nUne chose par ligne"></textarea>'+
-      '<div class="capdest"><button data-d="today">📝 Post-it aujourd\'hui</button><button data-d="tomorrow">🗓️ Post-it demain</button><button data-d="idea">💭 Idée</button><button data-d="shop">🛒 Courses</button><button data-d="prio">✅ Priorité du jour</button><button data-d="someday">📥 Un jour</button></div>'+
+      '<div id="cpSmart" class="cpsmart" hidden></div><div class="capdest"><button data-d="smart" class="smartd" hidden>📅 Ranger au bon jour</button><button data-d="today">📝 Post-it aujourd\'hui</button><button data-d="tomorrow">🗓️ Post-it demain</button><button data-d="idea">💭 Idée</button><button data-d="shop">🛒 Courses</button><button data-d="prio">✅ Tâche importante du jour</button><button data-d="someday">📥 Un jour</button></div>'+
       '<p class="small" style="margin-top:8px">🎤 Astuce : le micro du clavier permet de dicter.</p>', card => {
       const ta = card.querySelector("#cpT"); ta.focus();
+      const sm = card.querySelector("#cpSmart"), sd = card.querySelector(".smartd");
+      ta.addEventListener("input", () => {
+        const W = ta.value.split("\n").map(x => x.trim()).filter(Boolean).map(parseWhen).filter(w => w.k || w.time);
+        sm.hidden = sd.hidden = !W.length;
+        sm.innerHTML = W.map(w => '✨ <b>'+esc(w.t)+'</b> → '+whenLabel(w)).join("<br>");
+      });
       card.querySelectorAll("[data-d]").forEach(b => b.onclick = () => {
         const L = ta.value.split("\n").map(x => x.trim()).filter(Boolean); if (!L.length){ ta.focus(); return; }
         const d = b.dataset.d, tk = (() => { const x = new Date(); x.setDate(x.getDate()+1); return dayKey(x); })();
         let over = 0;
         L.forEach(t => {
-          if (d === "today") dayList(todayKey()).push(P(t));
+          if (d === "smart"){ const w = parseWhen(t); dayList(w.k || todayKey()).push(P(w.t, w.time ? {time:w.time} : {})); }
+          else if (d === "today") dayList(todayKey()).push(P(t));
           else if (d === "tomorrow") dayList(tk).push(P(t));
           else if (d === "someday") dayList("someday").push(P(t));
           else if (d === "idea") state.ideas.unshift({t, d:todayKey()});
@@ -4591,7 +4877,7 @@
           else if (d === "prio"){ const i = state.items.findIndex(x => !x.t.trim()); if (i >= 0) state.items[i] = {t, d:false, s:[]}; else { state.ideas.unshift({t, d:todayKey()}); over++; } }
         });
         save(); closeSheet(); renderPlan(); renderToday(); renderShop(); renderIdeas(); renderMyDay();
-        toast(b.textContent.split(" ")[0]+" "+L.length+" élément"+(L.length>1?"s":"")+" rangé"+(L.length>1?"s":"")+(over ? " ("+over+" au parking : priorités pleines)" : ""));
+        toast(b.textContent.split(" ")[0]+" "+L.length+" élément"+(L.length>1?"s":"")+" rangé"+(L.length>1?"s":"")+(over ? " ("+over+" au parking : tâches importantes pleines)" : ""));
       });
     });
   }
@@ -4641,7 +4927,7 @@
     toast("↩️ C'est annulé");
   }
   const wrapUndo = (fn, label) => function(){ snap(typeof label === "function" ? label.apply(null, arguments) : label); return fn.apply(this, arguments); };
-  toggleItem = wrapUndo(toggleItem, i => state.items[i] && state.items[i].d ? "Priorité décochée" : "✓ Priorité faite");
+  toggleItem = wrapUndo(toggleItem, i => state.items[i] && state.items[i].d ? "Tâche importante décochée" : "✓ Tâche importante faite");
   togglePostit = wrapUndo(togglePostit, p => p.done ? "Post-it décoché" : "✓ Post-it fait");
   movePostit = wrapUndo(movePostit, (p, k) => "📅 Reporté : "+fmtDay(k, true));
 
@@ -4679,8 +4965,10 @@
       const i = Number(w.querySelector(".num").textContent) - 1, row = w.querySelector(".prio"), it = state.items[i];
       if (!row || !it || !it.t.trim()) return;
       swipeable(row, () => { if (!it.d) toggleItem(i); }, () => {
-        snap("📅 Priorité reportée à demain");
-        dayList(tomorrowK()).unshift(P(it.t, {c:"jaune"})); state.items[i] = {t:"", d:false, s:[]}; save(); renderToday(); renderPlan(); toast("📅 « "+it.t+" » → post-it demain");
+        snap("📅 Tâche importante reportée à demain");
+        const lk = it.pid ? findPostit(it.pid) : [null,null];
+        if (lk[1]){ delete lk[1].star; movePostit(lk[1], tomorrowK(), 0); } else dayList(tomorrowK()).unshift(P(it.t, {c:"jaune"}));
+        state.items[i] = {t:"", d:false, s:[]}; save(); renderToday(); renderPlan(); toast("📅 « "+it.t+" » → post-it demain");
       });
     });
   };
@@ -4715,7 +5003,7 @@
   })();
   function quickMenu(){
     const m = document.getElementById("quickMenu"); m.hidden = false;
-    m.innerHTML = [["today","📝","Post-it"],["idea","💭","Idée"],["shop","🛒","Courses"],["prio","✅","Priorité"]].map(([d,e,l]) => '<button data-d="'+d+'"><span>'+e+'</span>'+l+'</button>').join("");
+    m.innerHTML = [["today","📝","Post-it"],["idea","💭","Idée"],["shop","🛒","Courses"],["prio","✅","Tâche importante"]].map(([d,e,l]) => '<button data-d="'+d+'"><span>'+e+'</span>'+l+'</button>').join("");
     m.querySelectorAll("[data-d]").forEach(b => b.onclick = () => { m.hidden = true; captureTo(b.dataset.d, b.textContent); });
     setTimeout(() => document.addEventListener("click", function off(e){ if (!m.contains(e.target)){ m.hidden = true; document.removeEventListener("click", off); } }), 50);
   }
@@ -4728,28 +5016,58 @@
 
   /* ---------- Lisibilité et apparence ---------- */
   const mql = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  /* ---------- Ciel vivant (style cosy) ---------- */
+  function skyPhase(){ const d = new Date(), m = d.getHours()*60 + d.getMinutes(); return m < 360 ? "nuit" : m < 540 ? "aube" : m < 1020 ? "jour" : m < 1170 ? "doree" : m < 1290 ? "soir" : "nuit"; }
+  (function buildSky(){
+    const box = document.getElementById("skyDots"); if (!box) return;
+    let h = "";
+    for (let i=0;i<34;i++){ const x = (i*37 % 100) + (i%3)*.7, y = (i*53 % 46) + 2, sz = i%5 ? 2 : 3; h += '<i class="star" style="left:'+x.toFixed(1)+'%;top:'+y+'%;width:'+sz+'px;height:'+sz+'px;animation-delay:'+(i*.37%3.5).toFixed(2)+'s"></i>'; }
+    [[12,22,90],[70,40,120],[30,62,70],[82,14,80],[50,80,110]].forEach(([x,y,z],i) => h += '<i class="bokeh" style="left:'+x+'%;top:'+y+'%;width:'+z+'px;height:'+z+'px;animation-delay:-'+(i*3.7)+'s"></i>');
+    box.innerHTML = h;
+  })();
   function applyLook(){
     const S = state.settings, R = document.documentElement;
-    R.classList.toggle("dark", S.appearance === "dark" || (S.appearance === "auto" && !!(mql && mql.matches)));
+    S.style = S.style || "cosy";
+    const ph = skyPhase(); R.dataset.sky = ph;
+    R.classList.toggle("cosy", S.style === "cosy");
+    R.classList.toggle("nostreak", !!S.hideStreak);
+    if (!S.tone) S.tone = "doux";
+    R.classList.toggle("dark", S.appearance === "dark" || (S.appearance === "auto" && !!(mql && mql.matches)) || (S.appearance === "heure" && ph === "nuit"));
     R.classList.toggle("hc", !!S.hc);
     R.classList.toggle("lex", S.font === "lexend");
     R.dataset.fs = S.fontSize;
     const box = document.getElementById("lookBox"); if (!box) return;
     const seg = (key, opts) => '<div class="pseg look" data-k="'+key+'">'+opts.map(([v,l]) => '<button data-v="'+v+'"'+(S[key]===v?' class="on"':"")+'>'+l+'</button>').join("")+'</div>';
-    box.innerHTML = '<p class="fgroup">🔠 Taille du texte</p>'+seg("fontSize",[["normal","A"],["grand","A+"],["xgrand","A++"]])+
+    box.innerHTML = '<div data-rs="app"><p class="fgroup">🔠 Taille du texte</p>'+seg("fontSize",[["normal","A"],["grand","A+"],["xgrand","A++"]])+
       '<p class="fgroup">✍️ Police</p>'+seg("font",[["nunito","Classique"],["lexend","Lexend (lisibilité)"]])+
-      '<p class="fgroup">🌗 Apparence</p>'+seg("appearance",[["auto","Auto"],["light","☀️ Clair"],["dark","🌙 Sombre"]])+
+      '<p class="fgroup">🎨 Style</p>'+seg("style",[["cosy","🌙 Cosy lofi"],["classic","🌿 Classique"]])+
+      '<p class="fgroup">🌗 Apparence</p>'+seg("appearance",[["auto","Auto"],["heure","🌅 Selon l'heure"],["light","☀️ Clair"],["dark","🌙 Sombre"]])+
       '<label class="toggle sm" style="margin-top:10px"><input type="checkbox" id="hcT"'+(S.hc?" checked":"")+'> Contraste élevé</label>'+
-      '<label class="toggle sm"><input type="checkbox" id="swT"'+(S.swipe?" checked":"")+'> Gestes de glissement (post-its, priorités, onglets)</label>'+
+      '<p class="fgroup">🐨 Ton du koala</p>'+seg("tone",[["doux","🥰 Enthousiaste"],["sobre","🙂 Sobre"]])+
+      '</div><div data-rs="confort">'+
+      '<label class="toggle sm"><input type="checkbox" id="swT"'+(S.swipe?" checked":"")+'> Gestes de glissement (post-its, tâches importantes, onglets)</label>'+
       '<p class="fgroup">🚀 Ouvrir l\'app sur</p><select id="stT" class="sel" style="width:100%">'+[["koala","🐨 Koala (Ma journée)"],["today","✅ Tâches"],["plan","🗓️ Planning"],["focus","⏳ Focus"],["mood","💛 Moi"]].map(([v,l]) => '<option value="'+v+'"'+(S.startTab===v?" selected":"")+'>'+l+'</option>').join("")+'</select>'+
-      '<button class="btn ghost" id="tourAgain" style="width:100%;margin-top:12px">🧭 Revoir la visite guidée</button>';
+      '<p class="fgroup">🌿 Confort</p>'+
+      '<label class="toggle sm"><input type="checkbox" id="nsT"'+(S.noSurprise?" checked":"")+'> Sans surprises : pas de coffre au hasard, confettis discrets</label>'+
+      '<label class="toggle sm"><input type="checkbox" id="hsT"'+(S.hideStreak?" checked":"")+'> Masquer la série de jours 🔥</label>'+
+      '<label class="toggle sm"><input type="checkbox" id="pnT"'+(S.penalty?" checked":"")+'> Retirer des points quand je décoche une tâche</label>'+
+      '<p class="fgroup">🤫 Heures calmes (pas de messages spontanés)</p><label class="toggle sm"><input type="checkbox" id="qT"'+(S.quiet && S.quiet.on ? " checked" : "")+'> De <input type="time" id="qF" value="'+((S.quiet||{}).from||"22:00")+'" class="tsm"> à <input type="time" id="qTo" value="'+((S.quiet||{}).to||"07:30")+'" class="tsm"></label>'+
+
+      '<button class="btn ghost" id="tourAgain" style="width:100%;margin-top:12px">🧭 Revoir la visite guidée</button></div>';
     box.querySelectorAll(".look").forEach(g => g.querySelectorAll("[data-v]").forEach(b => b.onclick = () => { S[g.dataset.k] = b.dataset.v; save(); applyLook(); }));
     document.getElementById("hcT").onchange = e => { S.hc = e.target.checked; save(); applyLook(); };
     document.getElementById("swT").onchange = e => { S.swipe = e.target.checked; save(); };
     document.getElementById("stT").onchange = e => { S.startTab = e.target.value; save(); toast("🚀 L'app s'ouvrira sur cet onglet"); };
     document.getElementById("tourAgain").onclick = () => tour(0);
+    document.getElementById("nsT").onchange = e => { S.noSurprise = e.target.checked; save(); };
+    const qs = () => { S.quiet = {on:document.getElementById("qT").checked, from:document.getElementById("qF").value || "22:00", to:document.getElementById("qTo").value || "07:30"}; save(); };
+    ["qT","qF","qTo"].forEach(id => document.getElementById(id).onchange = qs);
+    document.getElementById("hsT").onchange = e => { S.hideStreak = e.target.checked; save(); applyLook(); };
+    document.getElementById("pnT").onchange = e => { S.penalty = e.target.checked; save(); };
+    if (typeof renderPinBox === "function") renderPinBox();
   }
   if (mql && mql.addEventListener) mql.addEventListener("change", applyLook);
+  setInterval(() => { const R = document.documentElement; if (R.dataset.sky !== skyPhase()){ applyLook(); deskKey = ""; renderDesk(); } }, 120000);
 
   /* ---------- Recherche globale ---------- */
   function searchSheet(){
@@ -4760,11 +5078,11 @@
         if (v.length < 2){ R.innerHTML = '<p class="small">Tape au moins 2 lettres.</p>'; return; }
         const res = [];
         Object.entries(state.plan).forEach(([k,l]) => l.forEach(p => { if (norm(p.t).includes(v)) res.push(["📝", p.t.split("\n")[0], fmtDay(k)+(p.done?" · fait":""), () => { planDay = k; state.settings.planView = "day"; show("plan"); renderPlan(); }]); }));
-        state.items.forEach(x => { if (x.t && norm(x.t).includes(v)) res.push(["✅", x.t, "Priorité du jour", () => show("today")]); });
+        state.items.forEach(x => { if (x.t && norm(x.t).includes(v)) res.push(["✅", x.t, "Tâche importante du jour", () => show("today")]); });
         state.ideas.forEach(x => { if (norm(x.t).includes(v)) res.push(["💭", x.t, "Parking à idées", () => show("today")]); });
         state.where.forEach(x => { if (norm(x.o+" "+x.p).includes(v)) res.push(["🔑", x.o+" → "+x.p, "Où j'ai mis…", () => show("today")]); });
         state.shop.forEach(x => { if (norm(x.t).includes(v)) res.push(["🛒", x.t, x.d ? "Courses (coché)" : "Courses", () => show("today")]); });
-        state.notes.forEach(x => { if (norm(x.t).includes(v)) res.push(["📋", x.t, "Carnet médecin · "+fmtDay(x.d), () => show("mood")]); });
+        if (!healthLocked()) state.notes.forEach(x => { if (norm(x.t).includes(v)) res.push(["📋", x.t, "Carnet médecin · "+fmtDay(x.d), () => show("mood")]); });
         state.papers.forEach(x => { if (norm(x.n).includes(v)) res.push(["🧾", x.n, "Échéance · "+fmtDay(x.date), () => show("today")]); });
         state.bdays.forEach(x => { if (norm(x.n).includes(v)) res.push(["🎂", x.n, "Anniversaire", () => show("mood")]); });
         state.prides.forEach(x => { if (norm(x.t).includes(v)) res.push(["💛", x.t, "Fierté", () => show("mood")]); });
@@ -4778,11 +5096,11 @@
 
   /* ---------- Aide contextuelle « ? » ---------- */
   const HELP = {
-    koala:["🏠 Ma journée","En haut : ton prochain post-it, tes priorités et des raccourcis. Le matin, fais le check-in en 30 secondes.","Plus bas, ton koala : nourris-le avec les feuilles gagnées, fais-lui un câlin, couche-le le soir."],
-    today:["✅ Tâches","3 priorités maximum. Le ☰ découpe une tâche en petites étapes, le ▶ la lance avec un chrono.","Glisse une priorité vers la droite = faite, vers la gauche = demain.","La boîte à outils t'aide quand tu bloques (🎲, 🧠, 🍔)."],
-    plan:["🗓️ Planning","Garde le doigt appuyé sur un post-it pour le déplacer. Dépose-le sur un jour pour le reporter.","Glisse un post-it vers la droite = fait, vers la gauche = jour suivant.","📋 Journées types pour remplir une journée en 1 tap."],
+    koala:["🏠 Ma journée","En haut, le koala te propose UNE chose à faire maintenant. Le matin : « Préparer ma journée » en 60 secondes.","Plus bas, ton koala : nourris-le, fais-lui un câlin, couche-le le soir. Tout en bas : 🎁 tes cadeaux et ton niveau."],
+    today:["🗓️ Planning","Tout est au même endroit : tes 3 tâches importantes ⭐ en haut, tes post-its en dessous, la boîte à outils en bas."],
+    plan:["🗓️ Planning","⭐ Tes tâches importantes sont des post-its avec une étoile (3 max). Ajoute ou retire l'étoile en touchant un post-it.","Appui long sur un post-it pour le déplacer, glisser à droite = fait, à gauche = jour suivant.","Le soir, 🌙 Fermer ma journée envoie ce qui reste à demain en un geste.","La boîte à outils (je bloque, vider ma tête, minuteurs…) est en bas de la page."],
     focus:["⏳ Focus","Choisis l'activité, la durée, puis Démarrer : ton koala fait la même chose que toi.","🔕 Focus profond cache tout le reste. 🏃 Une pause mouvement après 20 minutes, c'est idéal."],
-    mood:["💛 Moi","Note ton humeur en 1 tap. Les sections se replient : ouvre seulement ce qui t'intéresse.","Le carnet pour le médecin prépare un résumé avant tes rendez-vous."],
+    mood:["💛 Moi","3 groupes : 🌤️ Aujourd'hui, 🩺 Santé (protégeable par un code), 🧰 Mes outils.","Le carnet pour le médecin prépare un résumé avant tes rendez-vous."],
     rewards:["🎁 Cadeaux","Dépense tes points en vrais petits plaisirs que tu choisis.","Le boss de la semaine transforme une tâche redoutée en combat !"],
     settings:["⚙️ Réglages","Ici : saison, confort, taille du texte, apparence et mode à la carte pour masquer ce que tu n'utilises pas."]
   };
@@ -4796,9 +5114,9 @@
   /* ---------- Visite guidée ---------- */
   const TOUR = [
     ["🐨","Bienvenue dans Mon Focus !","Une app douce pour t'aider au quotidien avec le TDAH. Ton koala t'accompagne partout. Rien n'est obligatoire : prends ce qui t'aide."],
-    ["🏠","Ma journée","L'onglet Koala commence par l'essentiel : le prochain post-it, tes priorités, le check-in du matin."],
-    ["➕","Le bouton magique","Au centre en bas : note n'importe quoi en 2 secondes, puis range-le (post-it, idée, courses…). Appui long = raccourcis."],
-    ["🗓️","Planning en post-its","Comme ton tableau papier : appui long pour déplacer, glisser à droite = fait, à gauche = demain."],
+    ["🏠","Ma journée","L'onglet Koala te propose une seule chose à faire maintenant. Le matin : « Préparer ma journée » en 60 secondes."],
+    ["➕","Le bouton magique","Au centre en bas : écris « dentiste mardi 15h » et c'est rangé au bon jour, à la bonne heure. Appui long = raccourcis."],
+    ["🗓️","Planning en post-its","Tes 3 tâches importantes sont des post-its ⭐. Appui long pour déplacer, glisser à droite = fait. Le soir : 🌙 Fermer ma journée."],
     ["⏳","Focus avec ton koala","Choisis ton activité, il la fait avec toi, en musique lo-fi."],
     ["🆘","Quand ça déborde","Le bouton SOS en haut : respiration, ancrage, message prêt. 🔍 pour chercher, ? pour l'aide, ⚙️ pour tout régler."],
     ["🌱","Astuce","Trop de choses ? Dans ⚙️ Réglages → Personnaliser, choisis « Essentiel ». Bonne route !"]
@@ -4870,14 +5188,740 @@
   setInterval(particlesTick, 1700);
   setInterval(() => { if (state.themePref === "auto" && autoTheme() !== THEME) applyTheme(true); }, 60000);
 
-  function renderAll(){ applyLook(); applyFeats(); renderMyDay(); renderSleep(); renderNotes(); renderBoss(); document.getElementById("eatToggle").checked = !!state.eat.on; renderShop(); renderPet(); renderBdays(); renderWish(); renderKid(); timersTick(); renderPlan(); renderWardrobe(); renderChal(); renderPapers(); renderChantier(); renderDuo(); applyComfort(); renderDone(); renderHabits(); renderWhere(); renderScripts(); renderPrides(); renderSocial(); renderMeds(); renderCycle(); renderTrends(); renderBilanBtn(); bedCheck();
+
+  /* ================= AuDHD : prévisibilité, sensoriel, communication ================= */
+  const AU = state.au = Object.assign({
+    safeFoods:["🍝 Pâtes au beurre","🥣 Céréales","🍞 Tartines","🧀 Fromage","🍌 Banane","🥛 Yaourt"],
+    softClothes:["👕 T-shirt doux sans étiquette","🩳 Jogging","🧦 Chaussettes confort","🧥 Gros pull"],
+    kit:["🎧 Casque anti-bruit","🕶️ Lunettes de soleil","👂 Bouchons d'oreilles","🌀 Fidget","💧 Gourde"],
+    cards:["J'ai besoin de calme. Je reviens dans 10 minutes.","Je ne peux pas parler maintenant, mais je vais bien.","Il y a trop de bruit pour moi. On peut aller ailleurs ?","Peux-tu m'écrire plutôt que me parler ?","J'ai besoin d'une pause, ce n'est pas contre toi."],
+    passion:{name:"", notes:[]}, sens:{}, water:{}
+  }, state.au || {});
+  if (state.settings.trans === undefined) state.settings.trans = true;
+  if (state.settings.recharge === undefined) state.settings.recharge = true;
+
+  // Petit éditeur de liste réutilisable
+  function listEditor(box, arr, ph, onChange){
+    const draw = () => {
+      box.innerHTML = '<div class="aulist">'+arr.map((x,j) => '<span class="auitem">'+esc(x)+'<button data-j="'+j+'" aria-label="Retirer">✕</button></span>').join("")+'</div>'+
+        '<form class="add"><input placeholder="'+ph+'" maxlength="80"><button class="buy">＋</button></form>';
+      box.querySelectorAll("[data-j]").forEach(b => b.onclick = () => { arr.splice(Number(b.dataset.j),1); save(); draw(); onChange && onChange(); });
+      box.querySelector("form").onsubmit = e => { e.preventDefault(); const v = e.target.querySelector("input").value.trim(); if (v){ arr.push(v); save(); draw(); onChange && onChange(); } };
+    };
+    draw();
+  }
+
+  /* --- Météo sensorielle --- */
+  const SENS = [["bruit","🔊","Bruit"],["lum","💡","Lumière"],["monde","👥","Monde"],["tex","🧶","Textures"],["soc","🧠","Fatigue sociale"]];
+  function sensWeather(v){
+    if (!v) return null;
+    const t = SENS.reduce((a,[k]) => a + (v[k]||1), 0);
+    return t <= 7 ? ["☀️","Ciel clair"] : t <= 10 ? ["⛅","Un peu nuageux"] : ["⛈️","Orage sensoriel"];
+  }
+  function sensSheet(){
+    const cur = Object.assign({}, AU.sens[todayKey()] || {});
+    const draw = card => {
+      const w = sensWeather(Object.keys(cur).length ? cur : null);
+      card.innerHTML = '<button class="sheet-x" aria-label="Fermer">✕</button><h2>🎧 Ma météo sensorielle</h2><p class="small">Comment est chaque sens, là, maintenant ?</p>'+
+        SENS.map(([k,e,l]) => '<div class="sensrow"><span>'+e+' '+l+'</span><div class="senslv">'+[[1,"😌"],[2,"😐"],[3,"😣"]].map(([n,f]) => '<button data-k="'+k+'" data-n="'+n+'"'+(cur[k]===n?' class="on"':"")+' aria-label="'+["","ça va","un peu","trop"][n]+'">'+f+'</button>').join("")+'</div></div>').join("")+
+        (w ? '<div class="sensres"><b>'+w[0]+' '+w[1]+'</b>'+sensTips(cur)+'</div>' : "")+
+        '<button class="btn primary" id="snOk" style="width:100%;margin-top:12px">C\'est noté</button>';
+      card.querySelector(".sheet-x").onclick = closeSheet;
+      card.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { cur[b.dataset.k] = Number(b.dataset.n); draw(card); });
+      const lb = card.querySelector("#snLow"); if (lb) lb.onclick = () => { closeSheet(); lowDemand(true); };
+      const br = card.querySelector("#snBreath"); if (br) br.onclick = () => { closeSheet(); openSOS(); };
+      card.querySelector("#snOk").onclick = () => { if (Object.keys(cur).length){ AU.sens[todayKey()] = cur; save(); renderAu(); } closeSheet(); };
+    };
+    openSheet("", draw);
+  }
+  function sensTips(v){
+    const kit = AU.kit, find = re => kit.filter(x => re.test(x.toLowerCase()));
+    const tips = [];
+    if (v.bruit >= 2) tips.push(...(find(/casque|bouchon|écouteur|ecouteur/).length ? find(/casque|bouchon|écouteur|ecouteur/) : ["🎧 Un casque ou des bouchons"]));
+    if (v.lum >= 2) tips.push(...(find(/lunette|casquette/).length ? find(/lunette|casquette/) : ["🕶️ Baisser la lumière ou des lunettes"]));
+    if (v.tex >= 2) tips.push(AU.softClothes[0] || "👕 Un vêtement doux");
+    if (v.monde >= 2) tips.push("🚪 T'isoler 10 minutes dans un endroit calme");
+    if (v.soc >= 2) tips.push("🔋 Un temps de recharge sans personne");
+    const heavy = sensWeather(v)[0] === "⛈️";
+    return (tips.length ? '<ul class="senstips">'+[...new Set(tips)].map(t => '<li>'+esc(t)+'</li>').join("")+'</ul>' : '<p class="small">Tout va bien côté sens. Profites-en 🌿</p>')+
+      (heavy ? '<div class="row2" style="margin-top:8px"><button class="btn ghost" id="snLow">🫧 Mode basse demande</button><button class="btn ghost" id="snBreath">🌬️ Respirer</button></div>' : "");
+  }
+
+  /* --- Cartes à montrer --- */
+  function showCard(txt){
+    const o = document.createElement("div"); o.className = "commcard"; o.setAttribute("role","dialog");
+    o.innerHTML = '<p>'+esc(txt)+'</p><span class="small">Touche l\'écran pour fermer</span>';
+    o.onclick = () => o.remove(); document.body.appendChild(o);
+  }
+  function cardsPick(box){
+    box.innerHTML = '<p class="sosmed">Touche une carte pour l\'afficher en grand</p><div class="cardpick">'+AU.cards.map((c,j) => '<button data-c="'+j+'">🪧 '+esc(c)+'</button>').join("")+'</div>';
+    box.querySelectorAll("[data-c]").forEach(b => b.onclick = () => showCard(AU.cards[Number(b.dataset.c)]));
+  }
+
+  /* --- Mode basse demande --- */
+  function lowDemand(on){
+    let o = document.getElementById("lowd");
+    if (!on){ if (o) o.remove(); document.documentElement.classList.remove("lowd"); return; }
+    document.getElementById("sos").hidden = true; closeSheet();
+    if (Sound.playing){ Sound.stop(); renderAmb(); }
+    markActive(); save();
+    document.documentElement.classList.add("lowd");
+    o = document.createElement("div"); o.id = "lowd";
+    const home = () => {
+      const w = AU.water[todayKey()] || 0;
+      o.innerHTML = '<div class="lowk">'+koalaSVG("sleep")+'</div>'+
+        '<button class="lowbtn" data-l="eat">🍽️<span>Manger</span></button><button class="lowbtn" data-l="drink">💧<span>Boire'+(w ? " · "+w : "")+'</span></button><button class="lowbtn" data-l="rest">🛋️<span>Me reposer</span></button>'+
+        '<button class="lowout" id="lowOut">Je sors de ce mode</button>';
+      o.querySelector('[data-l="eat"]').onclick = () => {
+        o.innerHTML = '<div class="lowk">'+koalaSVG("happy")+'</div><div class="lowfood">'+AU.safeFoods.map(f => '<button>'+esc(f)+'</button>').join("")+'</div><button class="lowout" id="lowBack">← Retour</button>';
+        o.querySelectorAll(".lowfood button").forEach(b => b.onclick = () => { b.classList.add("on"); setTimeout(home, 900); });
+        o.querySelector("#lowBack").onclick = home;
+      };
+      o.querySelector('[data-l="drink"]').onclick = () => { AU.water[todayKey()] = w + 1; save(); fx("💧"); home(); };
+      o.querySelector('[data-l="rest"]').onclick = () => {
+        let left = 600; let t = null;
+        const draw = () => { o.innerHTML = '<div class="lowk">'+koalaSVG("sleep")+'</div><p class="lowtime">'+Math.ceil(left/60)+' min</p><p class="lowsoft">Rien d\'autre à faire.</p><button class="lowout" id="lowBack">← Retour</button>'; o.querySelector("#lowBack").onclick = () => { clearInterval(t); home(); }; };
+        draw(); t = setInterval(() => { left -= 5; if (left <= 0){ clearInterval(t); Sound.softBell(); home(); } else if (left % 60 === 0) draw(); }, 5000);
+      };
+      o.querySelector("#lowOut").onclick = () => { lowDemand(false); koala("today","happy","Bon retour 💚 Va doucement.", true); };
+    };
+    home(); document.body.appendChild(o);
+  }
+
+  /* --- Recharge automatique après un moment social --- */
+  const SOCIAL = /rdv|rendez|médecin|medecin|dentiste|kiné|kine|psy|réunion|reunion|anniv|soirée|soiree|repas chez|apéro|apero|invit|école|ecole|parents|visite|courses|banque|mairie|entretien|fête|fete|sortie|resto|restaurant|amis|famille/i;
+  // Propose (sans l'imposer) 30 min de recharge après un post-it social à heure fixe
+  function rechargeCandidate(k){
+    if (!state.settings.recharge || isSomeday(k)) return null;
+    const l = dayList(k);
+    return l.find(p => !p.rech && !p.rechAsk && !p.noRecharge && p.time && !p.done && SOCIAL.test(p.t) && !l.some(x => x.rech === p.id)) || null;
+  }
+  function addRecharge(k, p){
+    const l = dayList(k), end = hmToMin(p.time) + (p.dur || 60), hh = String(Math.floor(end/60) % 24).padStart(2,"0"), mm = String(end % 60).padStart(2,"0");
+    l.splice(l.indexOf(p)+1, 0, P("🔋 Recharge\n(après "+p.t.split("\n")[0]+")", {c:"violet", time:hh+":"+mm, dur:30, rech:p.id}));
+  }
+  function renderRechAsk(){
+    const box = document.getElementById("rechAsk"); if (!box) return;
+    const p = rechargeCandidate(planDay);
+    if (!p){ box.hidden = true; box.innerHTML = ""; return; }
+    box.hidden = false;
+    box.innerHTML = '<span>🔋 Ajouter 30 min de recharge après <b>'+esc(p.t.split("\n")[0])+'</b> ?</span><div class="tidyb"><button class="btn primary" data-r="y">Oui</button><button class="btn ghost" data-r="n">Non merci</button></div>';
+    box.querySelectorAll("[data-r]").forEach(b => b.onclick = () => {
+      if (b.dataset.r === "y"){ snap("🔋 Recharge ajoutée", true); p.rechAsk = "oui"; addRecharge(planDay, p); toast("🔋 Recharge ajoutée"); }
+      else p.rechAsk = "non";
+      save(); renderPlan();
+    });
+  }
+  const _renderPlanAu = renderPlan;
+  renderPlan = function(){ const r = _renderPlanAu.apply(this, arguments); renderRechAsk(); return r; };
+
+  /* --- Transitions avant un post-it à heure fixe --- */
+  const transFired = {};
+  function planTransitions(){
+    if (state.settings.trans === false || document.documentElement.classList.contains("lowd")) return;
+    const now = nowHM();
+    dayList(todayKey()).forEach(p => {
+      if (p.done || !p.time) return;
+      const d = hmToMin(p.time) - now;
+      [10,5,1].forEach(t => {
+        const key = todayKey()+p.id+t;
+        if (d <= t && d > t - 1 && !transFired[key]){ transFired[key] = 1; Sound.softBell(); toast("🔔 Dans "+t+" min : "+p.t.split("\n")[0]+(t === 10 ? ". Tu peux commencer à terminer ce que tu fais." : t === 1 ? ". On y va doucement." : "")); }
+      });
+    });
+  }
+  setInterval(planTransitions, 20000);
+
+  /* --- Plan B : quand tout change --- */
+  function planB(){
+    const k = todayKey(), l = dayList(k), left = l.filter(p => !p.done);
+    openSheet('<h2>⚡ Un imprévu ?</h2><p class="small">Pas de panique. On réorganise ensemble, en 3 petites étapes.</p><div class="wlist">'+
+      '<button class="btn ghost" data-b="add">➕ Un rendez-vous en plus</button><button class="btn ghost" data-b="late">⏩ Retard : tout se décale</button>'+
+      '<button class="btn ghost" data-b="cancel">❌ Quelque chose est annulé</button><button class="btn ghost" data-b="tired">🪫 Je n\'ai plus l\'énergie</button></div>', card => {
+      const done = msg => { save(); closeSheet(); renderPlan(); renderMyDay(); koala("plan","happy",msg,true); toast("✅ Journée réorganisée"); };
+      card.querySelector('[data-b="add"]').onclick = () => {
+        card.innerHTML = '<h2>➕ Le nouveau rendez-vous</h2><input class="search" id="pbT" maxlength="60" placeholder="Quoi ? (ex. RDV médecin)"><div class="row2" style="margin:8px 0"><input class="search" id="pbH" type="time" value="'+String(new Date().getHours()+1).padStart(2,"0")+':00'+'"><select id="pbD" class="sel"><option value="30">30 min</option><option value="60" selected>1 h</option><option value="120">2 h</option></select></div>'+
+          '<label class="toggle sm"><input type="checkbox" id="pbM" checked> Reporter à demain ce qui n\'est pas indispensable</label><button class="btn primary" id="pbOk" style="width:100%;margin-top:12px">C\'est bon</button>';
+        card.querySelector("#pbOk").onclick = () => {
+          const t = card.querySelector("#pbT").value.trim() || "Rendez-vous"; snap("⚡ Imprévu ajouté", true);
+          const np = P("📍 "+t, {c:"orange", time:card.querySelector("#pbH").value, dur:Number(card.querySelector("#pbD").value)});
+          l.push(np); l.sort((a,b) => (a.time ? hmToMin(a.time) : 9999) - (b.time ? hmToMin(b.time) : 9999));
+          if (card.querySelector("#pbM").checked){ const extra = left.filter(p => !p.time && p.c !== "rose").slice(2); extra.forEach(p => movePostit(p, tomorrowK())); }
+          done("C'est noté. Le rendez-vous est dans ton planning 📍");
+        };
+      };
+      card.querySelector('[data-b="late"]').onclick = () => {
+        card.innerHTML = '<h2>⏩ De combien ça décale ?</h2><div class="row3"><button data-m="15">15 min</button><button data-m="30">30 min</button><button data-m="60">1 h</button></div>';
+        card.querySelectorAll("[data-m]").forEach(b => b.onclick = () => {
+          snap("⏩ Horaires décalés", true); const m = Number(b.dataset.m), now = nowHM();
+          left.forEach(p => { if (p.time && hmToMin(p.time) >= now - 30){ const x = hmToMin(p.time) + m; p.time = String(Math.floor(x/60) % 24).padStart(2,"0")+":"+String(x % 60).padStart(2,"0"); } });
+          done("Tout est décalé de "+b.textContent+". Le reste de la journée tient toujours 🌿");
+        });
+      };
+      card.querySelector('[data-b="cancel"]').onclick = () => {
+        card.innerHTML = '<h2>❌ Qu\'est-ce qui est annulé ?</h2><div class="wlist">'+left.map((p,j) => '<button class="btn ghost" data-j="'+j+'">'+esc(p.t.split("\n")[0])+(p.time ? ' · '+p.time : "")+'</button>').join("")+'</div>'+(left.length ? "" : '<p class="small">Aucun post-it restant aujourd\'hui.</p>');
+        card.querySelectorAll("[data-j]").forEach(b => b.onclick = () => {
+          snap("❌ Post-it annulé", true); const p = left[Number(b.dataset.j)];
+          state.plan[k] = l.filter(x => x !== p && x.rech !== p.id);
+          if (AU.passion.name && !l.some(x => /Temps passion/.test(x.t))) state.plan[k].push(P("🌟 Temps passion : "+AU.passion.name, {c:"violet", dur:30}));
+          done("Du temps de libéré ! "+(AU.passion.name ? "Je t'ai glissé un temps passion 🌟" : "Tu peux te reposer ou faire un truc qui te plaît 🌿"));
+        });
+      };
+      card.querySelector('[data-b="tired"]').onclick = () => {
+        card.innerHTML = '<h2>🪫 On garde quoi aujourd\'hui ?</h2><p class="small">Coche 1 à 3 choses maximum. Le reste part à demain, sans culpabilité.</p><div class="wlist">'+left.map((p,j) => '<label class="toggle sm"><input type="checkbox" data-j="'+j+'"'+(j < 1 ? " checked" : "")+'> '+esc(p.t.split("\n")[0])+'</label>').join("")+'</div><button class="btn primary" id="pbK" style="width:100%;margin-top:12px">C\'est bon</button>';
+        card.querySelector("#pbK").onclick = () => {
+          snap("🪫 Journée allégée", true);
+          const keep = new Set([...card.querySelectorAll("[data-j]:checked")].map(i => left[Number(i.dataset.j)]));
+          left.forEach(p => { if (!keep.has(p) && !p.rech) movePostit(p, tomorrowK()); });
+          done("Journée allégée. Faire peu, c'est déjà faire 💚");
+        };
+      };
+    });
+  }
+  document.getElementById("pPlanB").addEventListener("click", planB);
+
+  /* --- Aperçu de la semaine --- */
+  const UNUSUAL = /rdv|rendez|médecin|medecin|dentiste|réunion|reunion|anniv|soirée|soiree|nouveau|nouvelle|voyage|train|avion|invit|entretien|visite|école|ecole|sortie|fête|fete|📍/i;
+  function weekPreview(){
+    const days = []; for (let i=0;i<7;i++){ const d = new Date(); d.setDate(d.getDate()+i); days.push(dayKey(d)); }
+    const draw = card => {
+      card.innerHTML = '<button class="sheet-x" aria-label="Fermer">✕</button><h2>🔭 Ma semaine à venir</h2><p class="small">Les choses inhabituelles sont en couleur. Touche-les pour les préparer : lieu, départ, quoi emporter.</p>'+
+        days.map(k => {
+          const l = dayList(k).filter(p => !p.rech), un = l.filter(p => UNUSUAL.test(p.t));
+          const bd = (state.bdays || []).filter(b => b.d && b.d.slice(5) === k.slice(5));
+          return '<div class="wkday"><b>'+fmtDay(k, true)+'</b> <span class="small">'+(l.length ? l.length+" post-it"+(l.length>1?"s":"") : "journée libre")+'</span>'+
+            (un.length || bd.length ? '<div class="wkun">'+un.map(p => '<button data-k="'+k+'" data-id="'+p.id+'" class="'+(p.prep ? "ready" : "")+'">'+(p.prep ? "✅ " : "🧭 ")+esc(p.t.split("\n")[0])+(p.time ? ' · '+p.time : "")+'</button>').join("")+bd.map(b => '<span>🎂 '+esc(b.n)+'</span>').join("")+'</div>' : "")+'</div>';
+        }).join("")+'<button class="btn primary" id="wkOk" style="width:100%;margin-top:12px">J\'ai vu ma semaine 👀</button>';
+      card.querySelector(".sheet-x").onclick = closeSheet;
+      card.querySelector("#wkOk").onclick = () => { state.previewWeek = weekKey(); save(); closeSheet(); renderMyDay(); toast("👀 Ta semaine n'a plus de secret"); };
+      card.querySelectorAll("[data-id]").forEach(b => b.onclick = () => {
+        const p = dayList(b.dataset.k).find(x => x.id === b.dataset.id); if (!p) return;
+        const r = p.prep || {};
+        card.innerHTML = '<h2>🧭 Préparer : '+esc(p.t.split("\n")[0])+'</h2>'+
+          '<p class="fgroup">📍 Où ?</p><input class="search" id="ppL" maxlength="120" value="'+esc(r.lieu||"")+'" placeholder="Adresse, étage, code…">'+
+          '<p class="fgroup">🚶 Heure de départ</p><input class="search" id="ppD" type="time" value="'+esc(r.dep||"")+'">'+
+          '<p class="fgroup">🎒 À emporter</p><input class="search" id="ppE" maxlength="160" value="'+esc(r.emp||"")+'" placeholder="Carte vitale, papiers, casque…">'+
+          '<p class="fgroup">💭 Ce qui va se passer</p><input class="search" id="ppS" maxlength="200" value="'+esc(r.sce||"")+'" placeholder="Qui je vais voir, combien de temps…">'+
+          '<button class="btn primary" id="ppOk" style="width:100%;margin-top:12px">Enregistrer</button>';
+        card.querySelector("#ppOk").onclick = () => { p.prep = {lieu:card.querySelector("#ppL").value.trim(), dep:card.querySelector("#ppD").value, emp:card.querySelector("#ppE").value.trim(), sce:card.querySelector("#ppS").value.trim()}; save(); draw(card); };
+      });
+    };
+    openSheet("", draw);
+  }
+  document.getElementById("pPreview").addEventListener("click", weekPreview);
+
+  /* --- Carte « Mon profil AuDHD » dans Moi --- */
+  function renderAu(){
+    const sb = document.getElementById("sensBox"); if (!sb) return;
+    const w = sensWeather(AU.sens[todayKey()]);
+    sb.innerHTML = '<div class="row2"><button class="btn ghost" id="auSens">'+(w ? w[0]+" "+w[1] : "🎧 Météo sensorielle")+'</button><button class="btn ghost" id="auLow">🫧 Basse demande</button></div>'+
+      '<label class="toggle sm" style="margin-top:10px"><input type="checkbox" id="auTr"'+(state.settings.trans !== false ? " checked" : "")+'> Transitions en douceur : alertes à 10, 5 et 1 min</label>'+
+      '<label class="toggle sm"><input type="checkbox" id="auRc"'+(state.settings.recharge ? " checked" : "")+'> Me proposer 30 min de recharge après un moment social</label>'+
+      '<label class="toggle sm"><input type="checkbox" id="auCh"'+(state.settings.choice ? " checked" : "")+'> Mode choix : me proposer 2 options plutôt qu\'une consigne</label>'+
+      '<p class="fgroup">🎒 Mon kit sensoriel</p><div id="auKit"></div><p class="fgroup">🍽️ Mes aliments sûrs</p><div id="auFood"></div><p class="fgroup">👕 Mes vêtements doux</p><div id="auClo"></div>';
+    document.getElementById("auSens").onclick = sensSheet;
+    document.getElementById("auLow").onclick = () => lowDemand(true);
+    document.getElementById("auTr").onchange = e => { state.settings.trans = e.target.checked; save(); };
+    document.getElementById("auRc").onchange = e => { state.settings.recharge = e.target.checked; save(); };
+    document.getElementById("auCh").onchange = e => { state.settings.choice = e.target.checked; save(); renderMyDay(); };
+    listEditor(document.getElementById("auKit"), AU.kit, "Ajouter au kit…");
+    listEditor(document.getElementById("auFood"), AU.safeFoods, "Un aliment rassurant…");
+    listEditor(document.getElementById("auClo"), AU.softClothes, "Un vêtement confortable…");
+    const cb = document.getElementById("cardsBox");
+    cb.innerHTML = '<p class="small">Quand parler devient difficile, montre une carte en plein écran.</p><div class="cardpick">'+AU.cards.map((c,j) => '<button data-c="'+j+'">🪧 '+esc(c)+'</button>').join("")+'</div><p class="fgroup">✏️ Modifier mes cartes</p><div id="auCards"></div>';
+    cb.querySelectorAll("[data-c]").forEach(b => b.onclick = () => showCard(AU.cards[Number(b.dataset.c)]));
+    listEditor(document.getElementById("auCards"), AU.cards, "Une nouvelle carte…", renderAu);
+    const pb = document.getElementById("passionBox"), P0 = AU.passion;
+    pb.innerHTML = '<input class="search" id="paN" maxlength="40" placeholder="Ma passion du moment (ex. les orques, le tricot…)" value="'+esc(P0.name)+'">'+
+      '<button class="btn primary" id="paPlan" style="width:100%;margin:10px 0"'+(P0.name ? "" : " disabled")+'>🌟 M\'offrir 30 min de passion aujourd\'hui</button>'+
+      '<p class="fgroup">📓 Mon carnet de découvertes</p><form class="add" id="paF"><input maxlength="200" placeholder="Une chose fascinante que j\'ai apprise…"><button class="buy">＋</button></form>'+
+      '<div class="panotes">'+P0.notes.slice(0,8).map((n,j) => '<div class="panote"><span class="small">'+esc(n.d)+'</span> '+esc(n.t)+'<button data-j="'+j+'" aria-label="Supprimer">✕</button></div>').join("")+'</div>'+
+      (P0.notes.length > 8 ? '<p class="small">… et '+(P0.notes.length-8)+' autres</p>' : "");
+    document.getElementById("paN").onchange = e => { P0.name = e.target.value.trim(); save(); renderAu(); };
+    document.getElementById("paPlan").onclick = () => { dayList(todayKey()).push(P("🌟 Temps passion : "+P0.name, {c:"violet", dur:30})); save(); renderPlan(); renderMyDay(); toast("🌟 C'est dans ton planning du jour"); };
+    document.getElementById("paF").onsubmit = e => { e.preventDefault(); const v = e.target.querySelector("input").value.trim(); if (v){ P0.notes.unshift({t:v, d:new Date().toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}); award(2); save(); renderAu(); } };
+    pb.querySelectorAll(".panote [data-j]").forEach(b => b.onclick = () => { P0.notes.splice(Number(b.dataset.j),1); save(); renderAu(); });
+  }
+
+  // Onglets SOS supplémentaires
+  const _sosShow = sosShow;
+  sosShow = function(tab){
+    if (tab === "cards" || tab === "low"){
+      sosTab = tab; clearInterval(breathT);
+      document.querySelectorAll("#sos .stab").forEach(b => b.classList.toggle("on", b.dataset.t === tab));
+      document.getElementById("sosKoalaWrap").style.display = "none";
+      const body = document.getElementById("sosBody");
+      if (tab === "cards") cardsPick(body);
+      else { body.innerHTML = '<p class="sosmed">Un écran tout simple, sans question. Juste manger, boire, te reposer.</p><button class="sosbtn" id="sosLow">🫧 Passer en mode basse demande</button><p class="sossmall">Ta série de jours est protégée aujourd\'hui.</p>'; document.getElementById("sosLow").onclick = () => lowDemand(true); }
+      return;
+    }
+    return _sosShow(tab);
+  };
+
+
+  /* ================= Onglet Moi en 3 groupes + code santé ================= */
+  const MOI_GROUPS = [
+    ["jour","🌤️ Aujourd'hui",["moods","energy","week","sensBox","socBat","prides"]],
+    ["sante","🩺 Santé",["sleepBox","notesList","meds","cycle","trends"]],
+    ["outils","🧰 Mes outils",["cardsBox","passionBox","kid","bdays","wish"]]
+  ];
+  let healthOpen = false, healthT = null;
+  function healthLocked(){ return !!state.settings.pin && !healthOpen; }
+  async function hashPin(pin){
+    try { const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("monfocus:"+pin)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2,"0")).join(""); }
+    catch(e){ let h = 5381; for (const c of "monfocus:"+pin) h = ((h << 5) + h + c.charCodeAt(0)) | 0; return "d"+(h >>> 0).toString(16); }
+  }
+  function relock(){ healthOpen = false; clearTimeout(healthT); if (document.getElementById("moiSeg")) renderMoiGroup(); }
+  document.addEventListener("visibilitychange", () => { if (document.hidden) relock(); });
+  (function buildMoiGroups(){
+    const v = document.getElementById("v-mood"), kc = v.querySelector(".koala-card"); if (!kc) return;
+    const seg = document.createElement("div"); seg.className = "pseg moiseg"; seg.id = "moiSeg";
+    seg.innerHTML = MOI_GROUPS.map(([g,l]) => '<button data-g="'+g+'">'+l+'</button>').join("");
+    kc.after(seg);
+    const lock = document.createElement("div"); lock.id = "moiLock"; lock.className = "card"; lock.hidden = true; seg.after(lock);
+    let last = lock;
+    MOI_GROUPS.forEach(([g,,ids]) => ids.forEach(id => {
+      const el = document.getElementById(id); if (!el) return;
+      const c = el.closest("details.card, .card, details"); if (!c || c.dataset.mg) return;
+      c.dataset.mg = g; last.after(c); last = c;
+    }));
+    seg.querySelectorAll("[data-g]").forEach(b => b.onclick = () => { state.moiGroup = b.dataset.g; save(); renderMoiGroup(); });
+    renderMoiGroup();
+  })();
+  function renderMoiGroup(){
+    const g = state.moiGroup || "jour", locked = g === "sante" && healthLocked();
+    document.querySelectorAll("#moiSeg [data-g]").forEach(b => { b.classList.toggle("on", b.dataset.g === g); if (b.dataset.g === "sante") b.textContent = "🩺 Santé"+(state.settings.pin ? (healthOpen ? " 🔓" : " 🔒") : ""); });
+    document.querySelectorAll("#v-mood [data-mg]").forEach(c => c.classList.toggle("mghide", c.dataset.mg !== g || locked));
+    const lock = document.getElementById("moiLock"); lock.hidden = !locked;
+    if (locked) pinPad(lock, "🔒 Tes données santé sont protégées", "Tape ton code à 4 chiffres", async code => {
+      if (await hashPin(code) === state.settings.pin){ healthOpen = true; clearTimeout(healthT); healthT = setTimeout(relock, 5*60000); renderMoiGroup(); return true; }
+      return false;
+    });
+  }
+  // Petit clavier à 4 chiffres
+  function pinPad(box, title, sub, onDone){
+    let code = "";
+    const draw = (err) => {
+      box.innerHTML = '<h2 style="text-align:center">'+title+'</h2><p class="small center">'+(err || sub)+'</p><div class="pindots">'+[0,1,2,3].map(i => '<i class="'+(i < code.length ? "on" : "")+'"></i>').join("")+'</div>'+
+        '<div class="pinpad">'+[1,2,3,4,5,6,7,8,9,"",0,"⌫"].map(n => n === "" ? "<span></span>" : '<button data-n="'+n+'">'+n+'</button>').join("")+'</div>';
+      box.querySelectorAll("[data-n]").forEach(b => b.onclick = async () => {
+        const n = b.dataset.n;
+        if (n === "⌫") code = code.slice(0,-1); else if (code.length < 4) code += n;
+        draw();
+        if (code.length === 4){ const ok = await onDone(code); if (!ok){ code = ""; draw("Ce n'est pas le bon code. Réessaie."); box.querySelector(".pindots").classList.add("shake"); } }
+      });
+    };
+    draw();
+  }
+  function renderPinBox(){
+    const box = document.getElementById("pinBox"); if (!box) return;
+    if (!state.settings.pin){
+      box.innerHTML = '<p class="small">Protège Santé (sommeil, carnet médecin, traitement, cycle, tendances) avec un code. Ce n\'est pas un coffre-fort : ça évite surtout qu\'un proche tombe dessus par hasard.</p><button class="btn ghost" id="pinSet" style="width:100%">🔒 Choisir un code</button>';
+      box.querySelector("#pinSet").onclick = () => openSheet("", card => {
+        let first = null;
+        const step = () => pinPad(card, first ? "Confirme ton code" : "Choisis un code", first ? "Tape-le une 2e fois" : "4 chiffres faciles à retenir pour toi", async code => {
+          if (!first){ first = code; step(); return true; }
+          if (code !== first){ first = null; step(); toast("Les deux codes ne correspondent pas"); return true; }
+          state.settings.pin = await hashPin(code); healthOpen = false; save(); closeSheet(); renderPinBox(); renderMoiGroup(); toast("🔒 Tes données santé sont protégées"); return true;
+        });
+        step();
+      });
+    } else {
+      box.innerHTML = '<p class="small">✅ Code activé. Santé se verrouille quand tu quittes l\'app ou au bout de 5 minutes.</p><button class="btn ghost" id="pinOff" style="width:100%">Retirer le code</button>';
+      box.querySelector("#pinOff").onclick = () => openSheet("", card => pinPad(card, "Retirer le code", "Tape ton code actuel", async code => {
+        if (await hashPin(code) !== state.settings.pin) return false;
+        delete state.settings.pin; save(); closeSheet(); renderPinBox(); renderMoiGroup(); toast("Code retiré"); return true;
+      }));
+    }
+  }
+
+
+  /* ================= Tâches importantes = post-its ⭐ (une seule liste) ================= */
+  let syncing = false, syncDirty = false;
+  function syncStars(){
+    if (syncing) return; syncing = true;
+    try {
+      const k = todayKey(), l = dayList(k); let changed = false;
+      state.items = state.items || [];
+      while (state.items.length < 3) state.items.push({t:"", d:false, s:[]});
+      state.items.forEach((it, i) => {
+        const snap0 = it._s || {};
+        if (!it.t || !it.t.trim()){
+          if (it.pid){ const [,p] = findPostit(it.pid); if (p && p.star){ delete p.star; changed = true; } delete it.pid; delete it._s; }
+          return;
+        }
+        let [pk, p] = it.pid ? findPostit(it.pid) : [null, null];
+        if (p && pk < k && !isSomeday(pk) && !p.done){ movePostit(p, k, 0); pk = k; changed = true; }   // reprise d'une tâche d'un jour passé
+        if (it.pid && (!p || pk !== k)){ state.items[i] = {t:"", d:false, s:[]}; changed = true; return; }   // post-it supprimé ou reporté
+        if (!p){ p = P(it.t, {c:"rose", star:true, done:!!it.d}); l.unshift(p); it.pid = p.id; it._s = {t:it.t, d:!!it.d}; changed = true; return; }
+        if (!p.star){ state.items[i] = {t:"", d:false, s:[]}; changed = true; return; }   // étoile retirée sur le post-it
+        const first = p.t.split("\n")[0];
+        if (it.t !== snap0.t){ p.t = [it.t].concat(p.t.split("\n").slice(1)).join("\n"); changed = true; }
+        else if (first !== it.t){ it.t = first; changed = true; }
+        if (!!it.d !== !!snap0.d){ if (!!p.done !== !!it.d){ p.done = !!it.d; changed = true; } }
+        else if (!!p.done !== !!it.d){ it.d = !!p.done; changed = true; }
+        it._s = {t:it.t, d:!!it.d};
+      });
+      // Post-its étoilés pas encore liés → place libre
+      l.filter(p => p.star && !state.items.some(it => it.pid === p.id)).forEach(p => {
+        const slot = state.items.findIndex(it => !it.t || !it.t.trim());
+        if (slot >= 0){ state.items[slot] = {t:p.t.split("\n")[0], d:!!p.done, s:[], pid:p.id, _s:{t:p.t.split("\n")[0], d:!!p.done}}; changed = true; }
+        else { delete p.star; changed = true; }
+      });
+      if (changed && !syncDirty){ syncDirty = true; setTimeout(() => { syncDirty = false; try { const typing = document.activeElement && document.activeElement.closest && document.activeElement.closest("#prios"); if (!tabDirty.has("plan")) renderPlan(); if (!typing) renderToday(); renderMyDay(); } catch(e){} }, 0); }
+    } finally { syncing = false; }
+  }
+  syncHook = syncStars;
+  syncStars(); save();
+
+  /* ================= Capture intelligente : « dentiste mardi 15h » ================= */
+  const JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+  const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  function parseWhen(txt){
+    let t = " "+txt+" ", k = null, time = null;
+    const low = () => norm(t);
+    const cut = re => { const m = t.match(re); if (m){ t = t.replace(m[0], " "); } return m; };
+    const add = n => { const d = new Date(); d.setDate(d.getDate()+n); return dayKey(d); };
+    let m;
+    if ((m = cut(/\s(?:un jour|un de ces jours|plus tard)\s/i))) k = "someday";
+    else if ((m = cut(/\s(?:apr[eè]s[- ]demain)\s/i))) k = add(2);
+    else if ((m = cut(/\s(?:demain)(?:\s+(?:matin|soir|midi|apr[eè]s-midi))?\s/i))) k = add(1);
+    else if ((m = cut(/\s(?:aujourd'?hui|ce soir|ce matin|cet apr[eè]s-midi)\s/i))) k = todayKey();
+    else if ((m = cut(/\s(?:(?:ce|le)\s+)?(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)(\s+prochain)?\s/i))){
+      const want = JOURS.indexOf(m[1].toLowerCase()); let n = (want - new Date().getDay() + 7) % 7; if (m[2]) n = n || 7; k = add(n);
+    }
+    else if ((m = cut(/\s(?:le\s+)?(\d{1,2})\s*\/\s*(\d{1,2})\s/))){ k = futureDate(Number(m[1]), Number(m[2]) - 1); }
+    else if ((m = cut(new RegExp("\\s(?:le\\s+)?(\\d{1,2})(?:er)?\\s+("+MOIS.join("|")+"|fevrier|aout|decembre)\\s","i")))){ const mo = MOIS.map(norm).indexOf(norm(m[2])); k = futureDate(Number(m[1]), mo); }
+    else if ((m = cut(/\sle\s+(\d{1,2})(?:er)?\s/i))){ const d = new Date(), day = Number(m[1]); k = futureDate(day, d.getDate() > day ? d.getMonth()+1 : d.getMonth()); }
+    if ((m = cut(/\s(?:à|a|vers)?\s*(\d{1,2})\s*(?:h|:)\s*(\d{2})?\s/i)) && Number(m[1]) < 24) time = String(m[1]).padStart(2,"0")+":"+(m[2] || "00");
+    else if ((m = cut(/\s(?:à\s+)?midi\s/i))) time = "12:00";
+    t = t.replace(/\s+(?:à|a|le|pour|vers)\s*$/i, " ").replace(/^\s*(?:à|le|pour)\s+/i, " ").replace(/\s{2,}/g, " ").trim();
+    if (t) t = t.charAt(0).toUpperCase() + t.slice(1);
+    if (time && !k) k = todayKey();
+    return {t: t || txt, k, time};
+  }
+  function futureDate(day, month){
+    const now = new Date(); now.setHours(0,0,0,0);
+    let d = new Date(now.getFullYear(), month, day); if (d < now) d = new Date(now.getFullYear()+1, month, day);
+    return isNaN(d) ? null : dayKey(d);
+  }
+  function whenLabel(w){
+    if (w.k === "someday") return "📥 Un jour";
+    const dk = w.k || todayKey(), lbl = dk === todayKey() ? "aujourd'hui" : dk === tomorrowK() ? "demain" : dateOf(dk).toLocaleDateString("fr-FR",{weekday:"long", day:"numeric", month:"long"});
+    return "📅 "+lbl+(w.time ? " · ⏰ "+w.time.replace(/^0/,"").replace(":","h").replace("h00","h") : "");
+  }
+
+  /* ================= 4 onglets : Tâches → Planning, Cadeaux → Ma journée ================= */
+  (function mergeTabs(){
+    const vt = document.getElementById("v-today"), vp = document.getElementById("v-plan"), vr = document.getElementById("v-rewards"), vk = document.getElementById("v-koala");
+    const top = document.createElement("div"); top.id = "todayTop";
+    const tools = document.createElement("div"); tools.id = "todayTools";
+    const keep = el => el.matches("h1, .sub, .koala-card");
+    let toolbox = false;
+    [...vt.children].forEach(el => {
+      if (keep(el)) return;
+      if (el.matches("p.fgroup") && /Boîte à outils/.test(el.textContent)) toolbox = true;
+      (toolbox ? tools : top).appendChild(el);
+    });
+    vp.querySelector(".hint2#pLeft").before(top);
+    const tip = vp.querySelector("p.small.center"); tip.after(tools);
+    const rw = document.createElement("div"); rw.id = "rewardsIn";
+    rw.innerHTML = '<h2 class="secttl">🎁 Mes cadeaux et mon niveau</h2>';
+    [...vr.children].forEach(el => { if (!keep(el)) rw.appendChild(el); });
+    vk.appendChild(rw);
+    document.querySelectorAll('nav [data-v="today"], nav [data-v="rewards"]').forEach(b => b.classList.add("navgone"));
+  })();
+  function planScope(){
+    const vp = document.getElementById("v-plan"), day = (state.settings.planView || "day") === "day";
+    vp.classList.toggle("ptoday", day && planDay === todayKey());
+    vp.classList.toggle("pdayv", day);
+    const cl = document.getElementById("pClose"); if (cl) cl.hidden = !(day && planDay === todayKey() && new Date().getHours() >= 16);
+  }
+  const _renderPlanTabs = renderPlan;
+  renderPlan = function(){ const r = _renderPlanTabs.apply(this, arguments); planScope(); return r; };
+
+  /* ================= Préparer ma journée (60 s) ================= */
+  function dayPrep(){
+    const tm = state.moods[todayKey()] || {};
+    let en = tm.e || null, mo = tm.m || null, step = 1;
+    const imp = state.items.map(x => x.t).filter(x => x && x.trim());
+    const yest = (() => { const d = new Date(); d.setDate(d.getDate()-1); return dayList(dayKey(d)).filter(p => !p.done && !p.rech).map(p => p.t.split("\n")[0]); })();
+    const draw = card => {
+      const bar = '<div class="prepbar">'+[1,2,3].map(n => '<i class="'+(n <= step ? "on" : "")+'"></i>').join("")+'</div>';
+      if (step === 1){
+        card.innerHTML = bar+'<h2>🌅 Préparer ma journée</h2><p class="small">60 secondes, 3 étapes.</p>'+
+          '<p class="fgroup">⚡ Mon énergie</p><div class="estchips" id="dpE">'+[[1,"🪫 Basse"],[2,"🔋 Moyenne"],[3,"⚡ Haute"]].map(([v,l]) => '<button class="chip'+(en===v?" on":"")+'" data-v="'+v+'">'+l+'</button>').join("")+'</div>'+
+          '<p class="fgroup">🙂 Mon humeur</p><div class="estchips" id="dpM">'+MOODS.map((e,i) => '<button class="chip'+(mo===i+1?" on":"")+'" data-v="'+(i+1)+'" style="font-size:22px">'+e+'</button>').join("")+'</div>'+
+          '<button class="btn primary" id="dpN" style="width:100%;margin-top:14px">Suivant →</button>';
+        const grp = (id, set) => card.querySelectorAll("#"+id+" [data-v]").forEach(b => b.onclick = () => { set(Number(b.dataset.v)); card.querySelectorAll("#"+id+" [data-v]").forEach(x => x.classList.toggle("on", x === b)); });
+        grp("dpE", v => en = v); grp("dpM", v => mo = v);
+        card.querySelector("#dpN").onclick = () => { const t = today(); if (en) t.e = en; if (mo){ t.m = mo; moodPoints(); } save(); step = 2; draw(card); };
+      } else if (step === 2){
+        const n = en === 1 ? 1 : 3;
+        card.innerHTML = bar+'<h2>⭐ '+(n === 1 ? "LA chose importante" : "Mes 3 tâches importantes")+'</h2><p class="small">'+(en === 1 ? "Énergie basse : une seule, et petite. C'est déjà beaucoup." : "Pas plus de 3. Les petites comptent aussi.")+'</p>'+
+          [0,1,2].slice(0,n).map(i => '<input class="search dpI" maxlength="80" value="'+esc(imp[i]||"")+'" placeholder="'+["La plus importante","Une deuxième","Une troisième"][i]+'" style="margin-bottom:8px">').join("")+
+          (yest.length ? '<p class="small">Pas fini hier : '+yest.slice(0,4).map(t => '<button class="linkbtn dpY">'+esc(t)+'</button>').join(" · ")+'</p>' : "")+
+          '<button class="btn primary" id="dpN" style="width:100%;margin-top:10px">Suivant →</button>';
+        card.querySelectorAll(".dpY").forEach(b => b.onclick = () => { const e = [...card.querySelectorAll(".dpI")].find(i => !i.value.trim()); if (e) e.value = b.textContent; });
+        card.querySelector("#dpN").onclick = () => {
+          const vals = [...card.querySelectorAll(".dpI")].map(i => i.value.trim()).filter(Boolean);
+          const yk = (() => { const d = new Date(); d.setDate(d.getDate()-1); return dayKey(d); })();
+          vals.forEach(v => {
+            const yp = dayList(yk).find(p => !p.done && p.t.split("\n")[0] === v);
+            if (yp && !state.items.some(x => x.t === v)){ movePostit(yp, todayKey(), 0); yp.star = true; return; }
+          });
+          save();
+          vals.forEach(v => { if (state.items.some(x => x.t === v)) return; const s = state.items.findIndex(x => !x.t || !x.t.trim()); if (s >= 0) state.items[s] = {t:v, d:false, s:[]}; });
+          save(); step = 3; draw(card);
+        };
+      } else {
+        const rdv = dayList(todayKey()).filter(p => p.time && !p.rech);
+        card.innerHTML = bar+'<h2>📍 Mes rendez-vous du jour</h2>'+(rdv.length ? '<div class="wlist">'+rdv.map(p => '<div class="mdrow"><span>⏰ <b>'+p.time.replace(":","h")+'</b> '+esc(p.t.split("\n")[0])+'</span></div>').join("")+'</div>' : '<p class="small">Aucun pour l\'instant.</p>')+
+          '<form class="add" id="dpF"><input maxlength="80" placeholder="Ex. : appel école 14h"><button class="buy">＋</button></form><p class="small" id="dpW"></p>'+
+          '<button class="btn primary" id="dpOk" style="width:100%;margin-top:12px">Ma journée est prête ☀️</button>';
+        const inp = card.querySelector("#dpF input");
+        inp.oninput = () => { const w = parseWhen(inp.value); card.querySelector("#dpW").textContent = inp.value.trim() && w.time ? "✨ "+w.t+" à "+w.time.replace(":","h") : ""; };
+        card.querySelector("#dpF").onsubmit = e => { e.preventDefault(); const v = inp.value.trim(); if (!v) return; const w = parseWhen(v); dayList(todayKey()).push(P(w.t, w.time ? {time:w.time, c:"orange"} : {c:"orange"})); save(); draw(card); };
+        card.querySelector("#dpOk").onclick = () => {
+          if (state.checkinDate !== todayKey()){ state.checkinDate = todayKey(); award(5); }
+          save(); closeSheet(); renderAll();
+          const first = state.items.find(x => x.t && x.t.trim() && !x.d);
+          koala("koala", en === 1 ? "soft" : "happy", "", true);
+          toast(en === 1 ? "🌙 Journée douce : juste « "+(first ? first.t : "une petite chose")+" »" : "☀️ C'est parti ! On commence par « "+(first ? first.t : "ce qui te tente")+" »");
+        };
+      }
+    };
+    openSheet("", draw);
+  }
+
+  /* ================= Fermer la journée en un geste ================= */
+  function closeDay(){
+    const l = dayList(todayKey()).filter(p => !p.done && !p.rech);
+    if (!l.length){ toast("🌙 Tout est fait ou rangé. Belle journée bouclée !"); state.closedDay = todayKey(); save(); renderMyDay(); return; }
+    openSheet('<h2>🌙 Fermer ma journée</h2><p class="small">Ce n\'est pas un échec : c\'est juste pour plus tard. '+l.length+' chose'+(l.length>1?"s":"")+' pas faite'+(l.length>1?"s":"")+' :</p>'+
+      '<div class="wlist">'+l.map(p => '<label class="toggle sm"><input type="checkbox" data-id="'+p.id+'" checked> '+esc(p.t.split("\n")[0])+'</label>').join("")+'</div>'+
+      '<button class="btn primary" id="cdT" style="width:100%;margin-top:12px">🗓️ Tout à demain</button><button class="btn ghost" id="cdS" style="width:100%;margin-top:8px">📥 Tout dans « Un jour »</button>', card => {
+      const go = to => {
+        snap("🌙 Journée fermée", true);
+        const ids = [...card.querySelectorAll("[data-id]:checked")].map(i => i.dataset.id);
+        l.filter(p => ids.includes(p.id)).forEach(p => { delete p.star; movePostit(p, to); });
+        state.closedDay = todayKey(); save(); closeSheet(); renderPlan(); renderMyDay();
+        toast("🌙 Journée fermée. Repose-toi, tu as fait ce que tu as pu 💚");
+      };
+      card.querySelector("#cdT").onclick = () => go(tomorrowK());
+      card.querySelector("#cdS").onclick = () => go("someday");
+    });
+  }
+  document.getElementById("pClose").addEventListener("click", closeDay);
+
+  /* ================= Moins de messages : heures calmes + regroupement ================= */
+  let lastTouch = Date.now();
+  ["pointerdown","keydown"].forEach(ev => document.addEventListener(ev, () => lastTouch = Date.now(), true));
+  if (!state.settings.quiet) state.settings.quiet = {on:true, from:"22:00", to:"07:30"};
+  function quietNow(){
+    const q = state.settings.quiet; if (!q || !q.on) return false;
+    const n = nowHM(), a = hmToMin(q.from), b = hmToMin(q.to);
+    return a > b ? (n >= a || n < b) : (n >= a && n < b);
+  }
+  const spontaneous = () => Date.now() - lastTouch > 4000;
+  const _toastQ = toast;
+  toast = function(txt){ if (quietNow() && spontaneous()) return; return _toastQ(txt); };
+  const _bell = Sound.softBell;
+  Sound.softBell = function(){ if (quietNow() && spontaneous()) return; return _bell.apply(Sound, arguments); };
+
+  /* ================= Découverte progressive ================= */
+  const DISCOVER = ["tab-mood","timers","ideas","dump","halt","energy","move","routines","amb","shop","where","sleep","prides","social","auprof","aucards","passion","preview","planb","boss","chal","wardrobe","dopa","trends","notes","bdays","wish","habits","papers","chantier","scripts","kid","meds","cycle"];
+  function discoverTick(){
+    const D = state.discover; if (!D || !D.on) return;
+    if (Date.now() - (D.last || 0) < 7*864e5 || D.offer) return;
+    const next = DISCOVER.find(id => state.hidden[id] && ALLF.some(([x]) => x === id));
+    if (!next){ D.on = false; save(); return; }
+    D.offer = next; save();
+  }
+  function discoverHtml(){
+    const D = state.discover; if (!D || !D.on || !D.offer) return "";
+    const f = ALLF.find(([x]) => x === D.offer); if (!f) return "";
+    return '<div class="tidy disc"><span>🎁 <b>Nouvel outil à découvrir</b> : '+esc(f[1])+'. On l\'ajoute ?</span><div class="tidyb"><button class="btn primary" data-dc="y">Oui, montre-moi</button><button class="btn ghost" data-dc="n">Pas maintenant</button></div></div>';
+  }
+  function discoverBind(box){
+    box.querySelectorAll("[data-dc]").forEach(b => b.onclick = () => {
+      const D = state.discover, id = D.offer;
+      if (b.dataset.dc === "y"){ delete state.hidden[id]; applyFeats(); toast("🎁 Ajouté ! Tu le trouveras dans son onglet."); }
+      else D.skipped = (D.skipped || []).concat(id);
+      if (b.dataset.dc === "n") state.hidden[id] = true;
+      D.offer = null; D.last = Date.now(); save(); renderMyDay();
+    });
+  }
+  // Nouvelle installation (aucune donnée) : on démarre avec l'essentiel
+  if (!state.discover){
+    const fresh = !state.pts && !Object.keys(state.moods||{}).length && !(state.log||[]).length;
+    state.discover = {on:fresh, last:Date.now()};
+    if (fresh) try { applyPreset("essentiel"); } catch(e){}
+    save();
+  }
+  discoverTick();
+
+
+  /* ================= Écrans allégés ================= */
+  // Bouton « ＋ Ajouter une tâche importante » à la place des cases vides
+  const _rtSlim = renderToday;
+  renderToday = function(){
+    const r = _rtSlim.apply(this, arguments);
+    const low = lowDay() && state.showAllDate !== todayKey(), filled = state.items.filter(x => x.t && x.t.trim()).length;
+    prios.querySelectorAll(".prio input").forEach(inp => {
+      if (inp.value.trim()) return;
+      inp.addEventListener("input", () => { addSlotOpen = false; }, {once:true});
+      inp.addEventListener("blur", () => setTimeout(() => { if (!inp.value.trim() && addSlotOpen){ addSlotOpen = false; renderToday(); } }, 150));
+      if (addSlotOpen) setTimeout(() => inp.focus(), 30);
+    });
+    if (!low && filled > 0 && filled < 3 && !addSlotOpen){
+      const b = document.createElement("button"); b.className = "addprio"; b.textContent = "＋ Ajouter une tâche importante";
+      b.onclick = () => { addSlotOpen = true; renderToday(); };
+      prios.appendChild(b);
+    }
+    return r;
+  };
+
+  // Planning : les options secondaires dans « ⋯ Plus »
+  (function planMore(){
+    const vp = document.getElementById("v-plan"), close = document.getElementById("pClose");
+    const box = document.createElement("div"); box.className = "pmore"; box.hidden = true;
+    const items = [document.getElementById("pTpl").parentNode, document.getElementById("pPlanB").parentNode, document.getElementById("pEst").closest("label"), vp.querySelector("p.small.center")];
+    const btn = document.createElement("button"); btn.className = "btn ghost pmorebtn"; btn.textContent = "⋯ Plus d'options";
+    items[0].before(btn); btn.after(box); items.forEach(el => el && box.appendChild(el));
+    btn.onclick = () => { box.hidden = !box.hidden; btn.textContent = box.hidden ? "⋯ Plus d'options" : "✕ Moins d'options"; };
+    if (close) btn.before(close);
+  })();
+
+  // Koala compact : jauges dans la scène, tout tient sur un écran
+  (function compactKoala(){
+    const sc = document.getElementById("scene"), g = document.querySelector("#v-koala .gauges");
+    if (!sc || !g) return;
+    g.classList.add("gmini"); g.classList.remove("card");
+    sc.after(g);
+    const acts = document.querySelector("#v-koala .actions"); if (acts) g.after(acts);
+  })();
+
+  // Réglages en 3 rubriques
+  (function settingsTabs(){
+    const vs = document.getElementById("v-settings"); if (!vs) return;
+    const cards = [...vs.querySelectorAll(":scope > .card, :scope > details.card")];
+    const lookCard = document.getElementById("lookBox").closest(".card, details");
+    const comfort = document.getElementById("calmToggle").closest(".card, details");
+    cards.forEach(c => c.dataset.rs = c === comfort ? "confort" : c === lookCard ? "app confort" : "app");
+    // Carte « Mes données » : sauvegarde + code santé
+    const data = document.createElement("div"); data.className = "card"; data.dataset.rs = "data";
+    data.innerHTML = '<h2>💾 Mes données</h2><p class="small">Tout reste sur ton iPhone. Fais une sauvegarde chaque semaine.</p>';
+    const exp = document.getElementById("expBtn").parentNode, bk = document.getElementById("bkInfo");
+    data.appendChild(exp); if (bk) data.appendChild(bk);
+    const pinHost = document.createElement("div"); pinHost.innerHTML = '<p class="fgroup">🔒 Code pour mes données santé</p><div id="pinBox"></div>'; data.appendChild(pinHost);
+    comfort.after(data);
+    const seg = document.createElement("div"); seg.className = "pseg rseg";
+    seg.innerHTML = '<button data-r="app">🎨 Apparence</button><button data-r="confort">🌿 Confort</button><button data-r="data">💾 Mes données</button>';
+    lookCard.before(seg);
+    const set = r => { vs.dataset.rs = r; seg.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.r === r)); };
+    seg.querySelectorAll("button").forEach(b => b.onclick = () => set(b.dataset.r));
+    set("app");
+    renderPinBox();
+  })();
+
+  /* ================= Vraies alertes : Calendrier iPhone (.ics) ================= */
+  function icsDate(d){ return d.getFullYear()+String(d.getMonth()+1).padStart(2,"0")+String(d.getDate()).padStart(2,"0")+"T"+String(d.getHours()).padStart(2,"0")+String(d.getMinutes()).padStart(2,"0")+"00"; }
+  function icsEsc(t){ return String(t).replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/[,;]/g, m => "\\"+m); }
+  function makeIcs(evs){
+    const L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Mon Focus//FR","CALSCALE:GREGORIAN","METHOD:PUBLISH"];
+    evs.forEach(e => {
+      const end = new Date(e.start.getTime() + (e.dur || 15)*60000);
+      L.push("BEGIN:VEVENT","UID:"+uid()+"@monfocus","DTSTAMP:"+icsDate(new Date()),"DTSTART:"+icsDate(e.start),"DTEND:"+icsDate(end),"SUMMARY:"+icsEsc(e.title));
+      if (e.notes) L.push("DESCRIPTION:"+icsEsc(e.notes));
+      if (e.rrule) L.push("RRULE:"+e.rrule);
+      (e.alarms || [0]).forEach(m => L.push("BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+icsEsc(e.title),"TRIGGER:-PT"+m+"M","END:VALARM"));
+      L.push("END:VEVENT");
+    });
+    L.push("END:VCALENDAR");
+    return L.join("\r\n");
+  }
+  async function sendToCalendar(evs, name){
+    if (!IS_PWA){ toast("🔔 Disponible dans la version installée sur ton iPhone (icône koala)"); return; }
+    const txt = makeIcs(evs), file = name.replace(/[^\w-]+/g,"-").slice(0,40)+".ics";
+    const blob = new Blob([txt], {type:"text/calendar"});
+    try {
+      const f = new File([blob], file, {type:"text/calendar"});
+      if (navigator.canShare && navigator.canShare({files:[f]})){ await navigator.share({files:[f], title:name}); return; }
+    } catch(e){ if (e && e.name === "AbortError") return; }
+    try { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.target = "_blank"; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 4000); }
+    catch(e){ toast("Impossible d'ouvrir le Calendrier ici"); }
+  }
+  function calSheet(p, k){
+    const [hh, mm] = p.time.split(":").map(Number), d = dateOf(k); d.setHours(hh, mm, 0, 0);
+    let al = [10, 0];
+    openSheet('<h2>🔔 Alerte dans le Calendrier iPhone</h2><p class="small">L\'iPhone te préviendra même si l\'appli est fermée. Tu confirmes l\'ajout dans le Calendrier.</p>'+
+      '<div class="mdrow"><span>📅 <b>'+esc(p.t.split("\n")[0])+'</b><br><span class="small">'+fmtDay(k, true)+' à '+p.time.replace(":","h")+'</span></span></div>'+
+      '<p class="fgroup">⏰ Me prévenir</p><div class="estchips" id="caA">'+[[[0],"À l'heure"],[[10,0],"10 min avant + à l'heure"],[[30,0],"30 min avant + à l'heure"],[[60,10],"1 h avant + 10 min avant"]].map(([v,l],i) => '<button class="chip'+(i===1?" on":"")+'" data-a="'+v.join(",")+'">'+l+'</button>').join("")+'</div>'+
+      '<button class="btn primary" id="caOk" style="width:100%;margin-top:14px">🔔 Ajouter au Calendrier</button>', card => {
+      card.querySelectorAll("#caA [data-a]").forEach(b => b.onclick = () => { al = b.dataset.a.split(",").map(Number); card.querySelectorAll("#caA [data-a]").forEach(x => x.classList.toggle("on", x === b)); });
+      card.querySelector("#caOk").onclick = () => {
+        const prep = p.prep || {};
+        sendToCalendar([{title:p.t.split("\n")[0], start:d, dur:p.dur || 30, alarms:al, notes:[prep.lieu && "📍 "+prep.lieu, prep.dep && "🚶 Départ "+prep.dep, prep.emp && "🎒 "+prep.emp].filter(Boolean).join("\n")}], p.t.split("\n")[0]);
+        p.cal = true; save(); closeSheet();
+      };
+    });
+  }
+  // Bouton dans la fiche d'un post-it qui a une heure
+  const _editPostitCal = editPostit;
+  editPostit = function(p){
+    const r = _editPostitCal.apply(this, arguments);
+    if (p && p.time && !isSomeday(planDay)){
+      const card = document.querySelector("#sheet .sheet-card") || document.querySelector("#sheet"), ok = card && card.querySelector("#peOk");
+      if (ok){ const b = document.createElement("button"); b.className = "btn ghost"; b.style.cssText = "width:100%;margin-top:8px"; b.textContent = (p.cal ? "✅ Déjà dans le Calendrier · renvoyer" : "🔔 Alerte iPhone (Calendrier)"); const k = planDay; b.onclick = () => { closeSheet(); setTimeout(() => calSheet(p, k), 250); }; ok.after(b); }
+    }
+    return r;
+  };
+  // Rappels quotidiens du traitement
+  const _renderMedsCal = renderMeds;
+  renderMeds = function(){
+    const r = _renderMedsCal.apply(this, arguments);
+    const box = document.getElementById("meds"), M = state.meds;
+    if (box && M.on && M.list.length){
+      const b = document.createElement("button"); b.className = "btn ghost"; b.style.cssText = "width:100%;margin-top:10px"; b.textContent = "🔔 Rappels quotidiens dans le Calendrier iPhone";
+      b.onclick = () => sendToCalendar(M.list.map(m => { const d = new Date(); const [h, mi] = m.h.split(":").map(Number); d.setHours(h, mi, 0, 0); return {title:"💊 "+m.n, start:d, dur:5, alarms:[0], rrule:"FREQ=DAILY"}; }), "Traitement");
+      box.appendChild(b);
+    }
+    return r;
+  };
+
+  /* Rendu paresseux : seul l'onglet visible est préparé, les autres le sont quand on y va */
+  const TAB_RENDER = {
+    koala: () => { renderMyDay(); renderPet(); renderKoala(); renderBoss(); renderWardrobe(); renderChal(); renderDopa(); renderRewards(); },
+    today: () => { renderShop(); renderPapers(); renderChantier(); renderDone(); renderHabits(); renderWhere(); renderScripts(); renderBilanBtn(); },
+    plan: () => { renderPlan(); renderShop(); renderPapers(); renderChantier(); renderDone(); renderHabits(); renderWhere(); renderScripts(); renderBilanBtn(); },
+    focus: () => { renderRoutines(); renderEstimates(); renderActs(); renderAmb(); renderPresets(); drawTimer(); renderFocusStat(); if (!running) koala("focus","normal","Choisis ton activité et on s'y met ensemble. Je ferai pareil à côté de toi 🌿"); },
+    mood: () => { renderSleep(); renderNotes(); renderBdays(); renderWish(); renderKid(); renderPrides(); renderSocial(); renderMeds(); renderCycle(); renderTrends(); renderMood(); renderAu(); },
+    rewards: () => { renderBoss(); renderWardrobe(); renderChal(); renderDopa(); renderRewards(); }
+  };
+  const tabDirty = new Set();
+  const activeTab = () => { const v = document.querySelector(".view.active"); return v ? v.id.slice(2) : "koala"; };
+  function renderTab(v){ if (!tabDirty.has(v) || !TAB_RENDER[v]) return; tabDirty.delete(v); try { TAB_RENDER[v](); } catch(e){ console.error(e); } }
+  function renderAll(){
+    applyLook(); applyFeats(); document.getElementById("eatToggle").checked = !!state.eat.on; timersTick(); applyComfort(); bedCheck();
     document.getElementById("bedToggle").checked = !!state.settings.bedOn; document.getElementById("bedTime").value = state.settings.bed;
-    renderRoutines(); renderEstimates(); renderDopa(); renderKoala(); renderTop(); renderToday(); renderActs(); renderAmb(); renderPresets(); drawTimer(); renderFocusStat(); if (!running) koala("focus","normal","Choisis ton activité et on s'y met ensemble. Je ferai pareil à côté de toi 🌿"); renderMood(); renderRewards(); }
+    renderTop(); renderToday();
+    Object.keys(TAB_RENDER).forEach(k => tabDirty.add(k));
+    renderTab(activeTab());
+  }
+  // Les autres onglets se préparent ensuite tranquillement, quand le téléphone ne fait rien
+  function warmTabs(){
+    const next = Object.keys(TAB_RENDER).find(k => tabDirty.has(k)); if (!next) return;
+    const idle = window.requestIdleCallback || (f => setTimeout(f, 300));
+    idle(() => { renderTab(next); warmTabs(); });
+  }
   THEME = currentTheme(); document.documentElement.dataset.theme = THEME;
   renderAll(); applyTheme(false);
   setTimeout(() => { if (state.tourDone) bkRemind(); }, 4000);
   if (state.settings.startTab && state.settings.startTab !== "koala" && !state.hidden["tab-"+state.settings.startTab]) show(state.settings.startTab);
   if (!state.tourDone) setTimeout(() => tour(0), 700);
+  setTimeout(warmTabs, 2500);
+  // Ouverture directe sur la capture (raccourci iPhone « tapoter au dos ») : …/mon-focus/?capture
+  try { if (/[?&#]capture\b/.test(location.search + location.hash)){ setTimeout(captureSheet, 400); history.replaceState(null, "", location.pathname); } } catch(e){}
   document.getElementById("kBig").addEventListener("click", hug);
   document.getElementById("aHug").addEventListener("click", hug);
   document.getElementById("aFeed").addEventListener("click", feed);

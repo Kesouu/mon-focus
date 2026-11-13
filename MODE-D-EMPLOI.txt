@@ -74,9 +74,10 @@ PROTÉGER TES DONNÉES
 
 METTRE À JOUR L'APPLI PLUS TARD
 -------------------------------
-Si Claude te donne une nouvelle version : sur GitHub, ouvre ton dépôt
-mon-focus > « Add file » > « Upload files », glisse le nouveau
-index.html > « Commit changes ». Ton iPhone récupère la nouvelle version
+Si Claude te donne une nouvelle version : dézippe-la, puis sur GitHub,
+ouvre ton dépôt mon-focus > « Add file » > « Upload files », glisse
+tout le contenu du nouveau dossier (GitHub remplace les anciens
+fichiers) > « Commit changes ». Ton iPhone récupère la nouvelle version
 à la prochaine ouverture avec internet. Tes données ne bougent pas.
 
 
@@ -88,3 +89,18 @@ index.html > « Commit changes ». Ton iPhone récupère la nouvelle version
 - Alternative à GitHub : Netlify Drop (app.netlify.com/drop), en glissant
   le dossier. Il faut alors créer un compte gratuit Netlify dans l'heure,
   sinon le site est supprimé.
+
+BONUS : OUVRIR LA CAPTURE EN TAPOTANT 2 FOIS AU DOS DE L'IPHONE
+--------------------------------------------------------------
+(à tester une fois l'appli installée ; nécessite iOS 26 pour que le
+raccourci ouvre bien l'appli installée et pas Safari)
+1. Ouvre l'app Raccourcis > « + » > Ajouter une action > « Ouvrir les URL ».
+2. Colle ton lien suivi de ?capture, par exemple :
+      https://TON-PSEUDO.github.io/mon-focus/?capture
+3. Nomme le raccourci « Capture Mon Focus ».
+4. Réglages > Accessibilité > Toucher > Toucher le dos >
+   Toucher deux fois > choisis « Capture Mon Focus ».
+5. Teste : 2 petits tapotements au dos de l'iPhone > la capture s'ouvre.
+   Si c'est Safari qui s'ouvre (et pas l'appli au koala), ne t'en sers
+   pas : Safari n'a pas les mêmes données. Demande à Claude, on trouvera
+   une autre solution.
