@@ -874,6 +874,71 @@
   #v-settings[data-rs=app] [data-rs]:not([data-rs~=app]),
   #v-settings[data-rs=confort] [data-rs]:not([data-rs~=confort]),
   #v-settings[data-rs=data] [data-rs]:not([data-rs~=data]){display:none!important}
+
+  /* Koala en tête de Ma journée */
+  .khead{display:flex;gap:12px;align-items:center;padding:12px 14px;margin-bottom:10px}
+  .khav{flex:none;width:78px;height:72px;border:none;background:none;padding:0;cursor:pointer}
+  .khav svg{width:100%;height:100%}
+  .khr{flex:1;min-width:0}
+  .khn{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+  .khn b{font-family:"Fredoka","Nunito",sans-serif;font-size:19px}
+  .khn span{font-size:12px;font-weight:800;color:var(--muted)}
+  .gbig{margin:0;padding:0;background:none;box-shadow:none;border:none}
+  .gbig .g{display:grid;grid-template-columns:88px 1fr 42px;align-items:center;gap:8px;margin:5px 0;font-size:14px;font-weight:800}
+  .gbig .g > span:first-child{width:auto}
+  .gbig .track{height:12px;flex:none;width:100%;background:color-mix(in srgb,var(--ink) 14%,transparent)}
+  .gbig .gv{font-size:13px;text-align:right;color:var(--muted)}
+  html.dark .scene-top b{color:#EEE8FB}
+
+  /* Maison */
+  .hscore{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+  .hscore b{font-family:"Fredoka","Nunito",sans-serif;font-size:36px;line-height:1;display:block}
+  .hscore div span{font-size:13px;font-weight:800;color:var(--muted)}
+  .hbar{height:14px;margin:10px 0 4px;border-radius:99px;overflow:hidden;background:color-mix(in srgb,var(--ink) 12%,transparent);display:block}
+  .hbar i,.room .track i{display:block;height:100%;border-radius:99px;transition:width .6s}
+  .rooms{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+  .room{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;font:inherit;color:var(--ink);padding:14px;border-radius:22px;border:1px solid var(--glass-b, var(--line));background:var(--glass, var(--card));box-shadow:var(--shadow, none);cursor:pointer;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+  .room .re{font-size:30px;line-height:1}
+  .room b{font-size:16px}
+  .room .track{display:block;width:100%;height:9px;border-radius:99px;overflow:hidden;background:color-mix(in srgb,var(--ink) 12%,transparent)}
+  .room.addroom{align-items:center;justify-content:center;border-style:dashed;background:transparent;box-shadow:none;color:var(--muted)}
+  .htask{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;color:var(--ink);padding:10px 12px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+  button.htask{cursor:pointer}
+  .htask .hti{flex:1;min-width:0}
+  .htask .hc{flex:none;width:34px;height:34px;border-radius:50%;border:3px solid var(--accent);background:transparent;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;cursor:pointer}
+  .htask.done .hc{background:var(--accent)}
+  .htask.done b{text-decoration:line-through;opacity:.6}
+  .htask.todo{border-color:#F29E6B}
+  .htask.ok .hc{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 25%,transparent)}
+  .htask.snz{opacity:.6}
+
+  /* Questionnaire */
+  .wzsec{margin:0 0 4px;font-weight:800}
+  .wzq{font-family:"Fredoka","Nunito",sans-serif;font-size:22px;line-height:1.25;margin:4px 0 8px}
+  .wzo{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+  .wzb{display:flex;align-items:center;gap:10px;text-align:left;font:inherit;font-weight:800;font-size:17px;padding:14px 16px;border-radius:18px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;box-shadow:0 3px 0 var(--line)}
+  .wzb.on{border-color:var(--accent);background:var(--accent-soft)}
+  .wzc{flex:none;width:22px;height:22px;border-radius:7px;border:2px solid var(--accent);display:inline-flex;align-items:center;justify-content:center}
+  .wzb.on .wzc{background:var(--accent)}
+  .wzb.on .wzc::after{content:"✓";color:#fff;font-size:14px;font-weight:900}
+  .wznav{margin-top:6px;position:sticky;bottom:-2px;padding:8px 0 4px;background:linear-gradient(transparent,var(--card) 30%)}
+  .wzsum{padding-left:4px;list-style:none;margin:10px 0}
+  .wzsum li{padding:8px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+
+  /* Science */
+  .scibar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:10px 0 4px}
+  .sci{background:var(--glass, var(--card));border:1px solid var(--glass-b, var(--line));border-radius:22px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow, none)}
+  .sci h3{font-size:16px;line-height:1.3;margin:6px 0 4px}
+  .scib{display:flex;flex-wrap:wrap;gap:6px}
+  .scib span{font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;background:var(--bg)}
+  .scib .lv3{background:#FFE9A8;color:#7A5600}.scib .lv2{background:#E3F1E7;color:#2C6B49}.scib .lv1{background:#E6EEFB;color:#2F4F86}
+  html.dark .scib .lv3{background:#4C4122;color:#FFDE8A} html.dark .scib .lv2{background:#26443A;color:#A6E6C4} html.dark .scib .lv1{background:#2C3755;color:#B9CCF5}
+  .scib .new{background:var(--lav-soft, #EEEAFB);color:var(--lav, #7B6BD6)}
+  .scib .oa{background:transparent;border:1px solid var(--line)}
+  .sciconc{font-size:14px;line-height:1.45;background:var(--bg);border-radius:14px;padding:10px 12px;margin:8px 0 10px}
+  .sci .row2 a{text-decoration:none;text-align:center;margin:0}
+  .sciwarn{margin:10px 6px 20px}
+  nav button{min-width:0}
   /* ================= STYLE COSY LOFI (inspiré lofi, Focado, Finch) ================= */
   html.cosy{
     --bg:#F8F2EA; --card:#FFFCF7; --ink:#3B3452; --muted:#8B8399; --line:#EDE4E6;
@@ -1170,6 +1235,25 @@
   </section>
 
   <!-- HUMEUR -->
+  <section id="v-house" class="view">
+    <h1>Ma maison</h1>
+    <p class="sub">Où j'en suis, pièce par pièce. Sans culpabilité.</p>
+    <div class="koala-card"><div class="koala idle" id="k-house"></div><div class="bubble" id="b-house"></div></div>
+    <div class="card" id="houseTop"></div>
+    <div class="rooms" id="rooms"></div>
+  </section>
+
+  <section id="v-sci" class="view">
+    <h1>Science</h1>
+    <p class="sub">Les dernières publications sur le TDAH, le TSA et l'AuDHD, mises à jour chaque jour.</p>
+    <div class="koala-card"><div class="koala idle" id="k-sci"></div><div class="bubble" id="b-sci"></div></div>
+    <div class="pseg" id="sciSeg"><button data-t="tdah">⚡ TDAH</button><button data-t="tsa">🧩 TSA</button><button data-t="audhd">🌈 AuDHD</button></div>
+    <div class="scibar"><label class="toggle sm"><input type="checkbox" id="sciSolid"> 🏅 Seulement les études les plus solides</label><button class="mini" id="sciRefresh" aria-label="Actualiser">🔄</button></div>
+    <p class="small" id="sciInfo"></p>
+    <div id="sciList"></div>
+    <p class="small center sciwarn">Ce sont des résumés d'études, pas des conseils médicaux. Une étude seule ne suffit pas à conclure : parles-en à ton médecin avant de changer quoi que ce soit. Source : Europe PMC.</p>
+  </section>
+
   <section id="v-mood" class="view">
     <h1>Comment ça va ?</h1>
     <p class="sub">Un seul tap par jour suffit.</p>
@@ -1280,7 +1364,9 @@
   <button data-v="plan"><span>🗓️</span>Planning</button>
   <button class="navadd" id="fab" aria-label="Capture rapide"><span>＋</span></button>
   <button data-v="focus"><span>⏳</span>Focus</button>
+  <button data-v="house"><span>🧹</span>Maison</button>
   <button data-v="mood"><span>💛</span>Moi</button>
+  <button data-v="sci"><span>🔬</span>Science</button>
   <button data-v="rewards"><span>🎁</span>Cadeaux</button>
 </nav>
 <div class="undobar" id="undoBar" hidden></div>
@@ -1520,7 +1606,8 @@
   function emptyState(){ return { date: todayKey(), items:[{t:"",d:false},{t:"",d:false},{t:"",d:false}], moods:{}, focus:{date:todayKey(),n:0} }; }
 
   let state = emptyState();
-  try { const s = JSON.parse(localStorage.getItem(LS_KEY)); if (s && s.items) state = s; } catch(e){}
+  let hadData = false;
+  try { const s = JSON.parse(localStorage.getItem(LS_KEY)); if (s && s.items){ state = s; hadData = true; } } catch(e){}
   // Valeurs de gamification (ajoutées si absentes)
   state.pts = state.pts||0; state.xp = state.xp||0;
   state.streak = state.streak||{n:0,last:null};
@@ -3630,7 +3717,14 @@
         if (!rSel) return;
         const v = rSel.value, r = pp.rid ? state.recur.find(x => x.id === pp.rid) : null;
         if (v === "none"){ if (r){ state.recur = state.recur.filter(x => x !== r); Object.keys(state.plan).forEach(k => { if (k > planDay && !isSomeday(k)) state.plan[k] = state.plan[k].filter(x => x.rid !== r.id || x.done); }); delete pp.rid; } return; }
-        if (r) Object.assign(r, {t:o.t, c:o.c, time:o.time, dur:o.dur, type:v, dow:dateOf(planDay).getDay()});
+        if (r){
+          const changed = r.t !== o.t || r.c !== o.c || r.time !== o.time || r.dur !== o.dur;
+          Object.assign(r, {t:o.t, c:o.c, time:o.time, dur:o.dur, type:v, dow:dateOf(planDay).getDay()});
+          // Même modification sur tous les post-its de cette répétition, aujourd'hui et les jours suivants (sauf ceux déjà faits)
+          let n = 0;
+          if (changed) Object.keys(state.plan).forEach(k => { if (isSomeday(k) || k < todayKey()) return; state.plan[k].forEach(x => { if (x.rid === r.id && x !== pp && !x.done){ Object.assign(x, {t:o.t, c:o.c, time:o.time, dur:o.dur}); n++; } }); });
+          if (n) toast("🔁 Modifié aussi sur "+n+" autre"+(n>1?"s":"")+" jour"+(n>1?"s":""));
+        }
         else { const nr = {id:uid(), t:o.t, c:o.c, time:o.time, dur:o.dur, type:v, dow:dateOf(planDay).getDay(), from:planDay, skip:[]}; state.recur.push(nr); pp.rid = nr.id; toast("🔁 "+ruleLabel(nr)); }
       };
       card.querySelectorAll(".pcol").forEach(b => b.onclick = () => { c = b.dataset.c; card.querySelectorAll(".pcol").forEach(x => x.classList.toggle("on", x === b)); });
@@ -4040,7 +4134,13 @@
   function applyRecur(k){
     if (isSomeday(k) || k < todayKey()) return;
     const l = dayList(k);
-    state.recur.forEach(r => { if (ruleMatch(r, k) && !l.some(p => p.rid === r.id)) l.push(P(r.t, {c:r.c, time:r.time, dur:r.dur, rid:r.id})); });
+    state.recur.forEach(r => {
+      if (!ruleMatch(r, k) || l.some(p => p.rid === r.id)) return;
+      const np = P(r.t, {c:r.c, time:r.time, dur:r.dur, rid:r.id});
+      // rangé à sa place dans la journée (selon l'heure)
+      const at = r.time ? l.findIndex(p => p.time && p.time > r.time) : -1;
+      at >= 0 ? l.splice(at, 0, np) : l.push(np);
+    });
   }
   const ruleLabel = r => r.type === "dow" ? "Chaque "+["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"][r.dow] : (RULES.find(x => x[0] === r.type)||[])[1];
 
@@ -4374,7 +4474,7 @@
   /* ================= v5 : à la carte, mouvement, vidage de tête ================= */
   state.hidden = state.hidden || {};
   const FEATS = [
-    ["Onglets", [["tab-today","✅ Tâches",'nav [data-v="today"]'],["tab-plan","🗓️ Planning",'nav [data-v="plan"]'],["tab-focus","⏳ Focus",'nav [data-v="focus"]'],["tab-mood","💛 Moi",'nav [data-v="mood"]'],["tab-rewards","🎁 Cadeaux",'nav [data-v="rewards"]']]],
+    ["Onglets", [["tab-today","✅ Tâches",'nav [data-v="today"]'],["tab-plan","🗓️ Planning",'nav [data-v="plan"]'],["tab-focus","⏳ Focus",'nav [data-v="focus"]'],["tab-mood","💛 Moi",'nav [data-v="mood"]'],["tab-house","🧹 Maison",'nav [data-v="house"]'],["tab-sci","🔬 Science",'nav [data-v="sci"]'],["tab-rewards","🎁 Cadeaux",'nav [data-v="rewards"]']]],
     ["Accueil", [["myday","🏠 Ma journée","#myday"],["eat","🍽️ Rappels repas","label:has(#eatToggle)"]]],
     ["Barre du haut", [["sos","🆘 SOS surcharge","#sosPill"],["out","🚪 Avant de sortir","#outPill"],["gear","⚙️ Réglages (barre du haut)","#gearPill"]]],
     ["Tâches", [["energy","⚡ Énergie du jour","#energyBox"],["dice","🎲 Je bloque","#diceBtn,#diceGo"],["dump","🧠 Vider ma tête","#dumpBtn"],["wait","⏳ Rendez-vous","#waitBtn"],["halt","🍔 Check-in HALT","#haltBtn"],["timers","⏲️ Minuteurs","#timerBtn,#pTimer"],["bilan","🌙 Bilan du soir","#bilanBtn"],["review","🔄 Revue de la semaine","#reviewBtn"],
@@ -4392,10 +4492,11 @@
     equilibre: ["chantier","scripts","habits","where","social","trends","wish","meds","cycle","kid","bdays","chal","estbox","wardrobe","papers"],
     tout: []
   };
-  function applyPreset(p){ state.hidden = {}; PRESETS_F[p].forEach(id => state.hidden[id] = true); save(); applyFeats(); }
+  const NEVER_HIDE = ["gear","sos","search","myday"];
+  function applyPreset(p){ state.hidden = {}; PRESETS_F[p].forEach(id => { if (!NEVER_HIDE.includes(id)) state.hidden[id] = true; }); save(); applyFeats(); }
   function applyFeats(){
     let css = "";
-    ALLF.forEach(([id,,sel]) => { if (state.hidden[id]) css += sel+"{display:none!important}\n"; });
+    ALLF.forEach(([id,,sel]) => { if (state.hidden[id] && !["gear","sos","search","myday"].includes(id)) css += sel+"{display:none!important}\n"; });
     document.getElementById("featStyle").textContent = css;
     const cur = document.querySelector(".view.active");
     const tab = cur && cur.id.replace("v-","");
@@ -4417,7 +4518,7 @@
         save();
       };
       card.querySelectorAll("[data-f]").forEach(i => i.onchange = () => { if (i.checked) delete state.hidden[i.dataset.f]; else state.hidden[i.dataset.f] = true; save(); applyFeats(); });
-      card.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { state.hidden = {}; PRESETS_F[b.dataset.p].forEach(id => state.hidden[id] = true); save(); applyFeats(); draw(card); toast(b.textContent+" : c'est appliqué"); });
+      card.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { applyPreset(b.dataset.p); draw(card); toast(b.textContent+" : c'est appliqué"); });
     };
     openSheet("", draw);
   }
@@ -4805,6 +4906,8 @@
     // 6. Prochain post-it de la journée
     const nxp = tl.find(p => !p.done && !p.star && p !== timed && (!p.time || hmToMin(p.time) <= now + 60));
     if (nxp && !low) L.push({kind:"postit", e:"📝", t:nxp.t.split("\n")[0], sub:"Prochain post-it de ta journée", go:() => startFocus({minutes:nxp.dur||15, act:guessAct(nxp.t), postit:{id:nxp.id}}), ok:() => togglePostit(nxp)});
+    // 6 bis. Ménage, si la maison en a besoin
+    if (state.house && state.house.init && !low && h >= 9 && h < 20 && housePct() < 50 && !(state.hidden||{})["tab-house"]) L.push({e:"🧹", t:"Mission ménage 15 min", sub:"La maison est à "+housePct()+" % : l'appli choisit pour toi", go_l:"15 min", go:() => missionSheet(15)});
     // 7. Temps passion en récompense
     if (state.au && state.au.passion && state.au.passion.name && !pr.length && h >= 12) L.push({e:"🌟", t:"Temps passion : "+state.au.passion.name, sub:"Tes tâches importantes sont faites. Recharge-toi avec ce que tu aimes", go_l:"30 min", go:() => startFocus({minutes:30, act:"autre"})});
     // 8. Petits gestes qui font du bien
@@ -4833,10 +4936,11 @@
     html += '<button class="mdrow" id="mdPl">🗓️ Planning <b>'+tdone+'/'+tl.length+'</b>'+(nx && cur.kind !== "postit" ? ' · <span class="small">'+esc(nx.t.split("\n")[0])+'</span>' : "")+' <span>›</span></button>';
     html += '<button class="mdrow" id="mdTd">✅ Tâches importantes <b>'+prd+'/'+pr.length+'</b>'+(pr.find(x => !x.d) ? ' · <span class="small">'+esc(pr.find(x => !x.d).t)+'</span>' : "")+' <span>›</span></button>';
     if (B) html += '<button class="mdrow" id="mdBs">'+B.e+' '+esc(B.n)+' <div class="hpbar mini"><i style="width:'+(B.steps.filter(s => !s.d).length/B.steps.length*100)+'%"></i></div></button>';
-    if (eat) html += '<div class="mdrow"><span>🍽️ Repas : '+EATN.map((n,i) => (eat[i] ? "✓ " : "· ")+n.split(" ")[1]).join(" · ")+'</span></div>';
+    if (eat) html += '<div class="mdrow"><span>🍽️ Repas : '+EATN.map((n,i) => (eat[i] ? "✅ " : "⬜ ")+n.split(" ")[1]).join("  ")+'</span></div>';
 
-    html += discoverHtml() || tidyHtml();
+    html += (typeof wizCardHtml === "function" ? wizCardHtml() : "") || discoverHtml() || tidyHtml();
     box.innerHTML = html; tidyBind(box); discoverBind(box);
+    box.querySelectorAll("[data-wz]").forEach(b => b.onclick = () => { if (b.dataset.wz === "go") wizard(); else { state.wizSkip = true; save(); renderMyDay(); } });
     const on = (id, f) => { const e = document.getElementById(id); if (e) e.onclick = f; };
     on("mdCi", checkinSheet); on("mdRv", reviewSheet);
     on("nowGo", () => cur.go());
@@ -5101,6 +5205,8 @@
     plan:["🗓️ Planning","⭐ Tes tâches importantes sont des post-its avec une étoile (3 max). Ajoute ou retire l'étoile en touchant un post-it.","Appui long sur un post-it pour le déplacer, glisser à droite = fait, à gauche = jour suivant.","Le soir, 🌙 Fermer ma journée envoie ce qui reste à demain en un geste.","La boîte à outils (je bloque, vider ma tête, minuteurs…) est en bas de la page."],
     focus:["⏳ Focus","Choisis l'activité, la durée, puis Démarrer : ton koala fait la même chose que toi.","🔕 Focus profond cache tout le reste. 🏃 Une pause mouvement après 20 minutes, c'est idéal."],
     mood:["💛 Moi","3 groupes : 🌤️ Aujourd'hui, 🩺 Santé (protégeable par un code), 🧰 Mes outils.","Le carnet pour le médecin prépare un résumé avant tes rendez-vous."],
+    sci:["🔬 Science","Chaque jour, l'appli cherche les dernières publications scientifiques sur le TDAH, le TSA et l'AuDHD (base Europe PMC).","🏅 indique la solidité : méta-analyse 🏅🏅🏅, revue systématique ou essai randomisé 🏅🏅, revue 🏅.","🇫🇷 Traduire ouvre Google Traduction. 📄 ouvre l'article original. Ce ne sont pas des conseils médicaux : parles-en à ton médecin."],
+    house:["🧹 Maison","Chaque pièce a une jauge : elle descend doucement avec le temps, et remonte quand tu coches une tâche.","🎯 Mission ménage : choisis 5, 15 ou 30 minutes, l'appli choisit les tâches les plus utiles.","Touche une pièce pour voir ses tâches. ✏️ pour changer la fréquence, ou 😴 « Pas cette semaine »."],
     rewards:["🎁 Cadeaux","Dépense tes points en vrais petits plaisirs que tu choisis.","Le boss de la semaine transforme une tâche redoutée en combat !"],
     settings:["⚙️ Réglages","Ici : saison, confort, taille du texte, apparence et mode à la carte pour masquer ce que tu n'utilises pas."]
   };
@@ -5729,7 +5835,7 @@
   Sound.softBell = function(){ if (quietNow() && spontaneous()) return; return _bell.apply(Sound, arguments); };
 
   /* ================= Découverte progressive ================= */
-  const DISCOVER = ["tab-mood","timers","ideas","dump","halt","energy","move","routines","amb","shop","where","sleep","prides","social","auprof","aucards","passion","preview","planb","boss","chal","wardrobe","dopa","trends","notes","bdays","wish","habits","papers","chantier","scripts","kid","meds","cycle"];
+  const DISCOVER = ["tab-mood","tab-house","tab-sci","timers","ideas","dump","halt","energy","move","routines","amb","shop","where","sleep","prides","social","auprof","aucards","passion","preview","planb","boss","chal","wardrobe","dopa","trends","notes","bdays","wish","habits","papers","chantier","scripts","kid","meds","cycle"];
   function discoverTick(){
     const D = state.discover; if (!D || !D.on) return;
     if (Date.now() - (D.last || 0) < 7*864e5 || D.offer) return;
@@ -5753,10 +5859,16 @@
   }
   // Nouvelle installation (aucune donnée) : on démarre avec l'essentiel
   if (!state.discover){
-    const fresh = !state.pts && !Object.keys(state.moods||{}).length && !(state.log||[]).length;
+    const fresh = !hadData;   // uniquement une toute première ouverture
     state.discover = {on:fresh, last:Date.now()};
     if (fresh) try { applyPreset("essentiel"); } catch(e){}
     save();
+  }
+  // Correctif : la découverte progressive s'était activée chez une utilisatrice déjà installée → tout réafficher
+  if (!state.discFixV1){
+    const used = (state.k && state.k.name) || state.tourDone || Object.keys(state.plan || {}).length > 3;
+    if (state.discover && state.discover.on && used){ state.discover.on = false; state.discover.offer = null; state.hidden = {}; applyFeats(); }
+    state.discFixV1 = true; save();
   }
   discoverTick();
 
@@ -5889,6 +6001,440 @@
     return r;
   };
 
+
+  /* ================= Koala en haut de Ma journée, jauges bien visibles ================= */
+  (function koalaHead(){
+    const vk = document.getElementById("v-koala"), md = document.getElementById("myday"), g = document.querySelector("#v-koala .gauges");
+    if (!vk || !md || !g) return;
+    const hd = document.createElement("div"); hd.className = "card khead"; hd.id = "kHead";
+    hd.innerHTML = '<button class="khav" id="khAv" aria-label="Faire un câlin au koala"></button><div class="khr"><div class="khn"><b id="khName"></b><span id="khStage"></span></div><div id="khG"></div></div>';
+    md.before(hd);
+    g.classList.remove("gmini"); g.classList.add("gbig");
+    hd.querySelector("#khG").appendChild(g);
+    g.querySelectorAll(".g").forEach(x => { const v = document.createElement("b"); v.className = "gv"; x.appendChild(v); });
+    hd.querySelector("#khAv").onclick = () => { hug(); };
+  })();
+  const _renderKoalaHead = renderKoala;
+  renderKoala = function(){
+    const r = _renderKoalaHead.apply(this, arguments);
+    try {
+      const k = K(), av = document.getElementById("khAv"), mood = kMood();
+      if (av && av.dataset.m !== mood){ av.innerHTML = koalaSVG(mood); av.dataset.m = mood; }
+      document.getElementById("khName").textContent = k.name || "Mon koala";
+      document.getElementById("khStage").textContent = stage().n+" · niv. "+levelOf(state.xp);
+      [["gFaim",k.faim],["gEnergie",k.energie],["gBonheur",k.bonheur]].forEach(([id,v]) => { const e = document.getElementById(id); if (e){ const b = e.closest(".g").querySelector(".gv"); if (b) b.textContent = Math.round(v)+" %"; } });
+    } catch(e){}
+    return r;
+  };
+
+
+  /* ================= 🧹 Maison : où j'en suis dans le ménage ================= */
+  const HFREQ = [[1,"Chaque jour"],[2,"Tous les 2 jours"],[3,"Tous les 3 jours"],[7,"Chaque semaine"],[14,"Toutes les 2 semaines"],[30,"Chaque mois"],[90,"Tous les 3 mois"]];
+  const HT = (n, f, m) => ({id:uid(), n, f, m, last:null});
+  if (!state.house) state.house = {init:false, rooms:[
+    {id:uid(), e:"🍳", n:"Cuisine", act:"rcuisine", tasks:[HT("Vaisselle",1,15), HT("Plan de travail",1,5), HT("Poubelles",3,5), HT("Sol",7,10), HT("Micro-ondes",14,5), HT("Frigo",30,15)]},
+    {id:uid(), e:"🛋️", n:"Salon", act:"salon", tasks:[HT("Ranger",2,10), HT("Aspirateur",7,15), HT("Poussière",14,10), HT("Coussins et plaids",14,5)]},
+    {id:uid(), e:"🛁", n:"Salle de bain", act:"sdb", tasks:[HT("Toilettes",4,5), HT("Lavabo et miroir",7,5), HT("Douche ou baignoire",7,15), HT("Sol",7,10), HT("Serviettes propres",7,5)]},
+    {id:uid(), e:"🛏️", n:"Chambres", act:"chambres", tasks:[HT("Faire les lits",3,3), HT("Ranger",7,10), HT("Changer les draps",14,15), HT("Aspirateur",14,10)]},
+    {id:uid(), e:"🧺", n:"Linge", act:"autre", tasks:[HT("Lancer une lessive",3,5), HT("Étendre ou plier",3,10), HT("Ranger le linge",4,10)]},
+    {id:uid(), e:"🚪", n:"Entrée", act:"autre", tasks:[HT("Chaussures et manteaux",7,5), HT("Sol",14,5)]},
+    {id:uid(), e:"🌱", n:"Jardin", act:"jardin", tasks:[HT("Arroser ou désherber",7,20), HT("Grand jardinage",30,60)]}
+  ]};
+  const H = () => state.house;
+  // 1 = tout juste fait, 0.5 = c'est le moment, 0 = en retard depuis longtemps
+  function freshT(t){
+    if (t.snooze && t.snooze > Date.now()) return .8;
+    if (!t.last) return .35;
+    const d = (Date.now() - t.last)/864e5;
+    return Math.max(0, Math.min(1, 1 - d/(t.f*2)));
+  }
+  const dueT = t => freshT(t) <= .5;
+  function stateT(t){
+    if (t.snooze && t.snooze > Date.now()) return ["😴","Reporté","snz"];
+    const f = freshT(t);
+    return f > .65 ? ["✨","Propre","ok"] : f > .5 ? ["🙂","Bientôt","soon"] : ["🧽","À faire","todo"];
+  }
+  const roomPct = r => r.tasks.length ? Math.round(100 * r.tasks.reduce((a,t) => a + freshT(t), 0) / r.tasks.length) : 100;
+  const housePct = () => { const R = H().rooms.filter(r => r.tasks.length); return R.length ? Math.round(R.reduce((a,r) => a + roomPct(r), 0) / R.length) : 100; };
+  const pctColor = p => p >= 65 ? "var(--ok)" : p >= 45 ? "#F2C14E" : "#F29E6B";
+  function sinceTxt(t){
+    if (!t.last) return "jamais noté";
+    const d = Math.floor((Date.now() - t.last)/864e5);
+    return d === 0 ? "fait aujourd'hui" : d === 1 ? "fait hier" : "fait il y a "+d+" jours";
+  }
+  function doneT(t, r){
+    snap("🧹 "+t.n+" fait", true);
+    t.last = Date.now(); delete t.snooze; award(3); giveLeaves(1); save();
+    renderHouse(); fx("✨");
+    const p = roomPct(r);
+    koala("house", "happy", p >= 90 ? r.e+" "+r.n+" toute propre ! Ça fait du bien 💚" : "Et hop, "+t.n.toLowerCase()+" ✓ Chaque petit geste compte.", true);
+  }
+
+  function renderHouse(){
+    const top = document.getElementById("houseTop"); if (!top) return;
+    const hp = housePct(), due = H().rooms.reduce((a,r) => a + r.tasks.filter(dueT).length, 0);
+    if (!H().init){
+      top.innerHTML = '<h2>👋 Pour commencer</h2><p class="small">Dis-moi en 1 minute dans quel état est chaque pièce. Il n\'y a pas de mauvaise réponse.</p><button class="btn primary" id="hInit" style="width:100%">🏠 Faire l\'état des lieux</button>';
+      top.querySelector("#hInit").onclick = houseInit;
+    } else {
+      top.innerHTML = '<div class="hscore"><div><b>'+hp+' %</b><span>de la maison en ordre</span></div><span class="small">'+(due ? due+" petite"+(due>1?"s":"")+" chose"+(due>1?"s":"")+" à faire" : "Tout est à jour ✨")+'</span></div>'+
+        '<div class="track hbar"><i style="width:'+hp+'%;background:'+pctColor(hp)+'"></i></div>'+
+        '<p class="fgroup">🎯 Mission ménage : j\'ai…</p><div class="row3"><button data-mi="5">⚡ 5 min</button><button data-mi="15">🧹 15 min</button><button data-mi="30">💪 30 min</button></div>';
+      top.querySelectorAll("[data-mi]").forEach(b => b.onclick = () => missionSheet(Number(b.dataset.mi)));
+    }
+    const box = document.getElementById("rooms");
+    box.innerHTML = H().rooms.map((r,i) => { const p = roomPct(r), n = r.tasks.filter(dueT).length;
+      return '<button class="room" data-r="'+i+'"><span class="re">'+r.e+'</span><b>'+esc(r.n)+'</b><span class="track"><i style="width:'+p+'%;background:'+pctColor(p)+'"></i></span><span class="small">'+(n ? "🧽 "+n+" à faire" : r.tasks.some(t => stateT(t)[2] === "soon") ? "🙂 bientôt" : "✨ en ordre")+'</span></button>'; }).join("")+
+      '<button class="room addroom" id="hAddRoom"><span class="re">＋</span><b>Ajouter une pièce</b></button>';
+    box.querySelectorAll("[data-r]").forEach(b => b.onclick = () => roomSheet(H().rooms[Number(b.dataset.r)]));
+    document.getElementById("hAddRoom").onclick = () => roomEdit(null);
+    if (!H().init) koala("house","normal","On regarde ensemble où en est la maison ? Sans jugement, promis 🌿");
+    else koala("house", hp >= 70 ? "happy" : "normal", hp >= 80 ? "La maison respire ✨ Tu peux souffler." : hp >= 55 ? "Ça tient bien la route. Une petite mission de 5 min ?" : "Pas de panique : on y va pièce par pièce, 5 minutes à la fois 🌿");
+  }
+
+  function houseInit(){
+    let i = 0;
+    const draw = card => {
+      const r = H().rooms[i];
+      if (!r){ H().init = true; save(); closeSheet(); renderHouse(); toast("🏠 État des lieux fait ! Tu sais maintenant où tu en es."); return; }
+      card.innerHTML = '<div class="prepbar">'+H().rooms.map((_,j) => '<i class="'+(j <= i ? "on" : "")+'"></i>').join("")+'</div><h2 style="text-align:center;font-size:40px;margin:6px 0">'+r.e+'</h2><h2 style="text-align:center">'+esc(r.n)+'</h2><p class="small center">En ce moment, c\'est plutôt…</p>'+
+        '<div class="wlist"><button class="btn ghost" data-s="1">✨ Propre</button><button class="btn ghost" data-s="2">🙂 Ça va, sans plus</button><button class="btn ghost" data-s="3">🧽 À faire</button></div><button class="linkbtn" id="hiSkip" style="margin-top:8px">Je ne sais pas, passer</button>';
+      card.querySelectorAll("[data-s]").forEach(b => b.onclick = () => {
+        const k = {1:.4, 2:.9, 3:1.6}[b.dataset.s];
+        r.tasks.forEach(t => t.last = Date.now() - k*t.f*864e5);
+        i++; save(); draw(card);
+      });
+      card.querySelector("#hiSkip").onclick = () => { i++; draw(card); };
+    };
+    openSheet("", draw);
+  }
+
+  function missionSheet(min){
+    const all = [];
+    H().rooms.forEach(r => r.tasks.forEach(t => all.push({r, t, f:freshT(t)})));
+    // Les tâches les plus « rentables » d'abord : en retard ET rapides (plusieurs petites victoires)
+    all.sort((a,b) => (1-b.f)/Math.sqrt(b.t.m) - (1-a.f)/Math.sqrt(a.t.m));
+    const pick = []; let sum = 0;
+    all.filter(x => x.f <= .6).forEach(x => { if (sum + x.t.m <= min || !pick.length && x.t.m <= min*1.5){ pick.push(x); sum += x.t.m; } });
+    if (!pick.length){ toast("✨ Tout est à jour ! Profite, rien d'urgent."); return; }
+    const draw = card => {
+      card.innerHTML = '<h2>🎯 Ta mission de '+min+' minutes</h2><p class="small">Dans l\'ordre que tu veux. Coche au fur et à mesure.</p><div class="wlist">'+
+        pick.map((x,j) => '<button class="htask'+(x.ok ? " done" : "")+'" data-j="'+j+'"><span class="hc">'+(x.ok ? "✓" : "")+'</span><span><b>'+esc(x.t.n)+'</b><br><span class="small">'+x.r.e+' '+esc(x.r.n)+' · ~'+x.t.m+' min</span></span></button>').join("")+'</div>'+
+        '<button class="btn primary" id="miGo" style="width:100%;margin-top:12px">▶ Lancer le minuteur ('+min+' min)</button>';
+      card.querySelectorAll("[data-j]").forEach(b => b.onclick = () => { const x = pick[Number(b.dataset.j)]; if (x.ok) return; x.ok = true; doneT(x.t, x.r); draw(card); if (pick.every(y => y.ok)){ fx("🎉"); toast("🎉 Mission accomplie ! +"+(3*pick.length)+" ⭐"); } });
+      card.querySelector("#miGo").onclick = () => { closeSheet(); startFocus({minutes:min, act:pick[0].r.act || "autre"}); };
+    };
+    openSheet("", draw);
+  }
+
+  function roomSheet(r){
+    const draw = card => {
+      const p = roomPct(r);
+      card.innerHTML = '<button class="sheet-x" aria-label="Fermer">✕</button><h2>'+r.e+' '+esc(r.n)+' <span class="small">· '+p+' %</span></h2><div class="track hbar"><i style="width:'+p+'%;background:'+pctColor(p)+'"></i></div>'+
+        '<p class="small" style="margin:8px 0">Touche le rond quand c\'est fait.</p><div class="wlist">'+
+        r.tasks.slice().sort((a,b) => freshT(a) - freshT(b)).map(t => { const st = stateT(t);
+          return '<div class="htask '+st[2]+'"><button class="hc" data-d="'+t.id+'" aria-label="Fait"></button><span class="hti"><b>'+esc(t.n)+'</b><br><span class="small">'+st[0]+' '+st[1]+' · '+sinceTxt(t)+' · '+HFREQ.find(f => f[0] === t.f)[1].toLowerCase()+'</span></span><button class="mini" data-e="'+t.id+'" aria-label="Modifier">✏️</button></div>'; }).join("")+'</div>'+
+        '<form class="add" id="hAddT"><input maxlength="40" placeholder="Ajouter une tâche (ex. vitres)"><button class="buy">＋</button></form>'+
+        '<div class="row2" style="margin-top:12px"><button class="btn primary" id="hRoomGo">▶ 15 min ici</button><button class="btn ghost" id="hRoomEd">✏️ La pièce</button></div>';
+      card.querySelector(".sheet-x").onclick = closeSheet;
+      card.querySelectorAll("[data-d]").forEach(b => b.onclick = () => { doneT(r.tasks.find(t => t.id === b.dataset.d), r); draw(card); });
+      card.querySelectorAll("[data-e]").forEach(b => b.onclick = () => taskEdit(r, r.tasks.find(t => t.id === b.dataset.e), card, draw));
+      card.querySelector("#hAddT").onsubmit = e => { e.preventDefault(); const v = e.target.querySelector("input").value.trim(); if (!v) return; r.tasks.push(Object.assign(HT(v, 7, 10), {last:Date.now() - 7*864e5})); save(); renderHouse(); draw(card); };
+      card.querySelector("#hRoomGo").onclick = () => { closeSheet(); startFocus({minutes:15, act:r.act || "autre"}); };
+      card.querySelector("#hRoomEd").onclick = () => roomEdit(r);
+    };
+    openSheet("", draw);
+  }
+
+  function taskEdit(r, t, card, back){
+    card.innerHTML = '<h2>✏️ '+esc(t.n)+'</h2><input class="search" id="teN" maxlength="40" value="'+esc(t.n)+'">'+
+      '<p class="fgroup">🔁 À refaire</p><div class="estchips" id="teF">'+HFREQ.map(([v,l]) => '<button class="chip'+(t.f===v?" on":"")+'" data-v="'+v+'">'+l+'</button>').join("")+'</div>'+
+      '<p class="fgroup">⏱️ Ça me prend environ</p><div class="estchips" id="teM">'+[3,5,10,15,20,30,60].map(v => '<button class="chip'+(t.m===v?" on":"")+'" data-v="'+v+'">'+v+' min</button>').join("")+'</div>'+
+      '<button class="btn primary" id="teOk" style="width:100%;margin-top:14px">Enregistrer</button>'+
+      '<div class="row2" style="margin-top:8px"><button class="btn ghost" id="teSn">😴 Pas cette semaine</button><button class="btn ghost" id="teDel">🗑️ Supprimer</button></div>';
+    let f = t.f, m = t.m;
+    const grp = (id, set) => card.querySelectorAll("#"+id+" [data-v]").forEach(b => b.onclick = () => { set(Number(b.dataset.v)); card.querySelectorAll("#"+id+" [data-v]").forEach(x => x.classList.toggle("on", x === b)); });
+    grp("teF", v => f = v); grp("teM", v => m = v);
+    card.querySelector("#teOk").onclick = () => { t.n = card.querySelector("#teN").value.trim() || t.n; t.f = f; t.m = m; save(); renderHouse(); back(card); };
+    card.querySelector("#teSn").onclick = () => { t.snooze = Date.now() + 7*864e5; save(); renderHouse(); toast("😴 "+t.n+" : on n'y pense plus cette semaine"); back(card); };
+    card.querySelector("#teDel").onclick = () => { snap("🗑️ Tâche supprimée", true); r.tasks = r.tasks.filter(x => x !== t); save(); renderHouse(); back(card); };
+  }
+
+  function roomEdit(r){
+    const isNew = !r;
+    const E = ["🍳","🛋️","🛁","🛏️","🧸","🧺","🚪","🌱","🚗","💻","🐕","🏠"];
+    let e = r ? r.e : "🏠";
+    openSheet('<h2>'+(isNew ? "➕ Nouvelle pièce" : "✏️ "+esc(r.n))+'</h2><input class="search" id="reN" maxlength="30" placeholder="Nom (ex. Chambre des enfants)" value="'+(r ? esc(r.n) : "")+'">'+
+      '<div class="estchips" id="reE" style="margin-top:10px">'+E.map(x => '<button class="chip'+(x===e?" on":"")+'" data-v="'+x+'" style="font-size:22px">'+x+'</button>').join("")+'</div>'+
+      '<button class="btn primary" id="reOk" style="width:100%;margin-top:14px">Enregistrer</button>'+(isNew ? "" : '<button class="btn ghost" id="reDel" style="width:100%;margin-top:8px">🗑️ Supprimer la pièce</button>'), card => {
+      card.querySelectorAll("#reE [data-v]").forEach(b => b.onclick = () => { e = b.dataset.v; card.querySelectorAll("#reE [data-v]").forEach(x => x.classList.toggle("on", x === b)); });
+      card.querySelector("#reOk").onclick = () => {
+        const n = card.querySelector("#reN").value.trim(); if (!n){ card.querySelector("#reN").focus(); return; }
+        if (isNew) H().rooms.push({id:uid(), e, n, act:"autre", tasks:[Object.assign(HT("Ranger",7,10), {last:Date.now() - 7*864e5})]});
+        else Object.assign(r, {n, e});
+        save(); closeSheet(); renderHouse();
+      };
+      const d = card.querySelector("#reDel");
+      if (d) d.onclick = () => { snap("🗑️ Pièce supprimée", true); H().rooms = H().rooms.filter(x => x !== r); save(); closeSheet(); renderHouse(); };
+    });
+  }
+
+
+  /* ================= 🧭 Questionnaire de configuration (logigramme, sans rien écrire) ================= */
+  const WQ = [
+    // --- Toi
+    {id:"pain", sec:"toi", multi:true, q:"Qu'est-ce qui est le plus difficile pour toi au quotidien ?", sub:"Choisis tout ce qui te parle.", o:[["start","🚀 Me lancer dans une tâche"],["forget","🧠 Oublier des choses"],["time","⏳ Voir le temps passer"],["house","🧹 Le ménage"],["food","🍽️ Penser à manger"],["sens","🎧 Le bruit, la lumière, la foule"],["social","🔋 La fatigue après le monde"],["emo","🌊 Mes émotions et mon énergie"]]},
+    {id:"meds", sec:"toi", q:"Tu prends un traitement ?", o:[["oui","💊 Oui"],["non","Non"]]},
+    {id:"medt", sec:"toi", multi:true, when:a => a.meds === "oui", q:"À quels moments ?", o:[["08:00","☀️ Matin"],["12:00","🍽️ Midi"],["16:00","🌤️ Après-midi"],["20:00","🌙 Soir"],["22:00","🛏️ Coucher"]]},
+    {id:"cycle", sec:"toi", q:"Tu veux suivre ton cycle ?", o:[["oui","🌸 Oui"],["non","Non merci"]]},
+    {id:"kids", sec:"toi", q:"Des enfants à la maison ?", o:[["0","Non"],["1","👧 1 enfant"],["2","👧👦 2 enfants"],["3","3 ou plus"]]},
+    {id:"kidmode", sec:"toi", when:a => a.kids && a.kids !== "0", q:"Tu veux des routines en images pour ton ou tes enfants ?", sub:"Le mode enfant : grandes images, étoiles à gagner.", o:[["oui","⭐ Oui"],["non","Non"]]},
+    {id:"school", sec:"toi", when:a => a.kids && a.kids !== "0", q:"À quelle heure part-on pour l'école ?", o:[["07:45","7h45"],["08:00","8h00"],["08:15","8h15"],["08:30","8h30"],["non","Pas d'école"]]},
+    {id:"pet", sec:"toi", q:"Un animal à la maison ?", o:[["non","Non"],["chien","🐕 Un chien"],["chat","🐈 Un chat"],["autre","🐾 Un autre animal"]]},
+    {id:"games", sec:"toi", q:"Les points, cadeaux et défis, ça te motive ?", o:[["oui","🎮 Oui, j'adore"],["peu","🙂 Un peu"],["non","😐 Pas du tout"]]},
+    {id:"tone", sec:"toi", q:"Comment veux-tu que ton koala te parle ?", o:[["doux","🥰 Avec enthousiasme !"],["sobre","🙂 Calmement, sobrement."]]},
+    // --- Maison
+    {id:"htype", sec:"maison", q:"Tu vis dans…", o:[["appart","🏢 Un appartement"],["maison","🏡 Une maison"]]},
+    {id:"rooms", sec:"maison", multi:true, q:"Quelles pièces as-tu ?", sub:"Les plus courantes sont déjà cochées.", o:a => [["cuisine","🍳 Cuisine",1],["salon","🛋️ Salon",1],["sam","🍽️ Salle à manger"],["sdb","🛁 Salle de bain",1],["sdb2","🚿 2e salle de bain"],["wc","🚽 WC séparés"],["ch","🛏️ Ma chambre",1]].concat(a.kids && a.kids !== "0" ? [["chk","🧸 Chambre(s) d'enfant",1]] : []).concat([["cha","🛌 Chambre d'amis"],["bureau","💻 Bureau"],["entree","🚪 Entrée",1],["linge","🧺 Linge",1]]).concat(a.htype === "maison" ? [["jardin","🌱 Jardin",1],["garage","🚗 Garage"]] : [["balcon","🪴 Balcon"]]).concat([["voiture","🚙 Voiture"]])},
+    {id:"dish", sec:"maison", when:a => (a.rooms||[]).includes("cuisine"), q:"Tu as un lave-vaisselle ?", o:[["oui","Oui"],["non","Non, à la main"]]},
+    {id:"bath", sec:"maison", when:a => (a.rooms||[]).includes("sdb"), q:"Dans la salle de bain, il y a…", o:[["douche","🚿 Une douche"],["bain","🛁 Une baignoire"],["deux","Les deux"]]},
+    {id:"dryer", sec:"maison", when:a => (a.rooms||[]).includes("linge"), q:"Tu as un sèche-linge ?", o:[["oui","Oui"],["non","Non, j'étends"]]},
+    {id:"floor", sec:"maison", multi:true, q:"Tes sols, c'est plutôt…", o:[["carrelage","Carrelage ou lino",1],["parquet","Parquet",1],["tapis","Moquette ou tapis"]]},
+    {id:"robot", sec:"maison", q:"Un aspirateur robot ?", o:[["oui","🤖 Oui"],["non","Non"]]},
+    {id:"level", sec:"maison", q:"Ton objectif pour le ménage ?", o:[["mini","🌿 Le minimum vital, sans stress"],["normal","🙂 Normal"],["nickel","✨ J'aime quand c'est nickel"]]},
+    {id:"rhythm", sec:"maison", q:"Tu préfères faire le ménage…", o:[["jour","☀️ Un peu chaque jour (15 min)"],["semaine","📅 Une grosse session par semaine"],["libre","🤷 Quand j'en ai envie"]]},
+    {id:"bigday", sec:"maison", when:a => a.rhythm === "semaine", q:"Quel jour pour la grosse session ?", o:[["6","Samedi"],["0","Dimanche"],["3","Mercredi"],["5","Vendredi"]]},
+    // --- Journées
+    {id:"wake", sec:"jours", q:"Tu te lèves vers quelle heure ?", o:[["06:30","6h30"],["07:00","7h00"],["07:30","7h30"],["08:00","8h00"],["09:00","9h00"],["varie","Ça varie"]]},
+    {id:"morning", sec:"jours", multi:true, q:"Ta routine du matin, c'est…", o:a => [["douche","🚿 Douche",1],["habiller","👕 M'habiller",1],["maquillage","💄 Me maquiller"],["manger","🥐 Petit déj",1],["cafe","☕ Café"]]},
+    {id:"evening", sec:"jours", multi:true, q:"Et le soir ?", o:[["rcuisine","🧽 Ranger la cuisine",1],["demain","🎒 Préparer demain"],["douche","🚿 Douche"],["lecture","📖 Lire",1],["ecrans","📵 Écrans éteints"]]},
+    {id:"recur", sec:"jours", multi:true, q:"Qu'est-ce qui revient régulièrement ?", sub:"Ça ira tout seul dans ton planning.", o:a => [["courses","🛒 Les courses"],["lessive","🧺 Une lessive tous les 3 jours"],["poubelles","🗑️ Sortir les poubelles"],["famille","📞 Appeler la famille"],["sport","🏃 Bouger / sport"],["admin","📧 Papiers et mails"]].concat(a.pet === "chien" ? [["chien","🐕 Sortir le chien",1]] : [])},
+    {id:"coursesday", sec:"jours", when:a => (a.recur||[]).includes("courses"), q:"Les courses, plutôt quel jour ?", o:[["6","Samedi"],["3","Mercredi"],["5","Vendredi"],["1","Lundi"]]},
+    {id:"trashday", sec:"jours", when:a => (a.recur||[]).includes("poubelles"), q:"Les poubelles sortent quel soir ?", o:[["1","Lundi"],["2","Mardi"],["3","Mercredi"],["4","Jeudi"],["0","Dimanche"]]}
+  ];
+  const WSEC = {toi:"💛 Toi", maison:"🧹 Ta maison", jours:"🗓️ Tes journées"};
+  function wizard(only){
+    const A = {}; const hist = []; let i = -1;
+    const opts = q => typeof q.o === "function" ? q.o(A) : q.o;
+    const visible = q => (!only || q.sec === only) && (!q.when || q.when(A));
+    const next = from => { for (let j = from+1; j < WQ.length; j++) if (visible(WQ[j])) return j; return WQ.length; };
+    const draw = card => {
+      if (i >= WQ.length) return summary(card);
+      const q = WQ[i], o = opts(q), tot = WQ.filter(visible).length, pos = WQ.slice(0, i+1).filter(visible).length;
+      if (q.multi && !A[q.id]) A[q.id] = o.filter(x => x[2]).map(x => x[0]);
+      card.innerHTML = '<div class="prepbar">'+Array.from({length:tot}, (_,j) => '<i class="'+(j < pos ? "on" : "")+'"></i>').join("")+'</div>'+
+        '<p class="small wzsec">'+WSEC[q.sec]+' · '+pos+'/'+tot+'</p><h2 class="wzq">'+q.q+'</h2>'+(q.sub ? '<p class="small">'+q.sub+'</p>' : "")+
+        '<div class="wzo'+(q.multi ? " multi" : "")+'">'+o.map(([v,l]) => '<button class="wzb'+((q.multi ? A[q.id].includes(v) : A[q.id] === v) ? " on" : "")+'" data-v="'+v+'">'+(q.multi ? '<span class="wzc"></span>' : "")+l+'</button>').join("")+'</div>'+
+        '<div class="row2 wznav"><button class="btn ghost" id="wzB">'+(hist.length ? "← Retour" : "Plus tard")+'</button>'+(q.multi ? '<button class="btn primary" id="wzN">Suivant →</button>' : '<span></span>')+'</div>';
+      card.querySelectorAll("[data-v]").forEach(b => b.onclick = () => {
+        if (q.multi){ const L = A[q.id], v = b.dataset.v; L.includes(v) ? L.splice(L.indexOf(v),1) : L.push(v); b.classList.toggle("on"); return; }
+        A[q.id] = b.dataset.v; b.classList.add("on"); hist.push(i); setTimeout(() => { i = next(i); draw(card); }, 160);
+      });
+      const nb = card.querySelector("#wzN"); if (nb) nb.onclick = () => { hist.push(i); i = next(i); draw(card); };
+      card.querySelector("#wzB").onclick = () => { if (!hist.length){ closeSheet(); return; } i = hist.pop(); draw(card); };
+    };
+    const summary = card => {
+      const plan = wizPlan(A, only);
+      card.innerHTML = '<h2>✨ Voilà ce que je vais préparer</h2><p class="small">Tu pourras tout changer ensuite.</p><ul class="wzsum">'+plan.lines.map(l => '<li>'+l+'</li>').join("")+'</ul>'+
+        '<button class="btn primary" id="wzOk" style="width:100%;margin-top:12px">✨ Tout configurer</button><button class="btn ghost" id="wzBack" style="width:100%;margin-top:8px">← Revoir mes réponses</button>';
+      card.querySelector("#wzOk").onclick = () => { snap("🧭 Configuration appliquée", true); plan.apply(); state.wizDone = true; save(); closeSheet(); renderAll(); toast("🧭 C'est configuré ! Ton appli est à ton image."); if (A.rooms) setTimeout(() => show("house"), 600); };
+      card.querySelector("#wzBack").onclick = () => { i = hist.pop(); draw(card); };
+    };
+    i = next(-1); openSheet("", draw);
+  }
+
+  // Ce que les réponses changent
+  function wizPlan(A, only){
+    const lines = [], acts = [];
+    const L = (txt, fn) => { lines.push(txt); acts.push(fn); };
+    const hide = (ids, on) => ids.forEach(id => { if (on) state.hidden[id] = true; else delete state.hidden[id]; });
+    if (!only || only === "toi"){
+      const P_ = A.pain || [];
+      if (A.meds === "oui"){ const T = (A.medt && A.medt.length ? A.medt : ["08:00"]); L("💊 Traitement activé, rappels à "+T.map(t => t.replace(":00","h")).join(", "), () => { hide(["meds"], false); state.meds.on = true; T.forEach(h => { if (!state.meds.list.some(m => m.h === h)) state.meds.list.push({n:"Traitement", h}); }); }); }
+      else if (A.meds === "non") L("💊 Traitement masqué", () => hide(["meds"], true));
+      if (A.cycle) L(A.cycle === "oui" ? "🌸 Suivi du cycle visible" : "🌸 Suivi du cycle masqué", () => hide(["cycle"], A.cycle !== "oui"));
+      if (A.kids === "0") L("🧒 Mode enfant masqué", () => hide(["kid"], true));
+      else if (A.kids) L(A.kidmode === "oui" ? "🧒 Mode enfant visible" : "🧒 Mode enfant masqué", () => hide(["kid"], A.kidmode !== "oui"));
+      if (A.pet === "non") L("🐕 Carte animal masquée", () => hide(["pet"], true));
+      else if (A.pet) L({chien:"🐕 Suivi du chien (balades, repas, eau)", chat:"🐈 Suivi du chat (repas, eau, litière)", autre:"🐾 Suivi de ton animal"}[A.pet], () => { hide(["pet"], false); state.pet.e = {chien:"🐕", chat:"🐈", autre:"🐾"}[A.pet]; });
+      if (A.games === "non") L("🎮 Pas de boss, défis, garde-robe ni série 🔥 ; pas de surprises", () => { hide(["boss","chal","wardrobe","badges","quest"], true); state.settings.hideStreak = true; state.settings.noSurprise = true; });
+      else if (A.games === "peu") L("🎮 Points et cadeaux gardés, sans boss ni garde-robe ; pas de surprises", () => { hide(["boss","wardrobe"], true); hide(["chal","badges"], false); state.settings.noSurprise = true; });
+      else if (A.games === "oui") L("🎮 Tout le côté jeu activé", () => { hide(["boss","chal","wardrobe","badges","quest"], false); state.settings.hideStreak = false; });
+      if (A.tone) L(A.tone === "sobre" ? "🙂 Koala au ton sobre" : "🥰 Koala enthousiaste", () => state.settings.tone = A.tone);
+      if (P_.includes("food")) L("🍽️ Rappels des repas activés", () => { hide(["eat"], false); state.eat.on = true; });
+      if (P_.includes("sens") || P_.includes("social")) L("🎧 Outils sensoriels, cartes et batterie sociale visibles", () => hide(["auprof","aucards","social"], false));
+      else if (P_.length) L("🎧 Outils sensoriels et cartes masqués (tu pourras les réafficher)", () => hide(["auprof","aucards"], true));
+      if (P_.includes("time")) L("⏳ Transitions douces et grand minuteur", () => { state.settings.trans = true; hide(["bigt","timers"], false); });
+      if (P_.includes("forget")) L("🧠 Vider ma tête, Où j'ai mis…, Échéances visibles", () => hide(["dump","where","papers","wait"], false));
+      if (P_.includes("start")) L("🚀 « Je bloque » et « Juste 2 minutes » visibles", () => hide(["dice","twomin"], false));
+      if (P_.includes("house")) L("🧹 Onglet Maison mis en avant", () => hide(["tab-house"], false));
+    }
+    if ((!only || only === "maison") && A.rooms){
+      const rooms = buildRooms(A);
+      L("🏠 "+rooms.length+" pièces : "+rooms.map(r => r.e).join(" ")+" ("+rooms.reduce((a,r) => a + r.tasks.length, 0)+" tâches adaptées)", () => {
+        const old = (state.house && state.house.rooms) || [];
+        rooms.forEach(r => { const o = old.find(x => norm(x.n) === norm(r.n)); if (o) r.tasks.forEach(t => { const ot = o.tasks.find(x => norm(x.n) === norm(t.n)); if (ot){ t.last = ot.last; t.snooze = ot.snooze; } }); });
+        state.house.rooms = rooms; state.house.init = rooms.every(r => r.tasks.every(t => t.last)); hide(["tab-house"], false);
+      });
+      if (A.rhythm === "jour") L("🧹 Post-it « Mission ménage 15 min » chaque jour à 18h30", () => addRule("🧹 Mission ménage 15 min", "daily", {time:"18:30", dur:15, c:"vert"}));
+      if (A.rhythm === "semaine") L("🧹 Post-it « Grand ménage » chaque "+JOURS[Number(A.bigday||6)]+" à 10h", () => addRule("🧹 Grand ménage", "dow", {time:"10:00", dur:60, c:"vert", dow:Number(A.bigday||6)}));
+    }
+    if (!only || only === "jours"){
+      const W = A.wake && A.wake !== "varie" ? A.wake : null;
+      const MAP = {douche:10, habiller:10, maquillage:10, manger:15, cafe:10, rcuisine:10, lecture:15};
+      if (A.morning) L("☀️ Routine du matin : "+A.morning.map(x => ({douche:"douche", habiller:"habillage", maquillage:"maquillage", manger:"petit déj", cafe:"café"}[x])).join(", "), () => state.routines.matin = {n:"Matin ☀️", steps:A.morning.map(a => ({a, m:MAP[a]||10}))});
+      if (A.evening){ const ev = A.evening.filter(x => MAP[x]); L("🌙 Routine du soir : "+A.evening.map(x => ({rcuisine:"cuisine", demain:"préparer demain", douche:"douche", lecture:"lecture", ecrans:"écrans éteints"}[x])).join(", "), () => {
+        state.routines.soir = {n:"Soir 🌙", steps:(ev.length ? ev : ["lecture"]).map(a => ({a, m:MAP[a]||10}))};
+        if (A.evening.includes("demain")) addRule("🎒 Préparer demain (sac, vêtements)", "daily", {time:"20:30", dur:10, c:"bleu"});
+        if (A.evening.includes("ecrans")){ state.settings.bedOn = true; }
+      }); }
+      if (A.meds === "oui") L("💊 Post-it « Médocs » chaque jour"+((A.medt||[]).length ? " à "+A.medt.map(t => t.replace(":00","h")).join(", ") : ""), () => (A.medt && A.medt.length ? A.medt : [W || "08:00"]).forEach(h => addRule("💊 Médocs", "daily", {time:h, dur:5, c:"rose"})));
+      if (A.school && A.school !== "non") L("🎒 Départ école à "+A.school.replace(":","h")+" en semaine", () => addRule("🎒 Départ école", "weekdays", {time:A.school, dur:20, c:"orange"}));
+      const R = A.recur || [];
+      if (R.includes("chien")) L("🐕 Sortir le chien matin et soir", () => { addRule("🐕 Sortir le chien", "daily", {time:W ? addMin(W, 30) : "08:00", dur:20, c:"vert"}); addRule("🐕 Sortir le chien", "daily", {time:"19:00", dur:20, c:"vert"}); });
+      if (R.includes("courses")) L("🛒 Courses chaque "+JOURS[Number(A.coursesday||6)], () => addRule("🛒 Courses", "dow", {time:"10:30", dur:60, c:"jaune", dow:Number(A.coursesday||6)}));
+      if (R.includes("lessive")) L("🧺 Lessive tous les 3 jours", () => addRule("🧺 Lancer une lessive", "every3", {c:"bleu", dur:10}));
+      if (R.includes("poubelles")) L("🗑️ Poubelles chaque "+JOURS[Number(A.trashday||1)]+" soir", () => addRule("🗑️ Sortir les poubelles", "dow", {time:"20:00", dur:5, c:"jaune", dow:Number(A.trashday||1)}));
+      if (R.includes("famille")) L("📞 Appeler la famille chaque dimanche", () => addRule("📞 Appeler la famille", "dow", {time:"17:00", dur:20, c:"rose", dow:0}));
+      if (R.includes("sport")) L("🏃 Bouger 3 fois par semaine", () => [1,3,5].forEach(d => addRule("🏃 Bouger / sport", "dow", {time:"18:00", dur:30, c:"vert", dow:d})));
+      if (R.includes("admin")) L("📧 Papiers et mails chaque mercredi", () => addRule("📧 Papiers et mails", "dow", {time:"14:00", dur:30, c:"bleu", dow:3}));
+    }
+    return {lines, apply:() => { acts.forEach(f => { try { f(); } catch(e){ console.error(e); } }); applyFeats(); }};
+  }
+  const addMin = (hm, m) => { const x = hmToMin(hm) + m; return String(Math.floor(x/60)%24).padStart(2,"0")+":"+String(x%60).padStart(2,"0"); };
+  function addRule(t, type, o){
+    o = o || {};
+    if (state.recur.some(r => r.t === t && r.time === o.time && r.type === type && (type !== "dow" || r.dow === o.dow))) return;
+    // heure déjà passée aujourd'hui : ça commence demain
+    const skip = o.time && hmToMin(o.time) < nowHM() ? [todayKey()] : [];
+    state.recur.push({id:uid(), t, c:o.c || "jaune", time:o.time, dur:o.dur, type, dow:o.dow != null ? o.dow : new Date().getDay(), from:todayKey(), skip});
+    // nettoie les jours déjà générés pour qu'ils reçoivent la nouvelle règle
+  }
+  function buildRooms(A){
+    const lv = {mini:1.6, normal:1, nickel:.7}[A.level || "normal"], robot = A.robot === "oui", floors = A.floor || ["carrelage"];
+    const F = (f) => { const v = Math.max(1, Math.round(f*lv)); return [1,2,3,7,14,30,90].reduce((a,b) => Math.abs(b-v) < Math.abs(a-v) ? b : a); };
+    const T = (n, f, m, keep) => (A.level === "mini" && f >= 30 && !keep) ? null : HT(n, F(f), m);
+    const sol = (m) => [robot ? T("Lancer le robot", 3, 2) : T("Aspirateur", 7, m || 10), floors.some(x => x !== "tapis") ? T("Serpillière", 14, m || 10) : null];
+    const R = [], add = (e, n, act, tasks) => R.push({id:uid(), e, n, act, tasks:tasks.filter(Boolean)});
+    const has = k => (A.rooms||[]).includes(k), pet = A.pet && A.pet !== "non";
+    if (has("cuisine")) add("🍳","Cuisine","rcuisine",[A.dish === "oui" ? T("Remplir ou vider le lave-vaisselle",1,5) : T("Vaisselle",1,15), T("Plan de travail",1,5), T("Poubelles",3,5), ...sol(), T("Plaques et four",14,10), T("Micro-ondes",14,5), T("Frigo",30,15)]);
+    if (has("salon")) add("🛋️","Salon","salon",[T("Ranger",2,10), ...sol(15), T("Poussière",14,10), T("Coussins et plaids",14,5), pet ? T("Poils sur le canapé",7,5) : null]);
+    if (has("sam")) add("🍽️","Salle à manger","salon",[T("Débarrasser la table",1,5), T("Chaises et sol",7,10)]);
+    const bath = (n, e) => add(e, n, "sdb",[T("Lavabo et miroir",7,5), A.bath === "bain" ? T("Baignoire",7,15) : A.bath === "deux" ? T("Douche et baignoire",7,20) : T("Douche",7,15), has("wc") ? null : T("Toilettes",4,5), T("Sol",7,10), T("Serviettes propres",7,5)]);
+    if (has("sdb")) bath("Salle de bain","🛁");
+    if (has("sdb2")) bath("2e salle de bain","🚿");
+    if (has("wc")) add("🚽","Toilettes","sdb",[T("Cuvette",4,5), T("Sol et lavabo",7,5), T("Papier toilette",7,1)]);
+    if (has("ch")) add("🛏️","Ma chambre","chambres",[T("Faire le lit",3,3), T("Ranger",7,10), T("Changer les draps",14,15), ...sol()]);
+    if (has("chk")) add("🧸","Chambre d'enfant","chambres",[T("Ranger les jouets",2,10), T("Faire le lit",3,3), T("Changer les draps",14,15), ...sol()]);
+    if (has("cha")) add("🛌","Chambre d'amis","chambres",[T("Poussière et aérer",30,10, true)]);
+    if (has("bureau")) add("💻","Bureau","admin",[T("Ranger le bureau",7,10), T("Trier les papiers",14,15), T("Poussière",14,5)]);
+    if (has("entree")) add("🚪","Entrée","autre",[T("Chaussures et manteaux",7,5), ...sol(5).slice(0,1)]);
+    if (has("linge")) add("🧺","Linge","autre",[T("Lancer une lessive",3,5), A.dryer === "oui" ? T("Vider le sèche-linge",3,5) : T("Étendre",3,10), T("Plier",3,10), T("Ranger le linge",4,10)]);
+    if (has("jardin")) add("🌱","Jardin","jardin",[T("Arroser ou désherber",7,20), T("Tondre",14,45), T("Grand jardinage",30,60)]);
+    if (has("balcon")) add("🪴","Balcon","jardin",[T("Arroser les plantes",3,5), T("Balayer",14,10)]);
+    if (has("garage")) add("🚗","Garage","autre",[T("Ranger",30,20, true)]);
+    if (has("voiture")) add("🚙","Voiture","conduire",[T("Vider les déchets",7,5), T("Aspirer l'intérieur",30,20)]);
+    if (pet){ const a = {chien:["🐕","Chien"], chat:["🐈","Chat"], autre:["🐾","Animal"]}[A.pet];
+      add(a[0], a[1], "autre",[T("Gamelles",1,3), A.pet === "chat" ? T("Litière",2,5) : A.pet === "chien" ? T("Brosser",7,10) : T("Nettoyer son coin",7,10), T("Laver panier ou couverture",30,10)]); }
+    return R;
+  }
+
+  // Points d'entrée
+  (function wizEntries(){
+    const conf = document.getElementById("calmToggle"), card = conf && conf.closest(".card, details");
+    if (card){ const b = document.createElement("button"); b.className = "btn primary"; b.style.cssText = "width:100%;margin-bottom:12px"; b.textContent = "🧭 Configurer mon appli (questionnaire, 3 min)"; b.onclick = () => wizard(); const h2 = card.querySelector("h2, summary"); (h2 ? h2.after(b) : card.prepend(b)); }
+  })();
+  const _renderHouseWiz = renderHouse;
+  renderHouse = function(){
+    const r = _renderHouseWiz.apply(this, arguments);
+    const box = document.getElementById("rooms");
+    if (box && !document.getElementById("hWiz")){ const b = document.createElement("button"); b.id = "hWiz"; b.className = "btn ghost"; b.style.cssText = "width:100%;margin:0 0 16px"; b.textContent = "🧭 Adapter à ma maison (questions, sans écrire)"; b.onclick = () => wizard("maison"); box.after(b); }
+    return r;
+  };
+  function wizCardHtml(){ return state.wizDone || state.wizSkip ? "" : '<div class="tidy disc"><span>🧭 <b>Configure ton appli en 3 minutes</b>, juste en touchant des réponses : tes besoins, ta maison, tes routines.</span><div class="tidyb"><button class="btn primary" data-wz="go">C\'est parti</button><button class="btn ghost" data-wz="no">Plus tard</button></div></div>'; }
+
+
+  /* ================= 🔬 Science : dernières publications TDAH / TSA / AuDHD ================= */
+  const SCI_T = {
+    tdah: {n:"TDAH", e:"⚡", q:'(TITLE:"ADHD" OR TITLE:"attention-deficit" OR TITLE:"attention deficit")'},
+    tsa:  {n:"TSA", e:"🧩", q:'(TITLE:"autism" OR TITLE:"autistic")'},
+    audhd:{n:"AuDHD", e:"🌈", q:'((TITLE:"autism" OR TITLE:"autistic" OR ABSTRACT:"autism") AND (TITLE:"ADHD" OR ABSTRACT:"ADHD" OR ABSTRACT:"attention-deficit"))'}
+  };
+  state.sci = Object.assign({topic:"tdah", solid:true, cache:{}, seen:{}}, state.sci || {});
+  const SOLID = [["meta-analysis",3,"Méta-analyse"],["systematic review",2,"Revue systématique"],["randomized controlled trial",2,"Essai randomisé"],["review",1,"Revue"]];
+  function sciLevel(types){
+    const t = (types || []).map(x => String(x).toLowerCase());
+    for (const [k,n,l] of SOLID) if (t.some(x => x.includes(k))) return [n,l];
+    return [0,"Étude"];
+  }
+  function sciConclusion(abs){
+    const txt = String(abs || "").replace(/<h\d[^>]*>\s*([^<]+?)\s*<\/h\d>/gi, " $1: ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const m = txt.match(/^.*\b(conclusions?(?: and (?:relevance|implications))?|interpretation|implications?)\s*[:.]\s*(.+)$/i);
+    if (m) return m[2].slice(0, 700);
+    const S = txt.match(/[^.!?]+[.!?]+/g) || [txt];
+    return S.slice(-2).join(" ").trim().slice(0, 700);
+  }
+  async function sciFetch(topic, force){
+    const C = state.sci.cache[topic];
+    if (!force && C && C.day === todayKey()) return C;
+    const since = (() => { const d = new Date(); d.setDate(d.getDate() - 75); return dayKey(d); })();
+    const base = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=40&sort="+encodeURIComponent("P_PDATE_D desc")+"&query=";
+    const qs = [SCI_T[topic].q+' AND HAS_ABSTRACT:y AND SRC:MED AND FIRST_PDATE:['+since+' TO '+todayKey()+']', SCI_T[topic].q+' AND HAS_ABSTRACT:y'];
+    let list = null;
+    for (const q of qs){
+      try {
+        const r = await fetch(base + encodeURIComponent(q), {cache:"no-store"}); if (!r.ok) continue;
+        const j = await r.json(), R = (j.resultList && j.resultList.result) || [];
+        if (!R.length) continue;
+        list = R.map(a => ({
+          id: a.id, t: a.title || "", j: (a.journalInfo && a.journalInfo.journal && (a.journalInfo.journal.isoabbreviation || a.journalInfo.journal.title)) || a.journalTitle || "",
+          d: a.firstPublicationDate || a.pubYear || "", au: (a.authorString || "").split(",").slice(0,3).join(",") + ((a.authorString || "").split(",").length > 3 ? " et al." : ""),
+          types: (a.pubTypeList && a.pubTypeList.pubType) || [], c: sciConclusion(a.abstractText),
+          url: a.doi ? "https://doi.org/"+a.doi : a.pmid ? "https://pubmed.ncbi.nlm.nih.gov/"+a.pmid+"/" : "https://europepmc.org/article/"+(a.source||"MED")+"/"+a.id,
+          oa: a.isOpenAccess === "Y"
+        }));
+        break;
+      } catch(e){}
+    }
+    if (!list) throw new Error("offline");
+    state.sci.cache[topic] = {day:todayKey(), at:Date.now(), list}; save();
+    return state.sci.cache[topic];
+  }
+  let sciBusy = false;
+  async function renderSci(force){
+    const box = document.getElementById("sciList"); if (!box) return;
+    const S = state.sci, T = SCI_T[S.topic];
+    document.querySelectorAll("#sciSeg [data-t]").forEach(b => b.classList.toggle("on", b.dataset.t === S.topic));
+    document.getElementById("sciSolid").checked = !!S.solid;
+    const draw = (C, note) => {
+      let L = (C ? C.list : []).map(a => Object.assign({lv:sciLevel(a.types)}, a));
+      if (S.solid) L = L.filter(a => a.lv[0] > 0);
+      L = L.slice(0, 15);
+      const seen = S.seen[S.topic] || 0;
+      document.getElementById("sciInfo").textContent = note || (C ? "Mis à jour "+(C.day === todayKey() ? "aujourd'hui" : "le "+dateOf(C.day).toLocaleDateString("fr-FR"))+" · "+L.length+" article"+(L.length>1?"s":"") : "");
+      box.innerHTML = L.length ? L.map(a => {
+        const isNew = C && a.d && new Date(a.d).getTime() > seen && seen;
+        return '<article class="sci"><div class="scib"><span class="lv lv'+a.lv[0]+'">'+"🏅".repeat(a.lv[0])+" "+a.lv[1]+'</span>'+(isNew ? '<span class="new">Nouveau</span>' : "")+(a.oa ? '<span class="oa">🔓 Gratuit</span>' : "")+'</div>'+
+          '<h3>'+esc(a.t)+'</h3><p class="small">'+esc(a.j)+' · '+(a.d ? new Date(a.d).toLocaleDateString("fr-FR",{day:"numeric",month:"short",year:"numeric"}) : "")+(a.au ? ' · '+esc(a.au) : "")+'</p>'+
+          '<p class="sciconc"><b>Conclusion des auteurs</b> <span class="small">(en anglais)</span><br>'+esc(a.c)+'</p>'+
+          '<div class="row2"><a class="btn ghost" href="https://translate.google.com/?sl=en&tl=fr&op=translate&text='+encodeURIComponent(a.t+"\n\n"+a.c)+'" target="_blank" rel="noopener">🇫🇷 Traduire</a><a class="btn primary" href="'+a.url+'" target="_blank" rel="noopener">📄 L\'article</a></div></article>';
+      }).join("") : (C ? '<p class="small center">Aucun article récent'+(S.solid ? " parmi les études les plus solides. Décoche le filtre pour tout voir." : ".")+'</p>' : "");
+    };
+    draw(S.cache[S.topic]);
+    if (sciBusy) return;
+    sciBusy = true; document.getElementById("sciInfo").textContent = "⏳ Recherche des dernières publications…";
+    try { const C = await sciFetch(S.topic, force); draw(C); }
+    catch(e){ draw(S.cache[S.topic], S.cache[S.topic] ? "📴 Hors ligne : dernière liste enregistrée" : (IS_PWA ? "📴 Pas de connexion pour l'instant. Réessaie avec internet." : "📴 La version dans Claude ne peut pas aller sur internet : ouvre ta version installée (icône koala).")); }
+    finally { sciBusy = false; }
+    setTimeout(() => { S.seen[S.topic] = Date.now(); save(); }, 4000);
+  }
+  (function sciInit(){
+    const v = document.getElementById("v-sci"); if (!v) return;
+    document.querySelectorAll("#sciSeg [data-t]").forEach(b => b.onclick = () => { state.sci.topic = b.dataset.t; save(); renderSci(); });
+    document.getElementById("sciSolid").onchange = e => { state.sci.solid = e.target.checked; save(); renderSci(); };
+    document.getElementById("sciRefresh").onclick = () => renderSci(true);
+  })();
+
   /* Rendu paresseux : seul l'onglet visible est préparé, les autres le sont quand on y va */
   const TAB_RENDER = {
     koala: () => { renderMyDay(); renderPet(); renderKoala(); renderBoss(); renderWardrobe(); renderChal(); renderDopa(); renderRewards(); },
@@ -5896,6 +6442,8 @@
     plan: () => { renderPlan(); renderShop(); renderPapers(); renderChantier(); renderDone(); renderHabits(); renderWhere(); renderScripts(); renderBilanBtn(); },
     focus: () => { renderRoutines(); renderEstimates(); renderActs(); renderAmb(); renderPresets(); drawTimer(); renderFocusStat(); if (!running) koala("focus","normal","Choisis ton activité et on s'y met ensemble. Je ferai pareil à côté de toi 🌿"); },
     mood: () => { renderSleep(); renderNotes(); renderBdays(); renderWish(); renderKid(); renderPrides(); renderSocial(); renderMeds(); renderCycle(); renderTrends(); renderMood(); renderAu(); },
+    house: () => { renderHouse(); },
+    sci: () => { renderSci(); koala("sci","normal","Les dernières études, triées des plus solides aux autres. Une étude seule ne fait pas une vérité 🔬"); },
     rewards: () => { renderBoss(); renderWardrobe(); renderChal(); renderDopa(); renderRewards(); }
   };
   const tabDirty = new Set();
